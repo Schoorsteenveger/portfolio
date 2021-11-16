@@ -1,5 +1,14 @@
-@import "_colors";
+@import "./colors";
+@import "./variables";
 
-.section h2 {
-    color:#fff;
+/* Mobile first*/
+
+header {
+    background-color: $background-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+  

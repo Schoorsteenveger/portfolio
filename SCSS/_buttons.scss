@@ -1,13 +1,14 @@
 @import "./colors";
 
-.button {
-    color: $primary-color;
+.contact-button {
+    color: $font-color;
     background-color: $button-color;
-    width: 100px;
-    height: 40px;
+    width: 200px;
+    height: 50px;
     font-size: x-large;
     &:hover {
         background-color:$button-hover-color;
+        cursor: pointer;
     }
 }
 

@@ -1,0 +1,121 @@
+@import "./variables";
+@import "./colors";
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: $body-font;
+    background: $background-color;
+    min-height: 100vh;
+}
+ 
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-header;
+    font-weight: normal;
+    color:$font-color;
+}
+
+p {
+    font-family: $body-font;
+    color: $font-color;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: $secondary-color;
+    height: 50vh;
+    padding: 10px;
+}
+
+.tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    margin: 5px;
+    text-align: center;
+    align-items: center;
+    flex: 1 3 33%;
+    font-size: 1.6rem;
+    margin: 0;
+    p {
+        padding: 6px 23px;
+    }
+    }
+
+    .tile-bg {
+        background-color: $background-color-mid;
+        flex-direction: column;
+    }
+
+    .tile::before {
+        content: "";
+        display: flex;    
+    }
+
+    .img-bg {
+        background-color: $background-img;
+        flex-direction: column;
+        p {
+            line-height: 65px;
+        }
+    }
+   
+.section-about-mb {
+    display: flex;
+    justify-content: center;    
+    img {
+        width: $image-size;
+    }
+    .about-text{
+        background-color: $background-color-mid;
+        justify-content:flex-start;
+        align-items: center;
+    }
+    & { justify-content: center;
+        color: $font-color;
+        font-family: $font-header;
+    }
+}
+
+.section-portfolio, .section-contact {
+    display: flex;
+    width: 100%;
+    height: 600px;
+    padding: 10px;
+}
+/* Tijdelijke achtergrondkleur*/
+.section-contact {
+    background: rgb(48, 165, 42);
+    justify-content: flex-start;
+}
+.section-portfolio > .container-portfolio {
+    background:$section-donkergroen;
+    justify-content: center;
+    align-items: center;
+    .portfolio-item {
+        background: $background-color-mid;
+        margin: 5px;
+        width: 50px;
+        height: 50px;
+        padding: 25%;
+    }
+    .geel {
+      background: rgb(48, 165, 42);
+      justify-content: flex-start;
+      margin: 5px;
+      width: 50px;
+      height: 50px;
+      padding: 25%;
+    }
+
+}
