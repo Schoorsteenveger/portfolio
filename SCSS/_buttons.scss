@@ -6,6 +6,7 @@
     width: 200px;
     height: 50px;
     font-size: x-large;
+    border-radius: solid black 5px;
     &:hover {
         background-color:$button-hover-color;
         cursor: pointer;

@@ -50,6 +50,7 @@ p {
   color: #d5d5d5;
 }
 
+/* about */
 .container-fluid {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -145,6 +146,7 @@ p {
   font-family: "Arial', sans-serif";
 }
 
+/* portfolio grid */
 .section-portfolio, .section-contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -152,43 +154,62 @@ p {
   width: 100%;
   height: 600px;
   padding: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-family: "Arial', sans-serif";
 }
 
 /* Tijdelijke achtergrondkleur*/
+/* Contact*/
 .section-contact {
-  background: #30a52a;
+  background: #4287f5;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
 
-.section-portfolio > .container-portfolio {
-  background: #1a624a;
+.container-portfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-color: #262626;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.portfolio-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #29f986;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
+  margin: 5px;
+  text-align: center;
+  font-size: xx-large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.section-portfolio > .container-portfolio .portfolio-item {
-  background: #a7a7a7;
-  margin: 5px;
-  width: 50px;
-  height: 50px;
-  padding: 25%;
-}
-
-.section-portfolio > .container-portfolio .geel {
-  background: #30a52a;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  margin: 5px;
-  width: 50px;
-  height: 50px;
-  padding: 25%;
+.porttfolio-item::before {
+  content: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #d5d5d5;
 }
 
 /* Fonts */
@@ -199,6 +220,7 @@ p {
   width: 200px;
   height: 50px;
   font-size: x-large;
+  border-radius: solid black 5px;
 }
 
 .contact-button:hover {

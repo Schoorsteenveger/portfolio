@@ -28,6 +28,7 @@ p {
     color: $font-color;
 }
 
+/* about */
 .container-fluid {
     display: flex;
     justify-content: center;
@@ -69,7 +70,7 @@ p {
             line-height: 65px;
         }
     }
-   
+
 .section-about-mb {
     display: flex;
     justify-content: center;    
@@ -87,35 +88,48 @@ p {
     }
 }
 
+/* portfolio grid */
+
 .section-portfolio, .section-contact {
     display: flex;
     width: 100%;
     height: 600px;
     padding: 10px;
+    justify-content: center;
+    text-align: center;
+    font-family: $font-header;
 }
 /* Tijdelijke achtergrondkleur*/
+
+/* Contact*/
 .section-contact {
-    background: rgb(48, 165, 42);
+    background: #4287f5;
     justify-content: flex-start;
 }
-.section-portfolio > .container-portfolio {
-    background:$section-donkergroen;
+
+.container-portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    background-color: rgb(38, 38, 38);
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.portfolio-item {
+    display: flex;
+    background-color: rgb(41, 249, 134);
     justify-content: center;
     align-items: center;
-    .portfolio-item {
-        background: $background-color-mid;
-        margin: 5px;
-        width: 50px;
-        height: 50px;
-        padding: 25%;
-    }
-    .geel {
-      background: rgb(48, 165, 42);
-      justify-content: flex-start;
-      margin: 5px;
-      width: 50px;
-      height: 50px;
-      padding: 25%;
-    }
+    flex: 1 1 25%;
+    margin: 5px;
+    text-align: center;
+    font-size: xx-large; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
+.porttfolio-item::before {
+    content: "";
+    display: flex;
+    color: $font-color;   
 }
