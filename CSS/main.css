@@ -1,27 +1,8 @@
 /* Fonts */
 /* Image size */
-/* Mobile first*/
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@100;400;500&display=swap");
-header {
-  background-color: #121212;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
 /* Fonts */
 /* Image size */
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@100;400;500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -40,7 +21,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Arial', sans-serif";
+  font-family: "Shippori Antique', sans";
   font-weight: normal;
   color: #d5d5d5;
 }
@@ -60,8 +41,8 @@ p {
           justify-content: center;
   width: 100%;
   background: #42f5b9;
-  height: 50vh;
-  padding: 10px;
+  height: 60vh;
+  padding: 5px;
 }
 
 .tile {
@@ -143,7 +124,7 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
   color: #d5d5d5;
-  font-family: "Arial', sans-serif";
+  font-family: "Shippori Antique', sans";
 }
 
 /* portfolio grid */
@@ -158,7 +139,7 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  font-family: "Arial', sans-serif";
+  font-family: "Shippori Antique', sans";
 }
 
 /* Tijdelijke achtergrondkleur*/
@@ -201,7 +182,7 @@ p {
   margin: 5px;
   text-align: center;
   font-size: xx-large;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Shippori Antique', sans;
 }
 
 .porttfolio-item::before {
@@ -210,6 +191,124 @@ p {
   display: -ms-flexbox;
   display: flex;
   color: #d5d5d5;
+}
+
+/* Fonts */
+/* Image size */
+/* Mobile first*/
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  background-color: #689ff7;
+  color: #d5d5d5;
+  font-family: "Roboto', sans-serif";
+}
+
+/* nav */
+nav ul {
+  list-style: none;
+}
+
+nav {
+  height: 70px;
+  width: 100%;
+  background-color: #1a624a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  margin: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+img.logo {
+  margin-left: 25px;
+}
+
+.logo-txt {
+  font-size: 1.1rem;
+  padding: 10px;
+  font-weight: 400;
+  color: #d5d5d5;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nav-list {
+  width: 100%;
+  background: #c5fea9;
+  height: 100vh;
+  position: fixed;
+  top: 75px;
+  left: 0;
+  text-align: center;
+  font-family: "Shippori Antique', sans";
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.nav-list li {
+  opacity: 1;
+  line-height: 30px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.nav-list li a {
+  color: #1a624a;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-family: "Shippori Antique', sans";
+  text-decoration: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-list li a.active, .nav-list li a:hover {
+  color: #ffa94d;
+  cursor: pointer;
+}
+
+.hamburger-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 25px;
+  padding: 5px;
+  margin-right: 10px;
+  float: right;
+}
+
+#check :checked ~ .nav-list {
+  display: none;
 }
 
 /* Fonts */
@@ -226,5 +325,22 @@ p {
 .contact-button:hover {
   background-color: #28936f;
   cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .container-fluid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .tile-bg {
+    font-size: 1rem;
+  }
+  .img-bg {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 10%;
+            flex: 1 1 10%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

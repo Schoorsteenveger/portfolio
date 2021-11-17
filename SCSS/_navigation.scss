@@ -1,1 +1,96 @@
 @import "./colors";
+@import "./variables";
+
+/* Mobile first*/
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    background-color: $button-color;
+    color: $font-color;
+    font-family: $body-font;
+}
+
+/* nav */
+  
+nav ul {
+    list-style: none;
+}
+
+nav {
+    height: 70px;
+    width: 100%;
+    background-color:$section-donkergroen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    width: auto;
+    margin: 0;
+    align-items: center;
+}
+
+img.logo {
+    margin-left:25px;
+
+}
+
+.logo-txt {
+    font-size: 1.1rem;
+    padding: 10px;
+    font-weight: 400;
+    color: $font-color;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nav-list {
+    width: 100%;
+    background: rgb(197, 254, 169);
+    height: 100vh;
+    position:fixed;
+    top: 75px;
+    left:0;
+    text-align: center;
+    font-family: $font-header;
+    transition: all .5s;
+}
+
+.nav-list li {
+    opacity: 1;
+    line-height: 30px;
+    transition: all .5s;
+}
+
+.nav-list li a {
+    color:$section-donkergroen;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-family: $font-header;
+    text-decoration: none;
+    align-items: center;
+}
+
+.nav-list li a.active, .nav-list li a:hover {
+    color: rgb(255, 169, 77);
+    cursor: pointer;
+}
+
+.hamburger-btn {
+    display: flex;
+    font-size: 25px;
+    padding:5px;
+    margin-right: 10px;
+    float: right;
+}
+
+#check :checked ~ .nav-list {
+    display:none;
+}
