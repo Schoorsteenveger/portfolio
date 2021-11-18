@@ -1,8 +1,11 @@
 /* Fonts */
 /* Image size */
+/*fontsize*/
+/* Calculate values */
 /* Fonts */
 /* Image size */
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@100;400;500&display=swap");
+/*fontsize*/
+/* Calculate values */
 * {
   margin: 0;
   padding: 0;
@@ -16,20 +19,19 @@ html {
 }
 
 body {
-  font-family: "Roboto', sans-serif";
+  font-family: "Cormorant Garamond", serif;
   background: #121212;
   min-height: 100vh;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Shippori Antique', sans";
+h1, h2, h3, h4, h5, h6, li, a {
+  font-family: "Roboto", sans-serif;
   font-weight: normal;
-  color: #d5d5d5;
 }
 
 p {
-  font-family: "Roboto', sans-serif";
-  color: #d5d5d5;
+  font-family: "Cormorant Garamond", serif;
+  color: #bdbcbc;
 }
 
 /* about */
@@ -40,10 +42,8 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
   background: #42f5b9;
-  height: 60vh;
-  padding: 5px;
+  margin: 0 auto;
 }
 
 .tile {
@@ -56,14 +56,10 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 5px;
+  margin: 0;
   text-align: center;
   align-items: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 3 50%;
-          flex: 1 3 50%;
   font-size: 1.6rem;
-  margin: 0;
 }
 
 .tile p {
@@ -71,30 +67,28 @@ p {
 }
 
 .tile-bg {
-  background-color: whitesmoke;
+  background-color: white;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.tile::before {
-  content: "";
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .img-bg {
-  background-color: #0c1711;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.img-bg p {
-  line-height: 65px;
+  background-position: no-repeat;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
 }
 
 .section-about-mb {
@@ -104,28 +98,49 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.section-about-mb img {
-  width: 300px;
 }
 
 .section-about-mb .about-text {
   background-color: #a7a7a7;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #161b1d;
 }
 
 .section-about-mb {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #d5d5d5;
-  font-family: "Shippori Antique', sans";
+  color: #18181a;
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+  background-image: url(/IMG/janou_img.jpg);
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 40vh;
+  font-size: 1,5rem;
+  color: #18181a;
+  padding: 25px 25px 20px;
 }
 
 /* portfolio grid */
@@ -140,7 +155,9 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  font-family: "Shippori Antique', sans";
+  font-family: "Roboto", sans-serif;
+  font-size: 133.3%;
+  color: #42f5b9;
 }
 
 /* Tijdelijke achtergrondkleur*/
@@ -149,7 +166,7 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #4287f5;
+  background: #232b39;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -181,7 +198,7 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #29f986;
+  background-color: #effa71;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -202,11 +219,37 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #d5d5d5;
+  color: #bdbcbc;
+}
+
+/* Contact Mobile version*/
+.section-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-preferred-size: 1;
+      flex-basis: 1;
+  height: 200px;
+}
+
+.section-contact .contact-info {
+  text-align: center;
 }
 
 /* Fonts */
 /* Image size */
+/*fontsize*/
+/* Calculate values */
 /* Mobile first*/
 /* navigation */
 .header {
@@ -227,9 +270,9 @@ p {
   width: 100%;
   text-decoration: none;
   list-style: none;
-  background: #1a624a;
+  background: #232b39;
   padding: 0 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
 }
 
@@ -278,7 +321,7 @@ p {
 }
 
 .menu li a {
-  color: #d5d5d5;
+  color: #bdbcbc;
   text-decoration: none;
   display: block;
   padding: 40px 15px;
@@ -286,7 +329,7 @@ p {
 }
 
 .menu a.active {
-  background-color: #04AA6D;
+  background-color: #4287f5;
   color: white;
 }
 
@@ -299,7 +342,7 @@ p {
   position: relative;
   width: 30px;
   height: 4px;
-  background: #d5d5d5;
+  background: #bdbcbc;
   border-radius: 10px;
   cursor: pointer;
   z-index: 2;
@@ -313,7 +356,7 @@ p {
   position: absolute;
   height: 4px;
   right: 0;
-  background-color: #d5d5d5;
+  background-color: #bdbcbc;
   border-radius: 10px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -332,7 +375,7 @@ p {
 .toggle-menu {
   position: absolute;
   width: 30px;
-  height: 100%;
+  height: 80%;
   z-index: 3;
   cursor: pointer;
   opacity: 0;
@@ -364,19 +407,20 @@ p {
 .menu li a:hover {
   padding: 30px;
   font-size: 2.4rem;
-  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
-          box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+  color: #bdbcbc;
 }
 
 /* Fonts */
 /* Image size */
+/*fontsize*/
+/* Calculate values */
 .contact-button {
-  color: #d5d5d5;
+  color: #bdbcbc;
   background-color: #689ff7;
   width: 200px;
-  height: 50px;
-  font-size: x-large;
-  border-radius: solid black 5px;
+  height: 70px;
+  font-size: 2rem;
+  border: solid 2px black;
 }
 
 .contact-button:hover {
@@ -384,39 +428,31 @@ p {
   cursor: pointer;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 992px) {
   .container-fluid {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .tile-bg {
-    font-size: 1rem;
-  }
-  .img-bg {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 10%;
-            flex: 1 1 10%;
-  }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 992px) {
   .header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .tile {
+    height: 700px;
+    width: 700px;
   }
 }
 
@@ -442,10 +478,10 @@ p {
     position: fixed;
     top: 0;
     right: -100%;
-    background-color: #4287f5;
+    background-color: #42f5b9;
     width: 100%;
     height: 100%;
-    padding-top: 10vh;
+    padding-top: 20vh;
   }
 }
 
@@ -456,7 +492,56 @@ p {
     display: none;
   }
   .header {
-    color: turquoise;
+    color: #121212;
+  }
+  .section-contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .contact-info {
+    text-align: left;
+  }
+  .tile {
+    width: 100%;
+    height: 65vh;
+  }
+  .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    position: relative;
+    background-image: url(/IMG/janou_img.jpg);
+    -o-object-fit: cover;
+       object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 70vh;
+    font-size: 1,5rem;
+    color: #a7a7a7;
+    padding: 25px 25px 60px;
+  }
+  .about-text {
+    padding: 50px;
+  }
+  .about-text p {
+    font-size: 2rem;
+    color: #fdffd3;
   }
 }
 /*# sourceMappingURL=main.css.map */

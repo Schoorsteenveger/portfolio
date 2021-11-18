@@ -2,14 +2,13 @@
 
 .contact-button {
     color: $font-color;
-    background-color: $button-color;
+    background-color:$button-color;
     width: 200px;
-    height: 50px;
-    font-size: x-large;
-    border-radius: solid black 5px;
+    height: 70px;
+    font-size: 2rem;
+    border: solid 2px black;
     &:hover {
         background-color:$button-hover-color;
         cursor: pointer;
     }
 }
-

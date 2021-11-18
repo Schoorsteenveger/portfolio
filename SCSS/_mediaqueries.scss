@@ -1,26 +1,24 @@
 //Desktop
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 992px) {
     .container-fluid {
      flex-direction: column;
     }
-    .tile-bg {
-        font-size: 1rem;
-    }
-    .img-bg {
-        flex: 1 1 10%;
-    }
 }
 
-
-@media screen and (min-width:700px){
+@media screen and (min-width:992px){
     .header {
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
-        align-items: center;
-        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        flex-direction: row;
+
     }
+    .tile {
+        height:700px;
+        width:700px;
+    }
+
 }
+
 
 @media screen and (max-width:992px){
     .hamburger,
@@ -39,11 +37,12 @@
         position: fixed;
         top: 0;
         right: -100%;
-        background-color: $primary-color;
+        background-color: $secondary-color;
         width: 100%;
         height: 100%;
-        padding-top: 10vh;
+        padding-top: 20vh;
     }
+    
 } 
 
 /* Desktop media queries */
@@ -54,10 +53,42 @@
         display: none;
     }
     .header {
-        color: turquoise;
+        color: $background-color;
     }
+    .section-contact {
+        display: flex;
+        flex-direction: row;
+    }
+    .contact-info {
+        text-align: left;
+    }
+    .tile {
+        width:100%;
+        height: 65vh;
+    }
+    .wrapper {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        background-image: url(/IMG/janou_img.jpg);
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 70vh;
+        font-size: 1,5rem; 
+        color: $background-color-mid;
+        padding:25px 25px 60px; 
+    }
+    .about-text {
+        padding:50px;
+        p {
+            font-size: 2rem;
+            color: rgb(253, 255, 211);
+        }
+    }
+    
 }
-
-
-
 
