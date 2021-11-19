@@ -83,11 +83,15 @@ p {
     background-image: no-repeat;
     object-fit: contain;
     background-image: url(/IMG/janou-t-1.png);
+    padding-right: 20px;
 }
 
 .wrapper h2 {
-    font-size: 2em;
-    padding-bottom: 25px;
+    font-size: 1.5em;
+}
+
+.wrapper h3 {
+    font-size: 1.1em;
 }
 
 /* portfolio grid */
@@ -154,7 +158,7 @@ p {
     flex-basis: 1;
     height: 400px;
     .contact-info {
-    text-align: left;
+    text-align: center;
     font-size: 1.8em;
     }
     p {

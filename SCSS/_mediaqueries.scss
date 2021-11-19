@@ -86,14 +86,15 @@
         p {
             font-size: 1em;
             color: rgb(253, 255, 211);
-
         }  
     
 }
 
 @media screen and (min-width:1024){
-    .about-text{
-        padding: 50px 30px;
+    .section-about-mb .about-text {
+        display:flex;
+        justify-content: center;
+        padding: 50px 10px;
     }
     
 }
