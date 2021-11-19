@@ -15,7 +15,6 @@ html {
 body {
     font-family: $body-font;
     background: $background-color;
-    min-height: 100vh;
 }
  
 h1, h2, h3, h4, h5, h6,li,a {
@@ -26,6 +25,7 @@ h1, h2, h3, h4, h5, h6,li,a {
 p {
     font-family: $body-font;
     color: $font-color;
+    font-size: $font-size;
 }
 
 /* about */
@@ -43,10 +43,7 @@ p {
     margin: 0;
     text-align: center;
     align-items: center;
-    font-size: 1.6rem;
-    p {
-        padding: 6px 23px;
-    }
+    font-size: 1.4em;
 }
 
 .tile-bg {
@@ -70,10 +67,14 @@ p {
         background-color: $background-color-mid;
         align-items: center;
         color: #161b1d;
+        padding: 80px 10px;
     }
     & { justify-content: center;
         color: #18181a;
         font-family: $font-header;
+    }
+    p {
+        padding: 25px 20px;
     }
 }
 
@@ -90,7 +91,8 @@ p {
     width: 100%;
     height: 40vh;
     font-size: 1,5rem; 
-    color: #18181a;
+    font-weight:700;
+    color: $color-heading;
     padding:25px 25px 20px; 
 }
 
@@ -119,6 +121,8 @@ p {
     flex-direction: column;
     height: 10vh;
 }
+
+/* Portfolio*/
 
 .container-portfolio {
     display: flex;

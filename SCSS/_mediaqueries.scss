@@ -16,6 +16,9 @@
         height:700px;
         width:700px;
     }
+    .about-text {
+        font-size: 2em;
+    }
 
 }
 
@@ -47,7 +50,7 @@
 
 /* Desktop media queries */
 
-@media screen and (min-width:993px) {
+@media screen and (min-width:1024px) {
     .hamburger,
     .toggle-menu {
         display: none;
@@ -83,12 +86,18 @@
         padding:25px 25px 60px; 
     }
     .about-text {
-        padding:50px;
         p {
-            font-size: 2rem;
+            font-size: 1em;
             color: rgb(253, 255, 211);
         }
     }
     
 }
+
+@media screen and (min-width:768px) and (max-width:1024px){
+    .about-text {
+        font-size: 1.8em;
+    }
+}
+
 

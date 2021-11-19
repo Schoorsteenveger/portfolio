@@ -6,9 +6,9 @@
 
 .header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     position: relative;
     width: 100%;
     text-decoration: none;
@@ -16,15 +16,20 @@
     background: #232b39;
     padding: 0 20px;
     font-family:$font-header;
-    font-size: 0.5rem;
+    font-size: 1.2em;
 }
 
 .logo a {
     display: block;
 }
+
+.logo img {
+    width: 80px;
+    height:fit-content;
+}
+
 .logo a img {
     display: block;
-    width: 100%;
 }
  .navigation {
      display: flex;
@@ -125,6 +130,6 @@
 .menu li a,
 .menu li a:hover {
     padding: 30px;
-    font-size: 2.4rem;
+    font-size: 2em;
     color: $font-color;
 } 
