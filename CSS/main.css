@@ -571,5 +571,8 @@ p {
     font-size: 5em;
     color: white;
   }
+  .about-text p {
+    font-size: 1em;
+  }
 }
 /*# sourceMappingURL=main.css.map */
