@@ -51,15 +51,6 @@ p {
     flex-direction: column;
 }
 
-.img-bg { 
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    background-position:no-repeat;
-    object-fit: contain;
-    width: 100%;
-}    
-
 .section-about-mb {
     display: flex;
     justify-content: center;  
@@ -67,7 +58,7 @@ p {
         background-color: $background-color-mid;
         align-items: center;
         color: #161b1d;
-        padding: 80px 10px;
+        padding: 25px 10px;
     }
     & { justify-content: center;
         color: #18181a;
@@ -81,22 +72,24 @@ p {
 .wrapper {
     display: flex;
     justify-content: flex-end;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-    background-image: url(/IMG/janou_img.jpg);
-    object-fit: cover;
-    background-repeat: no-repeat;
-    background-size: cover;
+    flex-direction: column; 
+    align-items: flex-end;  
     width: 100%;
-    height: 40vh;
+    height: 60vh;
     font-size: 1,5rem; 
     font-weight:700;
     color: $color-heading;
-    padding:25px 25px 20px; 
+    background-position:center;
+    background-image: no-repeat;
+    object-fit: contain;
+    background-image: url(/IMG/janou-t-1.png);
 }
 
-    
+.wrapper h2 {
+    font-size: 2em;
+    padding-bottom: 25px;
+}
+
 /* portfolio grid */
 
 .section-portfolio {
@@ -159,8 +152,12 @@ p {
     flex-direction: column;
     justify-content: space-evenly;
     flex-basis: 1;
-    height: 200px;
+    height: 400px;
     .contact-info {
-        text-align: center;
+    text-align: left;
+    font-size: 1.8em;
+    }
+    p {
+        color: $color-heading;
     }
 }

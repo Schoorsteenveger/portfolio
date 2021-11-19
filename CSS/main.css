@@ -70,23 +70,6 @@ p {
           flex-direction: column;
 }
 
-.img-bg {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-position: no-repeat;
-  -o-object-fit: contain;
-     object-fit: contain;
-  width: 100%;
-}
-
 .section-about-mb {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -102,7 +85,7 @@ p {
       -ms-flex-align: center;
           align-items: center;
   color: #161b1d;
-  padding: 80px 10px;
+  padding: 25px 10px;
 }
 
 .section-about-mb {
@@ -128,21 +111,24 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  position: relative;
-  background-image: url(/IMG/janou_img.jpg);
-  -o-object-fit: cover;
-     object-fit: cover;
-  background-repeat: no-repeat;
-  background-size: cover;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   width: 100%;
-  height: 40vh;
+  height: 60vh;
   font-size: 1,5rem;
   font-weight: 700;
   color: #a7a7a7;
-  padding: 25px 25px 20px;
+  background-position: center;
+  background-image: no-repeat;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-image: url(/IMG/janou-t-1.png);
+}
+
+.wrapper h2 {
+  font-size: 2em;
+  padding-bottom: 25px;
 }
 
 /* portfolio grid */
@@ -242,11 +228,16 @@ p {
           justify-content: space-evenly;
   -ms-flex-preferred-size: 1;
       flex-basis: 1;
-  height: 200px;
+  height: 400px;
 }
 
 .section-contact .contact-info {
-  text-align: center;
+  text-align: left;
+  font-size: 1.8em;
+}
+
+.section-contact p {
+  color: #a7a7a7;
 }
 
 /* Fonts */
@@ -269,7 +260,8 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
   left: 0;
   z-index: 1;
@@ -277,13 +269,15 @@ p {
   text-decoration: none;
   list-style: none;
   background: #232b39;
-  padding: 0 20px;
+  padding: 20px;
   font-family: "Roboto", sans-serif;
   font-size: 1.2em;
+  color: blanchedalmond;
 }
 
 .logo a {
   display: block;
+  padding: 20px;
 }
 
 .logo img {
@@ -333,21 +327,31 @@ p {
 }
 
 .menu li a {
-  color: #505050;
+  color: #a7a7a7;
   text-decoration: none;
   display: block;
-  padding: 40px 15px;
-  font-size: 1.1rem;
 }
 
 .menu a.active {
   background-color: #4287f5;
   color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .menu a:hover:not(.active) {
   background-color: #b00345;
   color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.menu li a,
+.menu li a:hover {
+  color: #a7a7a7;
+  padding: 10px 50px;
+  font-size: 2em;
+  margin: 5px 0;
 }
 
 .hamburger {
@@ -399,8 +403,8 @@ p {
 
 .navigation input:checked ~ .hamburger::before {
   top: 0;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   width: 30px;
 }
 
@@ -415,13 +419,6 @@ p {
   width: 30px;
 }
 
-.menu li a,
-.menu li a:hover {
-  padding: 30px;
-  font-size: 2em;
-  color: #505050;
-}
-
 /* Fonts */
 /* Image size */
 /*fontsize*/
@@ -433,11 +430,14 @@ p {
   height: 70px;
   font-size: 2rem;
   border: solid 2px black;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .contact-button:hover {
   background-color: #28936f;
   cursor: pointer;
+  color: blanchedalmond;
 }
 
 @media screen and (max-width: 992px) {
@@ -493,7 +493,7 @@ p {
     position: fixed;
     top: 0;
     right: -100%;
-    background-color: #42f5b9;
+    background-color: #3f5983;
     width: 100%;
     height: 100%;
     padding-top: 20vh;
@@ -505,9 +505,6 @@ p {
   .hamburger,
   .toggle-menu {
     display: none;
-  }
-  .header {
-    color: #121212;
   }
   .section-contact {
     display: -webkit-box;
@@ -536,30 +533,31 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     position: relative;
-    background-image: url(/IMG/janou_img.jpg);
+    background-image: url(/IMG/janou-t-1.png);
     -o-object-fit: cover;
        object-fit: cover;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 70vh;
-    font-size: 1,5rem;
+    height: 65vh;
+    font-size: 1.5rem;
     color: #a7a7a7;
-    padding: 25px 25px 60px;
+    padding: 25px;
   }
-  .about-text p {
+  .about-text
+p {
     font-size: 1em;
     color: #fdffd3;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 1024) {
   .about-text {
-    font-size: 1.8em;
+    padding: 50px 30px;
   }
 }
 /*# sourceMappingURL=main.css.map */

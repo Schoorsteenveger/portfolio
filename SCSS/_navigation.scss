@@ -9,7 +9,7 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    position: fixed;
+    position: sticky;
     top:0;
     left:0;
     z-index: 1;
@@ -17,13 +17,15 @@
     text-decoration: none;
     list-style: none;
     background: #232b39;
-    padding: 0 20px;
+    padding: 20px;
     font-family:$font-header;
     font-size: 1.2em;
+    color: blanchedalmond;
 }
 
 .logo a {
     display: block;
+    padding: 20px;
 }
 
 .logo img {
@@ -54,22 +56,30 @@
 }
 
 .menu li a {
-    color: $font-color;
+    color: $color-heading;
     text-decoration: none;
     display: block;
-    padding: 40px 15px;
-    font-size: 1.1rem;
 }
 
 .menu a.active {
     background-color: $primary-color;
     color: white;
+    transition: 0.3s;
   }
   
 .menu a:hover:not(.active) {
     background-color: rgb(176, 3, 69);
     color: white;
+    transition: 0.3s;
 }
+
+.menu li a,
+.menu li a:hover {
+    color: $color-heading;
+    padding: 10px 50px;
+    font-size: 2em;
+    margin: 5px 0;
+ } 
 
 .hamburger {
     position: relative;
@@ -116,7 +126,7 @@
 }
 .navigation input:checked ~ .hamburger::before {
     top:0;
-    transform: rotate(-45deg);
+    transform: rotate(45deg);
     width:30px;
 }
 
@@ -130,9 +140,3 @@
     width:30px;
 }
 
-.menu li a,
-.menu li a:hover {
-    padding: 30px;
-    font-size: 2em;
-    color: $font-color;
-} 

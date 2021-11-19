@@ -7,8 +7,10 @@
     height: 70px;
     font-size: 2rem;
     border: solid 2px black;
+    transition: 0.3s;
     &:hover {
         background-color:$button-hover-color;
         cursor: pointer;
+        color: blanchedalmond;
     }
 }
