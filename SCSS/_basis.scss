@@ -72,26 +72,23 @@ p {
 .wrapper {
     display: flex;
     justify-content: flex-end;
+    align-content: flex-start;
     flex-direction: column; 
-    align-items: flex-end;  
+    align-items: flex-;  
     width: 100%;
     height: 60vh;
-    font-size: 1,5rem; 
+    font-size: 1rem; 
     font-weight:700;
     color: $color-heading;
     background-position:center;
     background-image: no-repeat;
     object-fit: contain;
     background-image: url(/IMG/janou-t-1.png);
-    padding-right: 20px;
+    padding: 20px;
 }
 
-.wrapper h2 {
-    font-size: 1.5em;
-}
-
-.wrapper h3 {
-    font-size: 1.1em;
+.wrapper h2, h3 {
+    font-size: 2em;
 }
 
 /* portfolio grid */
