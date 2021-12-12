@@ -16,45 +16,52 @@
 </head>
 
 <body>
-    <main class="main-homepage">
+    
         <header class="header">
 
             <div class="logo">
                 <a href="index.html">
                     <img src="/IMG/logo-hertz-hr.png" alt="logo-hertz">
-                </a>
+                </a> 
             </div>
-            <div class="navigation">
-                <input type="checkbox" class="toggle-menu">
-                <div class="hamburger"></div>
+            <nav class=" navbar navigation">
+                <!-- <input type="checkbox" class="toggle-menu"> -->
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
 
-                <ul class="menu">
-                    <li><a class="active" href="index.html">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <ul class="nav-menu">
+                    <li class="nav-item menu-item">
+                        <a class="nav-link menu-link" href="index.html">Home</a></li>
+                    <li class="nav-item menu-item">
+                        <a class="nav-link menu-item" class="menu-link" href="#about">About</a></li>
+                    <li class="nav-item menu-item">
+                        <a class="nav-link menu-item" class="menu-link" href="#work">Work</a></li>
+                    <li class="nav-item menu-item">
+                        <a class="nav-link menu-item" class="menu-link" href="#contact">Contact</a></li>
                 </ul>
-            </div>
+            </nav>
 
         </header>
-        <section class="section-about-mb" id="about">
 
-            <div class="container-fluid">
+
+        <main class="main-homepage">
+
+        <section class="section-about-mb">
+
+            <div class="container-fluid" id="about">
                 <div class="tile tile-bg about-text">
                     <h2>Frontend/Backend</h2>
-                    <p class="left-border-color"> "But I must explain to you how all this mistaken idea of denouncing
-                        pleasure and
-                        praising pain was born and I will give you a complete account of the system, and expound the
-                        actual
-                        teachings of the great explorer of the truth, the master-builder of human happiness. No one
-                        rejects,
-                        dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know
-                        how to
-                        pursue
-                        pleasure rationally encounter consequences that are extremely painful."</p>
-                    <h4>Oscar Wilde</h4>
+                    <p class="left-border-color"> Als zelfstandige ontwikkelde ik creatieve oplossingen voor een gevarieerd publiek met het bouwen van
+                    websites en video content creatie. Het is tijd voor een nieuwe technische uitdaging. Nu ik ontdek hoe
+                    leuk programmeren is, gooi ik het roer om en zou graag mijn ervaring delen binnen een team. Met
+                    Ruby on Rails en bouwde een e-commerce webapplicatie met het MVC principe. Ik sta open voor andere talen als Java en leer snel!</p>
+                    <h4>Janou</h4>
 
                 </div>
+
                 <div class="tile img-bg">
                     <div class="wrapper">
                         <h2>Janou Treffers</h2>
@@ -65,8 +72,8 @@
             </div>
 
         </section>
-        <section class="section-portfolio" id="work">
-            <div class='container-portfolio'>
+        <section class="section-portfolio">
+            <div class='container-portfolio'id="work">
                 <div class='portfolio-item'>
                     <h4>Titel</h4>
                 </div>
@@ -87,8 +94,8 @@
                 </div>
             </div>
         </section>
-        <section class="section-contact" id="contact">
-            <div class="contact-info">
+        <section class="section-contact">
+            <div class="contact-info" id="contact">
                 <h2>Like to know more?</h2>
                 <p>Send me a message</p>
             </div>
@@ -102,7 +109,7 @@
 
 
     </main>
-
+    <script src="/JS/main.js"></script>
 </body>
 
 </html>

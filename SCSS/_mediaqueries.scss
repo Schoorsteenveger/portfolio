@@ -1,7 +1,10 @@
-//Desktop
+// //Desktop
 @media screen and (max-width: 992px) {
     .container-fluid {
         flex-direction: column;
+    }
+     .nav-menu {
+    display: block;
     }
 }
 
@@ -10,7 +13,6 @@
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-
     }
     .tile {
         height:700px;
@@ -22,18 +24,26 @@
 
 }
 
-
+/* Vanaf tablet en kleiner */
 @media screen and (max-width:992px){
-    .hamburger,
-    .toggle-menu {
+    .hamburger {
         display: block;
+        z-index: 100;
+        position: relative;
     }
 
-    .header {
-        padding: 25px 20px;
-
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
     }
-    .menu {
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu {
         justify-content: start;
         flex-direction: column;
         align-items: center;
@@ -44,13 +54,43 @@
         width: 100%;
         height: 100%;
         padding-top: 20vh;
+        transition: 0.3s;
     }
+    .nav-item {
+        margin: 16px 0;
+    }
+    .nav-menu.active {
+        left:0;
+    }
+}
+    .header {
+        padding: 25px 25px;
+    }
+//     .hamburger.active {
+//         background: transparent;
+//     }
+//     .hambuger.active .hamburger::before {
+//         top:0;
+//         transform: rotate(45deg);
+//         width:30px;
+//     }
+
+//     .navigation.active {
+//         right:0;
+//     }
     
-} 
+//     .hamburger.active .hamburger::after {
+//         top:0;
+//         transform: rotate(-45deg);
+//         width:30px;
+//     }
+
+
+// } 
 
 /* Desktop media queries */
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width:786px) {
     .hamburger,
     .toggle-menu {
         display: none;
