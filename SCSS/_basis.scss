@@ -54,18 +54,21 @@ p {
 .section-about-mb {
     display: flex;
     justify-content: center;  
+    
     .about-text {
         background-color: $background-color-mid;
         align-items: center;
         color: #161b1d;
-        padding: 100px;
+        padding: 25px;
+        text-align: left;
     }
-    & { justify-content: center;
+
+    & { justify-content:center;
         color: #18181a;
         font-family: $font-header;
     }
     p {
-        padding: 25px 20px;
+        padding: 35px 20px;
     }
 }
 
@@ -116,6 +119,9 @@ p {
     height: 10vh;
 }
 
+.section-contact h2 {
+    color: $button-menu-color;
+}
 /* Portfolio*/
 
 .container-portfolio {

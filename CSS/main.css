@@ -85,7 +85,8 @@ p {
       -ms-flex-align: center;
           align-items: center;
   color: #161b1d;
-  padding: 100px;
+  padding: 25px;
+  text-align: left;
 }
 
 .section-about-mb {
@@ -97,7 +98,7 @@ p {
 }
 
 .section-about-mb p {
-  padding: 25px 20px;
+  padding: 35px 20px;
 }
 
 .wrapper {
@@ -120,7 +121,7 @@ p {
   height: 60vh;
   font-size: 1rem;
   font-weight: 700;
-  color: #a7a7a7;
+  color: #c1f2b4;
   background-position: center;
   background-image: no-repeat;
   -o-object-fit: contain;
@@ -168,6 +169,10 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 10vh;
+}
+
+.section-contact h2 {
+  color: #4a7391;
 }
 
 /* Portfolio*/
@@ -239,7 +244,7 @@ p {
 }
 
 .section-contact p {
-  color: #a7a7a7;
+  color: #c1f2b4;
 }
 
 /* Fonts */
@@ -331,7 +336,7 @@ li {
 }
 
 .nav-menu li a {
-  color: #a7a7a7;
+  color: #c1f2b4;
   text-decoration: none;
   display: block;
   -webkit-transition: 0.7s ease;
@@ -347,11 +352,11 @@ li {
 
 .nav-menu li a,
 .nav-menu li a:hover {
-  color: #a7a7a7;
-  padding: 10px 50px;
-  font-size: 2em;
+  color: #c1f2b4;
+  padding: 10px 45px;
+  font-size: 1.7em;
   margin: 5px 0;
-  background-color: blanchedalmond;
+  background-color: #4a7391;
 }
 
 .bar {

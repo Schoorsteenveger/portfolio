@@ -81,10 +81,10 @@ li {
 .nav-menu li a,
 .nav-menu li a:hover {
     color: $color-heading;
-    padding: 10px 50px;
-    font-size: 2em;
+    padding: 10px 45px;
+    font-size: 1.7em;
     margin: 5px 0;
-    background-color: blanchedalmond;
+    background-color:$button-menu-color;
  } 
 
 .bar {
