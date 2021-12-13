@@ -8,4 +8,5 @@ hamburger.addEventListener("click", () => {
 
 document.querySelectorAll(".menu-item").forEach(n => n.addEventListener("click", () => {
     hamburger.classList.remove("active");
+    navmenu.classList.remove("active");
 }))

@@ -431,6 +431,7 @@ li {
     display: block;
     z-index: 100;
     position: relative;
+    cursor: pointer;
   }
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
