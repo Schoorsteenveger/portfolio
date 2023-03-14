@@ -1,72 +1,98 @@
-// //Desktop
-@media screen and (max-width: 992px) {
-    .container-fluid {
-        flex-direction: column;
-    }
-     .nav-menu {
-    display: block;
-    }
+@import './variables';
+@import './colors';
+// //Mobile
+@media screen and (min-width: 992px) {
+	.header {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+		align-items: center;
+		padding: 0 2em;
+	}
+	.container-about {
+		flex-direction: row;
+	}
+	.nav-menu {
+		display: flex;
+	}
 }
 
-@media screen and (min-width:992px){
-    .header {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-    }
-    .tile {
-        height:700px;
-        width:700px;
-    }
-    .about-text {
-        font-size: 2em;
-    }
-
+@media screen and (min-width: 300px) {
+	.tile {
+		width: 100%;
+		height: auto;
+		justify-content: center;
+		align-items: center;
+		h3 {
+			font-weight: 400;
+			font-size: 2em;
+			color: $secondary-color;
+		}
+		h2 {
+			font-weight: 00;
+			font-size: 2.8em;
+			color: $primary-color;
+		}
+	}
+	.img-bg {
+		flex-direction: column;
+		background-image: url(/IMG/janou-t-1.png);
+		object-fit: cover;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+		height: 40vh;
+		color: $background-color-mid;
+		padding: 5px;
+	}
+	.section-contact {
+		display: flex;
+		flex-direction: column;
+	}
 }
 
 /* Vanaf tablet en kleiner */
-@media screen and (max-width:992px){
-    .hamburger {
-        display: block;
-        z-index: 100;
-        position: relative;
-        cursor: pointer;
-    }
-
-    .hamburger.active .bar:nth-child(2){
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }
-    .nav-menu {
-        justify-content: start;
-        flex-direction: column;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        background-color: $background-menu;
-        width: 100%;
-        height: 100%;
-        padding-top: 20vh;
-        transition: 0.3s;
-    }
-    .nav-item {
-        margin: 16px 0;
-    }
-    .nav-menu.active {
-        left:0;
-    }
+@media screen and (max-width: 992px) {
+	.hamburger {
+		display: block;
+		z-index: 100;
+		position: relative;
+		cursor: pointer;
+	}
+	.hamburger.active .bar:nth-child(2) {
+		opacity: 0;
+	}
+	.hamburger.active .bar:nth-child(1) {
+		transform: translateY(8px) rotate(45deg);
+		cursor: pointer;
+		&:hover {
+			color: $secondary-color;
+		}
+	}
+	.hamburger.active .bar:nth-child(3) {
+		transform: translateY(-8px) rotate(-45deg);
+	}
+	.nav-menu {
+		justify-content: start;
+		flex-direction: column;
+		align-items: center;
+		position: fixed;
+		top: 0;
+		right: -100%;
+		background-color: $background-menu;
+		width: 100%;
+		height: 100%;
+		padding-top: 20vh;
+		transition: 0.3s;
+	}
+	.nav-item {
+		margin: 16px 0;
+	}
+	.nav-menu.active {
+		left: 0;
+	}
 }
-    .header {
-        padding: 25px 25px;
-    }
+
 //     .hamburger.active {
 //         background: transparent;
 //     }
@@ -79,68 +105,45 @@
 //     .navigation.active {
 //         right:0;
 //     }
-    
+
 //     .hamburger.active .hamburger::after {
 //         top:0;
 //         transform: rotate(-45deg);
 //         width:30px;
 //     }
 
-
-// } 
+// }
 
 /* Desktop media queries */
 
-@media screen and (min-width:786px) {
-    .hamburger,
-    .toggle-menu {
-        display: none;
-    }
-    .section-contact {
-        display: flex;
-        flex-direction: row;
-    }
-    .contact-info {
-        text-align: left;
-    }
-    .tile {
-        width:100%;
-        height: 65vh;
-    }
-    .wrapper {
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-        align-items: flex-start;
-        align-content: flex-start;
-        background-image: url(/IMG/janou-t-1.png);
-        object-fit: cover;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-        height: 65vh; 
-        color: $background-color-mid;
-        padding:25px; 
-    }
-    .about-text p {
-            font-size: 0.8em;
-            color: rgb(253, 255, 211);
-        }  
-    
+@media screen and (min-width: 786px) {
+	.hamburger,
+	.toggle-menu {
+		display: none;
+	}
+	.tile {
+		width: 100%;
+		height: auto;
+		justify-content: center;
+		align-items: center;
+		h3 {
+			font-weight: 400;
+			font-size: 2em;
+			color: $secondary-color;
+		}
+		h2 {
+			font-weight: 700;
+			font-size: 2.8em;
+			color: $primary-color;
+		}
+	}
+	.img-bg {
+		background-image: url(/IMG/janou-t-1.png);
+		align-items: center;
+		width: 100%;
+		background-position: center;
+		object-fit: contain;
+		height: 65vh;
+		color: $background-color-mid;
+	}
 }
-
-// @media screen and (min-width:1340px){
-//     .wrapper {
-//         display:flex;
-//         justify-content: center;
-//         align-content: flex-start;
-//     }
-//     h2, h3 {
-//         font-size: 5em;
-//         color: rgb(255, 0, 0);
-//     }
-//     .about-text p {
-//         font-size: 1em;
-//     }
-    
-// }

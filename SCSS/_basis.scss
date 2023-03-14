@@ -1,170 +1,124 @@
-@import "./variables";
-@import "./colors";
+@import './variables';
+@import './colors';
 
-* { 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
-
 html {
-    height: 100%;
-    scroll-behavior: smooth;
+	height: 100%;
+	scroll-behavior: smooth;
 }
-
 body {
-    font-family: $body-font;
-    background: $background-color;
+	font-family: $body-font;
+	background: $background-color;
 }
- 
-h1, h2, h3, h4, h5, h6,li,a {
-    font-family: $font-header;
-    font-weight: normal;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+a {
+	font-family: $font-header;
+	font-weight: 800;
+}
+p {
+	font-family: $body-font;
+	color: $font-color;
 }
 
-p {
-    font-family: $body-font;
-    color: $font-color;
-    font-size: $font-size;
+a {
+	color: $button-color;
+	cursor: pointer;
+	text-decoration: none;
+	&:hover {
+		color: $button-hover-color;
+	}
+}
+
+img {
+	width: 100%;
 }
 
 /* about */
-.container-fluid {
-    display: flex;
-    justify-content: center;
-    background: $secondary-color;
-    margin: 0 auto;
+.container-about {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	background: $secondary-color;
+	width: 100%;
+	padding: 0;
+	border: 2px solid pink;
 }
-
 .tile {
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-    margin: 0;
-    text-align: center;
-    align-items: center;
-    font-size: 1.4em;
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column;
+	align-content: center;
+	text-align: center;
+	background-color: $background-color-mid;
+	h2 {
+		font-size: 2em;
+	}
+	p {
+		color: $font-color;
+		font-size: 1.5em;
+	}
+	h4 {
+		font-size: 3em;
+	}
 }
-
-.tile-bg {
-    background-color: rgb(255, 255, 255);
-    flex-direction: column;
+.container-about {
+	display: flex;
+	justify-content: center;
+	padding: 2em 1em;
+	.about-text {
+		background-color: $background-color-mid;
+		align-items: center;
+		color: #161b1d;
+		padding: 1em;
+		text-align: left;
+	}
+	p {
+		padding: 2em 1.5em;
+	}
 }
-
-.section-about-mb {
-    display: flex;
-    justify-content: center;  
-    
-    .about-text {
-        background-color: $background-color-mid;
-        align-items: center;
-        color: #161b1d;
-        padding: 25px;
-        text-align: left;
-    }
-
-    & { justify-content:center;
-        color: #18181a;
-        font-family: $font-header;
-    }
-    p {
-        padding: 35px 20px;
-    }
-}
-
-.wrapper {
-    display: flex;
-    justify-content: flex-end;
-    align-content: flex-start;
-    flex-direction: column; 
-    align-items: flex-;  
-    width: 100%;
-    height: 60vh;
-    font-size: 1rem; 
-    font-weight:700;
-    color: $color-heading;
-    background-position:center;
-    background-image: no-repeat;
-    object-fit: contain;
-    background-image: url(/IMG/janou-t-1.png);
-    padding: 20px;
-}
-
-.wrapper h2, h3 {
-    font-size: 2em;
-}
-
-/* portfolio grid */
-
-.section-portfolio {
-    display: flex;
-    width: 100%;
-    height: 600px;
-    padding: 10px;
-    justify-content: center;
-    text-align: center;
-    font-family: $font-header;
-    font-size: $h4;
-    color: $secondary-color;
-} 
-/* Tijdelijke achtergrondkleur*/
 
 /* Contact*/
 .section-contact {
-    display: flex;
-    background: #232b39;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 10vh;
+	display: flex;
+	background: #232b39;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100%;
+	h2 {
+		color: $button-menu-color;
+		font-size: 5em;
+	}
 }
 
-.section-contact h2 {
-    color: $button-menu-color;
-}
 /* Portfolio*/
-
-.container-portfolio {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    background-color: rgb(38, 38, 38);
-    padding: 0.5rem;
-    width: 100%;
-}
-
-.portfolio-item {
-    display: flex;
-    background-color: rgb(239, 250, 113);
-    justify-content: center;
-    align-items: center;
-    flex: 1 1 25%;
-    margin: 5px;
-    text-align: center;
-    font-size: xx-large; 
-    font-family: 'Shippori Antique', sans;
-}
-
-.porttfolio-item::before {
-    content: "";
-    display: flex;
-    color: $font-color;   
-}
 
 /* Contact Mobile version*/
 
 .section-contact {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    justify-content: space-evenly;
-    flex-basis: 1;
-    height: 400px;
-    .contact-info {
-    text-align: center;
-    font-size: 1.8em;
-    }
-    p {
-        color: $color-heading;
-    }
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	justify-content: space-evenly;
+	width: 100%;
+	height: fit-content;
+	.contact-info {
+		text-align: center;
+		font-size: 1;
+	}
+	p {
+		font-size: 2em;
+		color: $color-heading;
+		padding-bottom: 1em;
+	}
 }

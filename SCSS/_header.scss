@@ -1,3 +1,10 @@
-@import "./colors";
-@import "./variables";
+@import './colors';
+@import './variables';
 
+.header {
+	display: flex;
+	max-height: 30%;
+	justify-content: space-between;
+	padding: 0 1em;
+	background: $background-menu;
+}
