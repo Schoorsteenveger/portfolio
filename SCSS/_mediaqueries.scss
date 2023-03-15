@@ -1,20 +1,19 @@
 @import './variables';
 @import './colors';
-// //Mobile
+// //Desktop
 @media screen and (min-width: 992px) {
 	.header {
-		display: flex;
 		justify-content: space-between;
-		flex-direction: row;
 		align-items: center;
 		padding: 0 2em;
 	}
 	.container-about {
 		flex-direction: row;
 	}
-	.nav-menu {
-		display: flex;
-	}
+	// .nav-menu {
+	// 	display: flex;
+	// 	border: 2px solid pink;
+	// }
 }
 
 @media screen and (min-width: 300px) {
@@ -45,10 +44,6 @@
 		color: $background-color-mid;
 		padding: 5px;
 	}
-	.section-contact {
-		display: flex;
-		flex-direction: column;
-	}
 }
 
 /* Vanaf tablet en kleiner */
@@ -57,7 +52,6 @@
 		display: block;
 		z-index: 100;
 		position: relative;
-		cursor: pointer;
 	}
 	.hamburger.active .bar:nth-child(2) {
 		opacity: 0;
@@ -83,7 +77,7 @@
 		width: 100%;
 		height: 100%;
 		padding-top: 20vh;
-		transition: 0.3s;
+		cursor: pointer;
 	}
 	.nav-item {
 		margin: 16px 0;
@@ -113,6 +107,15 @@
 //     }
 
 // }
+
+@media screen and (max-width: 400px) {
+	.container-portfolio {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		min-height: 400px;
+	}
+}
 
 /* Desktop media queries */
 

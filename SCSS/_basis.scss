@@ -101,24 +101,4 @@ img {
 	}
 }
 
-/* Portfolio*/
 
-/* Contact Mobile version*/
-
-.section-contact {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	justify-content: space-evenly;
-	width: 100%;
-	height: fit-content;
-	.contact-info {
-		text-align: center;
-		font-size: 1;
-	}
-	p {
-		font-size: 2em;
-		color: $color-heading;
-		padding-bottom: 1em;
-	}
-}

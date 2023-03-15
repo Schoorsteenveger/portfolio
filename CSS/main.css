@@ -11,7 +11,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 1em;
-  background: #3f5983;
+  background: deeppink;
 }
 
 /* Fonts */
@@ -162,39 +162,6 @@ img {
   font-size: 5em;
 }
 
-/* Portfolio*/
-/* Contact Mobile version*/
-.section-contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
-.section-contact .contact-info {
-  text-align: center;
-  font-size: 1;
-}
-
-.section-contact p {
-  font-size: 2em;
-  color: #c1f2b4;
-  padding-bottom: 1em;
-}
-
 /* Fonts */
 /* Image size */
 /*fontsize*/
@@ -246,15 +213,22 @@ img {
           align-items: center;
   gap: 40px;
   z-index: 1;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
 }
 
-li {
+.nav-menu li {
   list-style-type: none;
+  padding: 1em 2em;
+  background-color: #4a7391;
 }
 
-.nav-menu li a {
+.nav-menu li:hover {
+  background-color: #4287f5;
+}
+
+.nav-menu a {
   color: #c1f2b4;
   text-decoration: none;
   display: block;
@@ -262,20 +236,15 @@ li {
   transition: 0.7s ease;
 }
 
-.nav-menu a:hover:not(.active) {
-  background-color: #b00345;
-  color: white;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+.nav-menu a:hover {
+  color: #28932a;
 }
 
-.nav-menu li a,
-.nav-menu li a:hover {
-  color: #c1f2b4;
-  padding: 25px;
-  font-size: 1em;
-  margin: 5px 0;
-  background-color: #4a7391;
+.nav-menu a:active {
+  color: #8af6d2;
+  background-color: #4287f5;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .bar {
@@ -337,15 +306,16 @@ li {
       flex-wrap: wrap;
   background-color: #262626;
   width: 100%;
+  height: auto;
   font-size: xx-large;
   font-family: 'Shippori Antique', sans;
   gap: 10px;
 }
 
 .portfolio-item {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -353,16 +323,15 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 40vh;
-  width: 40vw;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  width: 100%;
+  height: 400px;
   background-color: #effa71;
-  background-image: url(/IMG/janou-t-1.png);
+  background-image: url(/IMG/mansion.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer;
@@ -374,17 +343,39 @@ li {
   transition: ease-in-out;
 }
 
-.portfolio-item::before {
-  content: '';
+/* Fonts */
+/* Image size */
+/*fontsize*/
+/* Calculate values */
+/* Contact Mobile version*/
+.section-contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #505050;
-  cursor: pointer;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+  height: auto;
+  padding: 2em 0;
 }
 
-.portfolio-item::before:hover {
-  color: black;
+.section-contact .contact-info {
+  text-align: center;
+  font-size: 1;
+}
+
+.section-contact p {
+  font-size: 2em;
+  color: #c1f2b4;
+  padding-bottom: 1em;
 }
 
 /* Fonts */
@@ -393,16 +384,9 @@ li {
 /* Calculate values */
 @media screen and (min-width: 992px) {
   .header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -413,11 +397,6 @@ li {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-  }
-  .nav-menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
 }
 
@@ -457,15 +436,6 @@ li {
     color: #a7a7a7;
     padding: 5px;
   }
-  .section-contact {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
 }
 
 /* Vanaf tablet en kleiner */
@@ -474,7 +444,6 @@ li {
     display: block;
     z-index: 100;
     position: relative;
-    cursor: pointer;
   }
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
@@ -509,14 +478,27 @@ li {
     width: 100%;
     height: 100%;
     padding-top: 20vh;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
+    cursor: pointer;
   }
   .nav-item {
     margin: 16px 0;
   }
   .nav-menu.active {
     left: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container-portfolio {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    min-height: 400px;
   }
 }
 

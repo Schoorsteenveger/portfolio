@@ -32,40 +32,46 @@
 	align-items: center;
 	gap: 40px;
 	z-index: 1;
-	transition: 0.5s;
+	transition: 0.2s;
+	cursor: pointer;
+	li {
+		list-style-type: none;
+		padding: 1em 2em;
+		background-color: $button-menu-color;
+		&:hover {
+			background-color: $primary-color;
+		}
+	}
+	a {
+		color: $color-heading;
+		text-decoration: none;
+		display: block;
+		transition: 0.7s ease;
+		&:hover {
+			color: $menu-link-hover;
+		}
+		&:active {
+			color: $menu-link-active;
+			background-color: $primary-color;
+			transition: 0.3s;
+		}
+	}
 }
 
-li {
-	list-style-type: none;
-}
+// .nav-menu a:hover:not(.active) {
+// 	background-color: rgb(176, 3, 69);
+// 	color: white;
+// 	transition: 0.3s;
+// }
 
-.nav-menu li a {
-	color: $color-heading;
-	text-decoration: none;
-	display: block;
-	transition: 0.7s ease;
-}
-
-// .nav-menu a.active {
-//     background-color: $primary-color;
-//     color: white;
-//     transition: 0.3s;
-//   }
-
-.nav-menu a:hover:not(.active) {
-	background-color: rgb(176, 3, 69);
-	color: white;
-	transition: 0.3s;
-}
-
-.nav-menu li a,
-.nav-menu li a:hover {
-	color: $color-heading;
-	padding: 25px;
-	font-size: 1em;
-	margin: 5px 0;
-	background-color: $button-menu-color;
-}
+// .nav-menu li a,
+// .nav-menu li a:hover {
+// 	color: $color-heading;
+// 	padding: 25px;
+// 	font-size: 1em;
+// 	margin: 5px 0;
+// 	background-color: $button-menu-color;
+// }
 
 .bar {
 	display: block;
