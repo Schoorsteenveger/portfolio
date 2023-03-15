@@ -11,7 +11,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 1em;
-  background: deeppink;
+  background: #42f5b9;
 }
 
 /* Fonts */
@@ -78,10 +78,20 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #42f5b9;
-  width: 100%;
-  padding: 0;
-  border: 2px solid pink;
+}
+
+.container-about .about-text {
+  background-color: #a7a7a7;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #161b1d;
+  padding: 1em 2em;
+  text-align: left;
+}
+
+.container-about p {
+  padding: 2em 1.5em;
 }
 
 .tile {
@@ -98,6 +108,7 @@ img {
   -ms-flex-line-pack: center;
       align-content: center;
   text-align: center;
+  padding: 1em 1.5rem;
   background-color: #a7a7a7;
 }
 
@@ -112,30 +123,6 @@ img {
 
 .tile h4 {
   font-size: 3em;
-}
-
-.container-about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 2em 1em;
-}
-
-.container-about .about-text {
-  background-color: #a7a7a7;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #161b1d;
-  padding: 1em;
-  text-align: left;
-}
-
-.container-about p {
-  padding: 2em 1.5em;
 }
 
 /* Contact*/
@@ -343,6 +330,19 @@ img {
   transition: ease-in-out;
 }
 
+.portfolio-item::before {
+  content: '';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #505050;
+  cursor: pointer;
+}
+
+.portfolio-item::before:hover {
+  color: black;
+}
+
 /* Fonts */
 /* Image size */
 /*fontsize*/
@@ -411,15 +411,16 @@ img {
         -ms-flex-align: center;
             align-items: center;
   }
-  .tile h3 {
-    font-weight: 400;
-    font-size: 2em;
-    color: #42f5b9;
-  }
   .tile h2 {
     font-weight: 00;
     font-size: 2.8em;
     color: #4287f5;
+  }
+  .tile h3 {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 2em;
+    color: #42f5b9;
   }
   .img-bg {
     -webkit-box-orient: vertical;

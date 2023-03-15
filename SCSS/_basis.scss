@@ -48,17 +48,25 @@ img {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	background: $secondary-color;
-	width: 100%;
-	padding: 0;
-	border: 2px solid pink;
+	.about-text {
+		background-color: $background-color-mid;
+		align-items: center;
+		color: #161b1d;
+		padding: 1em 2em;
+		text-align: left;
+	}
+	p {
+		padding: 2em 1.5em;
+	}
 }
+
 .tile {
 	display: flex;
 	justify-content: flex-end;
 	flex-direction: column;
 	align-content: center;
 	text-align: center;
+	padding: 1em 1.5rem;
 	background-color: $background-color-mid;
 	h2 {
 		font-size: 2em;
@@ -69,21 +77,6 @@ img {
 	}
 	h4 {
 		font-size: 3em;
-	}
-}
-.container-about {
-	display: flex;
-	justify-content: center;
-	padding: 2em 1em;
-	.about-text {
-		background-color: $background-color-mid;
-		align-items: center;
-		color: #161b1d;
-		padding: 1em;
-		text-align: left;
-	}
-	p {
-		padding: 2em 1.5em;
 	}
 }
 

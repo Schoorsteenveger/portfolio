@@ -44,11 +44,11 @@
 }
 
 .portfolio-item::before {
-	// content: '';
-	// display: flex;
-	// color: $font-color;
-	// cursor: pointer;
-	// &:hover {
-	// 	color: black;
-	// }
+	content: '';
+	display: flex;
+	color: $font-color;
+	cursor: pointer;
+	&:hover {
+		color: black;
+	}
 }
