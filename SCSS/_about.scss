@@ -1,0 +1,56 @@
+@import './variables';
+@import './colors';
+
+/* about */
+.section-about-mb {
+	justify-content: center
+}
+.container-about {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+	max-width: 95rem;
+	.about-text {
+		background-color: $background-color-mid;
+		align-items: center;
+		color: #161b1d;
+		padding: 1em 2em;
+		text-align: left;
+	}
+	p {
+		padding: 2em 1.5em;
+	}
+	h2 {
+		font-size: 3em;
+		font-weight: 700;
+	}
+	h3 {
+		font-size: 2em;
+		font-weight: 400;
+	}
+	.img-bg {
+		background-image: url(/IMG/janou-t-1.png);
+		align-items: center;
+		width: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		object-fit: contain;
+		height: 50pc;
+		color: $background-color-mid;
+	}
+}
+
+.tile {
+	flex: 50%;
+	align-content: center;
+	text-align: center;
+	padding: 1em 1.5rem;
+	background-color: $background-color-mid;
+	color: $primary-color;
+	p {
+		color: $font-color;
+		font-size: 1.5em;
+	}
+}

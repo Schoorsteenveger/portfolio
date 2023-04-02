@@ -2,22 +2,27 @@
 /* Image size */
 /*fontsize*/
 /* Calculate values */
+/* Gap Grid Portfolio */
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: normal;
+      -ms-flex-pack: normal;
+          justify-content: normal;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-height: 30%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 0 1em;
-  background: #42f5b9;
+  padding: 0 50px;
+  background: #3f5983;
 }
 
 /* Fonts */
 /* Image size */
 /*fontsize*/
 /* Calculate values */
+/* Gap Grid Portfolio */
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +37,7 @@ html {
 
 body {
   font-family: "Cormorant Garamond", serif;
-  background: #121212;
+  background: #3f5983;
 }
 
 h1,
@@ -59,14 +64,37 @@ a {
 }
 
 a:hover {
-  color: #28936f;
+  color: #2e9e79;
 }
 
+main {
+  display: -ms-grid;
+  display: grid;
+}
+
+div,
 img {
   width: 100%;
 }
 
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* Fonts */
+/* Image size */
+/*fontsize*/
+/* Calculate values */
+/* Gap Grid Portfolio */
 /* about */
+.section-about-mb {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .container-about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -74,10 +102,10 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  max-width: 95rem;
 }
 
 .container-about .about-text {
@@ -94,26 +122,41 @@ img {
   padding: 2em 1.5em;
 }
 
+.container-about h2 {
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.container-about h3 {
+  font-size: 2em;
+  font-weight: 400;
+}
+
+.container-about .img-bg {
+  background-image: url(/IMG/janou-t-1.png);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 50pc;
+  color: #a7a7a7;
+}
+
 .tile {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
   -ms-flex-line-pack: center;
       align-content: center;
   text-align: center;
   padding: 1em 1.5rem;
   background-color: #a7a7a7;
-}
-
-.tile h2 {
-  font-size: 2em;
+  color: #4287f5;
 }
 
 .tile p {
@@ -121,54 +164,29 @@ img {
   font-size: 1.5em;
 }
 
-.tile h4 {
-  font-size: 3em;
-}
-
-/* Contact*/
-.section-contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: #232b39;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100%;
-}
-
-.section-contact h2 {
-  color: #4a7391;
-  font-size: 5em;
-}
-
 /* Fonts */
 /* Image size */
 /*fontsize*/
 /* Calculate values */
+/* Gap Grid Portfolio */
 /* Mobile first*/
 /* navigation */
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .logo a {
-  display: block;
-  padding: 20px;
+  padding: 2em;
 }
 
 .logo img {
-  width: 80px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
-.logo a img {
-  display: block;
+  width: 3.5em;
+  height: auto;
 }
 
 .navbar {
@@ -224,7 +242,7 @@ img {
 }
 
 .nav-menu a:hover {
-  color: #28932a;
+  color: #9ff4d8;
 }
 
 .nav-menu a:active {
@@ -249,6 +267,7 @@ img {
 /* Image size */
 /*fontsize*/
 /* Calculate values */
+/* Gap Grid Portfolio */
 .contact-button {
   color: #505050;
   background-color: #689ff7;
@@ -261,7 +280,7 @@ img {
 }
 
 .contact-button:hover {
-  background-color: #28936f;
+  background-color: #2e9e79;
   cursor: pointer;
   color: blanchedalmond;
 }
@@ -270,83 +289,92 @@ img {
 /* Image size */
 /*fontsize*/
 /* Calculate values */
+/* Gap Grid Portfolio */
 /* portfolio grid */
 .section-portfolio {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   width: 100%;
-  height: auto;
-  padding: 10px;
-  font-family: "Roboto", sans-serif;
-  color: #42f5b9;
 }
 
 .container-portfolio {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  background-color: #262626;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  padding: 1rem;
+  gap: 2rem 1rem;
   width: 100%;
-  height: auto;
-  font-size: xx-large;
+  max-width: 95rem;
+  margin: 0 auto;
   font-family: 'Shippori Antique', sans;
-  gap: 10px;
+  background-color: #42f5b9;
 }
 
 .portfolio-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  position: relative;
   width: 100%;
-  height: 400px;
-  background-color: #effa71;
-  background-image: url(/IMG/mansion.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: auto;
   cursor: pointer;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: #c1f2b4;
 }
 
 .portfolio-item a:hover {
-  color: #28936f;
-  -webkit-transition: ease-in-out;
-  transition: ease-in-out;
+  color: #2e9e79;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
 }
 
-.portfolio-item::before {
-  content: '';
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: #505050;
-  cursor: pointer;
+.portfolio-item h4,
+.portfolio-item h5 {
+  font-size: 2rem;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 25%;
+  left: 0;
+  bottom: 0;
+  z-index: 15;
+  text-align: center;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
 }
 
-.portfolio-item::before:hover {
-  color: black;
+.portfolio-item h5 {
+  padding: 1.5em;
+}
+
+.portfolio-item img {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  width: 100%;
+  min-height: 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.portfolio-item img:hover {
+  filter: none;
+  -webkit-filter: grayscale(0%);
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.portfolio-item .link-spanner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 /* Fonts */
 /* Image size */
 /*fontsize*/
 /* Calculate values */
+/* Gap Grid Portfolio */
 /* Contact Mobile version*/
 .section-contact {
   display: -webkit-box;
@@ -362,8 +390,9 @@ img {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  background: #232b39;
   width: 100%;
-  height: auto;
+  min-height: 50vh;
   padding: 2em 0;
 }
 
@@ -378,11 +407,17 @@ img {
   padding-bottom: 1em;
 }
 
+.section-contact h2 {
+  color: #4a7391;
+  font-size: 5em;
+}
+
 /* Fonts */
 /* Image size */
 /*fontsize*/
 /* Calculate values */
-@media screen and (min-width: 992px) {
+/* Gap Grid Portfolio */
+@media screen and (min-width: 992px) and (max-width: 400px) {
   .header {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -390,18 +425,24 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 0 2em;
+    padding: 0 50px;
   }
   .container-about {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
   }
 }
 
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 600px) {
   .tile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
     height: auto;
     -webkit-box-pack: center;
@@ -412,30 +453,14 @@ img {
             align-items: center;
   }
   .tile h2 {
-    font-weight: 00;
-    font-size: 2.8em;
-    color: #4287f5;
+    font-weight: 700;
+    color: aliceblue;
   }
   .tile h3 {
     font-weight: 400;
     font-style: italic;
     font-size: 2em;
     color: #42f5b9;
-  }
-  .img-bg {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    background-image: url(/IMG/janou-t-1.png);
-    -o-object-fit: cover;
-       object-fit: cover;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 40vh;
-    color: #a7a7a7;
-    padding: 5px;
   }
 }
 
@@ -487,19 +512,20 @@ img {
   .nav-menu.active {
     left: 0;
   }
+  .container-portfolio {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (2fr)[2];
+        grid-template-columns: repeat(2, 2fr);
+  }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .container-portfolio {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 100%;
-    min-height: 400px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
   }
 }
 
@@ -508,38 +534,6 @@ img {
   .hamburger,
   .toggle-menu {
     display: none;
-  }
-  .tile {
-    width: 100%;
-    height: auto;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .tile h3 {
-    font-weight: 400;
-    font-size: 2em;
-    color: #42f5b9;
-  }
-  .tile h2 {
-    font-weight: 700;
-    font-size: 2.8em;
-    color: #4287f5;
-  }
-  .img-bg {
-    background-image: url(/IMG/janou-t-1.png);
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100%;
-    background-position: center;
-    -o-object-fit: contain;
-       object-fit: contain;
-    height: 65vh;
-    color: #a7a7a7;
   }
 }
 /*# sourceMappingURL=main.css.map */

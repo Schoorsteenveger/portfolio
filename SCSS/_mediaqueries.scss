@@ -1,27 +1,29 @@
 @import './variables';
 @import './colors';
 // //Desktop
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px)  and (max-width: 400px){
 	.header {
 		justify-content: space-between;
 		align-items: center;
-		padding: 0 2em;
+		padding: 0 50px;
 	}
 	.container-about {
-		flex-direction: row;
+		flex: 50%;
 	}
 }
 
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 600px) {
 	.tile {
+		display: flex;
+		flex-direction: column;
 		width: 100%;
 		height: auto;
 		justify-content: center;
 		align-items: center;
 		h2 {
-			font-weight: 00;
-			font-size: 2.8em;
-			color: $primary-color;
+			font-weight: 700;
+			color: aliceblue;
+
 		}
 		h3 {
 			font-weight: 400;
@@ -29,17 +31,6 @@
 			font-size: 2em;
 			color: $secondary-color;
 		}
-	}
-	.img-bg {
-		flex-direction: column;
-		background-image: url(/IMG/janou-t-1.png);
-		object-fit: cover;
-		background-repeat: no-repeat;
-		background-size: cover;
-		width: 100%;
-		height: 40vh;
-		color: $background-color-mid;
-		padding: 5px;
 	}
 }
 
@@ -82,47 +73,23 @@
 	.nav-menu.active {
 		left: 0;
 	}
-}
-
-@media screen and (max-width: 400px) {
 	.container-portfolio {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		min-height: 400px;
+		display: grid;
+		grid-template-columns: repeat(2, 2fr);
 	}
 }
 
+@media screen and (max-width: 600px) {
+	.container-portfolio {
+		display: grid;
+		grid-template-columns: auto;
+	}
+}
 /* Desktop media queries */
 
 @media screen and (min-width: 786px) {
 	.hamburger,
 	.toggle-menu {
 		display: none;
-	}
-	.tile {
-		width: 100%;
-		height: auto;
-		justify-content: center;
-		align-items: center;
-		h3 {
-			font-weight: 400;
-			font-size: 2em;
-			color: $secondary-color;
-		}
-		h2 {
-			font-weight: 700;
-			font-size: 2.8em;
-			color: $primary-color;
-		}
-	}
-	.img-bg {
-		background-image: url(/IMG/janou-t-1.png);
-		align-items: center;
-		width: 100%;
-		background-position: center;
-		object-fit: contain;
-		height: 65vh;
-		color: $background-color-mid;
 	}
 }

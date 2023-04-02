@@ -12,7 +12,7 @@ html {
 }
 body {
 	font-family: $body-font;
-	background: $background-color;
+	background: $background-menu;
 }
 h1,
 h2,
@@ -39,59 +39,14 @@ a {
 	}
 }
 
+main {
+	display: grid;
+}
+
+div,
 img {
-	width: 100%;
+	width: $image-size;
 }
-
-/* about */
-.container-about {
+section {
 	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	.about-text {
-		background-color: $background-color-mid;
-		align-items: center;
-		color: #161b1d;
-		padding: 1em 2em;
-		text-align: left;
-	}
-	p {
-		padding: 2em 1.5em;
-	}
 }
-
-.tile {
-	display: flex;
-	justify-content: flex-end;
-	flex-direction: column;
-	align-content: center;
-	text-align: center;
-	padding: 1em 1.5rem;
-	background-color: $background-color-mid;
-	h2 {
-		font-size: 2em;
-	}
-	p {
-		color: $font-color;
-		font-size: 1.5em;
-	}
-	h4 {
-		font-size: 3em;
-	}
-}
-
-/* Contact*/
-.section-contact {
-	display: flex;
-	background: #232b39;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	height: 100%;
-	h2 {
-		color: $button-menu-color;
-		font-size: 5em;
-	}
-}
-
-

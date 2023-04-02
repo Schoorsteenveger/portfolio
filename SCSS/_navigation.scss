@@ -4,18 +4,16 @@
 /* Mobile first*/
 /* navigation */
 
-.logo a {
-	display: block;
-	padding: 20px;
-}
-
-.logo img {
-	width: 80px;
-	height: fit-content;
-}
-
-.logo a img {
-	display: block;
+.logo {
+	display: flex;
+	align-items: center;
+	a {
+		padding: 2em;
+	}
+	img {
+		width: 3.5em;
+		height: auto;
+	}
 }
 
 .navbar {

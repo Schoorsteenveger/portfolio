@@ -8,8 +8,9 @@
 	justify-content: center;
 	flex-direction: column;
 	justify-content: space-evenly;
+	background: #232b39;
 	width: 100%;
-	height: auto;
+	min-height: 50vh;
 	padding: 2em 0;
 	.contact-info {
 		text-align: center;
@@ -19,5 +20,9 @@
 		font-size: 2em;
 		color: $color-heading;
 		padding-bottom: 1em;
+	}
+	h2 {
+		color: $button-menu-color;
+		font-size: 5em;
 	}
 }
