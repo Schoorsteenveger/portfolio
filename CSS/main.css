@@ -109,7 +109,7 @@ section {
 }
 
 .container-about .about-text {
-  background-color: #a7a7a7;
+  background-color: #a7a7a75b;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -144,7 +144,7 @@ section {
   -o-object-fit: contain;
      object-fit: contain;
   height: 50pc;
-  color: #a7a7a7;
+  color: #a7a7a75b;
 }
 
 .tile {
@@ -155,7 +155,7 @@ section {
       align-content: center;
   text-align: center;
   padding: 1em 1.5rem;
-  background-color: #a7a7a7;
+  background-color: #a7a7a75b;
   color: #4287f5;
 }
 
@@ -298,10 +298,10 @@ section {
 .container-portfolio {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  padding: 1rem;
-  gap: 2rem 1rem;
+  -ms-grid-columns: (minmax(500px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  padding: 0;
+  gap: 0;
   width: 100%;
   max-width: 95rem;
   margin: 0 auto;
@@ -311,8 +311,7 @@ section {
 
 .portfolio-item {
   position: relative;
-  width: 100%;
-  height: auto;
+  overflow: hidden;
   cursor: pointer;
   text-align: center;
   font-family: "Roboto", sans-serif;
@@ -327,37 +326,42 @@ section {
 
 .portfolio-item h4,
 .portfolio-item h5 {
-  font-size: 2rem;
   position: absolute;
   height: 100%;
   width: 100%;
-  top: 25%;
-  left: 0;
   bottom: 0;
-  z-index: 15;
+  z-index: 20;
   text-align: center;
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
+}
+
+.portfolio-item h4 {
+  font-size: 2em;
+  text-transform: uppercase;
+  top: 70%;
 }
 
 .portfolio-item h5 {
-  padding: 1.5em;
+  font-size: 1.5em;
+  top: 80%;
 }
 
 .portfolio-item img {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100%;
+  min-height: -webkit-fill-available;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
 }
 
 .portfolio-item img:hover {
   filter: none;
   -webkit-filter: grayscale(0%);
-  -webkit-transition: 0.2s ease-in;
-  transition: 0.2s ease-in;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .portfolio-item .link-spanner {
@@ -516,6 +520,7 @@ section {
     display: grid;
     -ms-grid-columns: (2fr)[2];
         grid-template-columns: repeat(2, 2fr);
+    height: auto;
   }
 }
 
@@ -525,6 +530,7 @@ section {
     display: grid;
     -ms-grid-columns: auto;
         grid-template-columns: auto;
+    height: auto;
   }
 }
 
