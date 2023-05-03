@@ -22,7 +22,7 @@
 .portfolio-item {
 	display: block;
 	position: relative;
-	padding-top: 66,66%;
+	padding-top: 66, 66%;
 	overflow: hidden;
 
 	cursor: pointer;
@@ -46,6 +46,9 @@
 		text-transform: uppercase;
 		top: 50%;
 		padding: 5px 15px;
+		&:hover {
+			color: $button-hover-color;
+		}
 	}
 	h5 {
 		font-size: 1.5em;
@@ -68,7 +71,7 @@
 	}
 
 	.background-title h4 {
-		padding: 0 3em 0 0,5em;
+		padding: 0 3em 0 0, 5em;
 	}
 
 	.link-spanner {

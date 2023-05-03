@@ -312,7 +312,7 @@ h3 {
   right: 1rem;
   width: 80%;
   height: 0;
-  background-color: rgba(99, 120, 134, 0.296);
+  background-color: rgba(99, 120, 134, 0.856);
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
   border-radius: 10px;
@@ -405,7 +405,7 @@ h3 {
 .portfolio-item {
   display: block;
   position: relative;
-  padding-top: 66,66%;
+  padding-top: 66, 66%;
   overflow: hidden;
   cursor: pointer;
   text-align: center;
@@ -435,6 +435,10 @@ h3 {
   padding: 5px 15px;
 }
 
+.portfolio-item h4:hover {
+  color: #2e9e79;
+}
+
 .portfolio-item h5 {
   font-size: 1.5em;
   top: 65%;
@@ -462,7 +466,7 @@ h3 {
 }
 
 .portfolio-item .background-title h4 {
-  padding: 0 3em 0 0,5em;
+  padding: 0 3em 0 0, 5em;
 }
 
 .portfolio-item .link-spanner {
