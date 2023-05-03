@@ -13,6 +13,14 @@ html {
 body {
 	font-family: $body-font;
 	background: $background-menu;
+	height: 100vh;
+	background-image: url(../IMG/header_portfolio.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+main {
+	display: flex;
+	flex-direction: column;
 }
 h1,
 h2,
@@ -33,16 +41,12 @@ p {
 a {
 	color: $button-color;
 	cursor: pointer;
+	font-size: 1rem;
 	text-decoration: none;
 	&:hover {
 		color: $button-hover-color;
 	}
 }
-
-main {
-	display: grid;
-}
-
 div,
 img {
 	width: $image-size;

@@ -3,9 +3,19 @@
 
 .header {
 	display: flex;
-	justify-content: normal;
+	position: relative;
+	justify-content: space-between;
 	align-items: center;
-	max-height: 30%;
-	padding: 0 50px;
-	background: $background-menu;
+	width: 100%;
+	margin: 0 auto;
+	height: 80px;
+	.logo {
+		a {
+			padding: 1.5rem;
+		}
+		img {
+			width: 3.5em;
+			height: auto;
+		}
+	}
 }

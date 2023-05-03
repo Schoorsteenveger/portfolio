@@ -7,9 +7,10 @@
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	justify-content: space-evenly;
+	margin: 0 auto;
 	background: #232b39;
 	width: 100%;
+	max-width: 95rem;
 	min-height: 50vh;
 	padding: 2em 0;
 	.contact-info {
