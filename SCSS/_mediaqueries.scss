@@ -7,25 +7,34 @@
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
-		height: auto;
+		height: fit-content;
 		max-width: 95rem;
 		padding: 0;
 	}
 }
-
-@media (max-width: 992px){
+/* On screens that are 992px or less */
+@media screen and (max-width: 992px) {
 	.nav-menu {
 		position: relative;
-		 li {
+		li {
 			display: none;
 		}
+	}
+	.action-btn-1 {
+		display: none;
 	}
 	.toggle-btn {
 		display: flex;
 		justify-content: flex-end;
 	}
-	.action-btn {
-		display: none;
+	.dropdown-menu {
+		display: flex;
+		z-index: 2000;
+	}
+	.container-portfolio {
+		display: grid;
+		grid-template-columns: repeat(2, 2fr);
+		height: auto;
 	}
 	.footer-container {
 		flex-direction: column;
@@ -55,62 +64,11 @@
 }
 
 /* Vanaf tablet en kleiner */
-@media screen and (max-width: 992px) {
-	.hamburger {
-		display: block;
-		z-index: 100;
-		position: relative;
-	}
-	.hamburger.active .bar:nth-child(2) {
-		opacity: 0;
-	}
-	.hamburger.active .bar:nth-child(1) {
-		transform: translateY(8px) rotate(45deg);
-		cursor: pointer;
-		&:hover {
-			color: $secondary-color;
-		}
-	}
-	.hamburger.active .bar:nth-child(3) {
-		transform: translateY(-8px) rotate(-45deg);
-	}
-	// .nav-menu {
-	// 	justify-content: start;
-	// 	flex-direction: column;
-	// 	align-items: center;
-	// 	position: fixed;
-	// 	top: 0;
-	// 	right: -100%;
-	// 	background-color: $background-menu;
-	// 	width: 100%;
-	// 	height: 100%;
-	// 	padding-top: 20vh;
-	// 	cursor: pointer;
-	// }
-	// .nav-item {
-	// 	margin: 16px 0;
-	// }
-	// .nav-menu.active {
-	// 	left: 0;
-	// }
-	.container-portfolio {
-		display: grid;
-		grid-template-columns: repeat(2, 2fr);
-		height: auto;
-	}
-}
 
 @media screen and (max-width: 600px) {
 	.container-portfolio {
 		display: grid;
 		grid-template-columns: auto;
 		height: auto;
-	}
-}
-/* Desktop media queries */
-
-@media screen and (min-width: 786px) {
-	.hamburger {
-		display: none;
 	}
 }

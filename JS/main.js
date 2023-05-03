@@ -1,12 +1,11 @@
-const hamburger = document.querySelector(".hamburger");
-const navmenu = document.querySelector(".nav-menu");
+const toggleButton = document.querySelector('.toggle-btn')
+const toggleButtonIcon = document.querySelector('.toggle-btn i')
+const dropDownMenu = document.querySelector('.dropdown-menu')
 
-hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navmenu.classList.toggle("active");
-})
+toggleButton.onclick = function () {
+    dropDownMenu.classList.toggle('open')
+    const isOpen = dropDownMenu.classList.contains('open')
 
-document.querySelectorAll(".menu-item").forEach(n => n.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navmenu.classList.remove("active");
-}))
+    toggleButtonIcon.classList === isOpen
+        ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
+}
