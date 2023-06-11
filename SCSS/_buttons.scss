@@ -1,11 +1,13 @@
-@import "./colors";
+@import './colors';
+@import './variables';
+@import './typography';
 
 .contact-button {
     color: $font-color;
     background-color:$button-color;
     width: 200px;
     height: 70px;
-    font-size: 2rem;
+    font-size: $font-size;
     border: solid 2px black;
     transition: 0.3s;
     &:hover {
@@ -14,3 +16,4 @@
         color: blanchedalmond;
     }
 }
+

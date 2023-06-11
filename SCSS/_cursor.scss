@@ -1,0 +1,54 @@
+.cursor {
+	pointer-events: none;
+	position: fixed;
+	display: block;
+	border-radius: 0;
+	top: 0;
+	left: 0;
+	z-index: 9999999999999999;
+}
+
+.circle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5000;
+	width: 24px;
+	height: 24px;
+	border-radius: 24px;
+	background-color: #bbff99;
+	background-image: linear-gradient(
+		319deg,
+		#bbff99 0%,
+		#ffec99 37%,
+		#ff9999 100%
+	);
+}
+
+// alternative cursor animation rainbow trail
+
+#wrap {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5000;
+}
+.ball {
+	pointer-events: none;
+	position: absolute;
+	z-index: 50000;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: gray;
+	animation: implode 1s ease-in-out;
+	animation-fill-mode: both;
+	opacity: 0.8;
+}
+@keyframes implode {
+	100% {
+		transform: scale(0);
+	}
+}

@@ -15,110 +15,245 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,300&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,100&display=swap"
         rel="stylesheet">
     <title>Portfolio</title>
+    <script src="/JS/main.js" defer></script>
+    <script src="/JS/cursor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Observer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/EaselPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/MotionPathPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/PixiPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js"></script>
 </head>
 
-<body>
+<body class="body-bg" id="wrap">
+    <div class="cursor">
+        <!-- <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div> -->
+    </div>
+    <!-- <div>
+        <p>move the cursor around the screen</p>
+    </div> -->
     <main class="main-homepage">
         <header class="header">
-            <nav class="navbar">
+            <div class="header-left">
                 <div class="logo">
                     <a href="index.html">
                         <img src="/IMG/logo-hertz-hr.png" alt="logo-hertz">
                     </a>
                 </div>
+                <nav class="navbar">
+                    <ul class="nav-menu">
+                        <li class="menuItem hide-logo">
+                            <a class="nav-link hover-underline-animation" href="index.html">Home</a>
+                        </li>
+                        <li class="menuItem">
+                            <a class="nav-link hover-underline-animation" href="#about">About</a>
+                        </li>
+                        <li class="menuItem hover-underline-animation">
+                            <a class="nav-link" href="#work">Work</a>
+                        </li>
+                        <li class="menuItem hover-underline-animation">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                        <div class="download-container">
+                            <a href="./PDF/Janou-treffers-resume.pdf" download="Janou-treffers-resume"><button
+                                    class="action-btn"><i class="fa fa-download"></i> Download</button></a>
 
-                <ul class="nav-menu">
-                    <li class="nav-item menu-item">
-                        <a class="nav-link menu-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item menu-item">
-                        <a class="nav-link menu-item" class="menu-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item menu-item">
-                        <a class="nav-link menu-item" class="menu-link" href="#work">Work</a>
-                    </li>
-                    <li class="nav-item menu-item">
-                        <a class="nav-link menu-item" class="menu-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-
-                <div class="toggle-btn">
-                    <i class="fa-solid fa-bars"></i>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-right">
+                <div class="download-container">
+                    <a href="./PDF/Janou-treffers-resume.pdf" download="Janou-treffers-resume"><button class="action-btn"><i
+                                class="fa fa-download"></i> Download</button></a>
                 </div>
-                <button class="action-btn-1"><a href="#"><span>Download CV</span></a></button>
-
-            </nav>
-
-            <div class="dropdown-menu open=" false">
-                <li class="nav-item menu-item">
-                    <a class="nav-link menu-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item menu-item">
-                    <a class="nav-link menu-item" class="menu-link" href="#about">About</a>
-                </li>
-                <li class="nav-item menu-item">
-                    <a class="nav-link menu-item" class="menu-link" href="#work">Work</a>
-                </li>
-                <li class="nav-item menu-item">
-                    <a class="nav-link menu-item" class="menu-link" href="#contact">Contact</a>
-                </li>
-                <button class="action-btn-dropdown"><a href="#"><span>Download CV</span></a></button>
+                <button class="toggleBtn">
+                    <i class="menuIcon fa-solid fa-bars"></i>
+                    <i class="closeIcon fa-solid fa-xmark"></i>
+                </button>
             </div>
         </header>
 
-        <section class="section-about-mb">
+        <!-- hero animation -->
+        <section id="about">
+            <div class="hero">
+                <div class="container">
+                    <div class="hero-inner">
+                        <div class="hero-content">
+                            <div class="hero-content-inner content">
+                                <h1>
+                                    <div class="hero-content-line">
+                                        <div class="hero-content-line-inner">Creative Frontend</div>
+                                    </div>
+                                    <div class="hero-content-line">
+                                        <div class="hero-content-line-inner">Painting the Digital Canvas</div>
+                                    </div>
+                                    <div class="hero-content-line">
+                                        <div class="hero-content-line-inner">With Brushstrokes</div>
+                                    </div>
+                                </h1>
+                                <p>Mastering the Art of Web Experiences: Unleashing Creativity with a Colorful Coding
+                                    Palette.
+                                </p>
+                                <div class="btn-row">
+                                    <button class="explore-btn">
+                                        Explore
+                                        <div class="arrow-icon">
+                                            <i class="fa-solid fa-arrow-right" alt="arrow"></i>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
 
-            <div class="container-about" id="about">
-                <div class="tile">
-                    <h2>Frontend Developer</h2>
-                    <p class="about-text"> Als zelfstandige ontwikkelde ik creatieve oplossingen voor een
-                        gevarieerd publiek met het bouwen van
-                        websites en video content creatie. Het is tijd voor een nieuwe technische uitdaging. Nu ik
-                        ontdek hoe
-                        leuk programmeren is, gooi ik het roer om en zou graag mijn ervaring delen binnen een team.</p>
-                    <h3>Janou</h3>
-
-                </div>
-
-                <div class="tile tile-text img-bg h3-italic">
-                    <h2>Eager to learn</h2>
-                    <h3>Loves coffee,</h3>
-                    <h3>art, long walks,</h3>
-                    <h3>favorite color: ...?</h3>
+                        <div class="hero-images">
+                            <div class="div">
+                                <div class="hero-images-inner images">
+                                    <div class="hero-image janou">
+                                        <img src="./IMG/janou-t-1.png" alt="janou treffers">
+                                    </div>
+                                    <div class="hero-image hertz">
+                                        <img src="./IMG/terese_bertha.jpg" alt="something">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
+            </div>
         </section>
-        <section class="section-portfolio">
-            <div class='container-portfolio' id="work">
+
+        <section class="section-card">
+            <div class="wrapper-card">
+                <div class="header-card-section">
+                    <h2>Higlights</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ratione corporis iure
+                        temporibus
+                        voluptas repellendus? Quis sequi laborum autem nulla quaerat pariatur veniam. Earum a magnam
+                        nesciunt dolor excepturi inventore.</p>
+                </div>
+                <div class="container-card">
+                    <div class="card">
+                        <div class="front">
+                            <div class="bg-left">
+                                <div class="github-icon-left">
+                                    <i class="icon-github-left fa-brands fa-github fa-2xl"></i>
+                                </div>
+                            </div>
+                            <div class="bg-right">
+                                <p>So, whether you're a startup looking to make a splash,
+                                    an established brand seeking a digital facelift, or an agency in
+                                    search of a creative powerhouse...
+                                </p>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <h1>Show on Github</h1>
+                            <div class="github-icon-container">
+                                <svg width="98" height="96" class="icon" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"
+                                        fill="#fff" />
+                                </svg>
+                            </div>
+                            <p>Project 1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-card">
+                    <div class="card">
+                        <div class="front">
+                            <div class="bg-left">
+                                <div class="github-icon-left">
+                                    <i class="icon-github-left fa-brands fa-github fa-2xl"></i>
+                                </div>
+                            </div>
+                            <div class="bg-right">
+                                <div class="breadcrumbs">
+                                    <p>So, whether you're a startup looking to make a splash,
+                                        an established brand seeking a digital facelift, or an agency in
+                                        search of a creative powerhouse...
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <h1>Show on Github</h1>
+                            <div class="github-icon-container">
+                                <svg width="98" height="96" class="icon" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"
+                                        fill="#fff" />
+                                </svg>
+                            </div>
+                            <p>Project 1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-portfolio" id="work">
+            <div class='container-portfolio'>
+                <div class="portfolio-item overlay">
+                    <a href="https://tg-web-dev-4.github.io/webshop-web-Schoorsteenveger/#/" target="_blank">
+                        <img src="./IMG/mansion.jpg" alt="real estate website project"></a>
+                    <h4 class="project-title">Real Estate website</h4>
+                    <h5 class="category-title">Custom
+                        made</h5>
+                </div>
                 <div class='portfolio-item overlay'>
                     <a href="https://weather-app-react-by-janou.netlify.app/" target="_blank">
                         <img src="./IMG/clouds.png" alt="weather app"></a>
                     <h4 class="project-title">Weather App</h4>
                     <h5 class="category-title">Api</h5>
                 </div>
-                <div class="portfolio-item overlay">
-                    <a href="https://tg-web-dev-4.github.io/webshop-web-Schoorsteenveger/#/" target="_blank">
-                        <img src="./IMG/mansion.jpg" alt="real estate website project"></a>
-                    <h4 class="project-title">Commerce website</h4>
-                    <h5 class="category-title">Custom
-                        made</h5>
-                </div>
                 <div class="portfolio-item">
-                    <a href="https://catcontrolsystems.nl/" target="_blank"><img src="./IMG/mockup_netflix.jpg"
-                            alt="real estate example"></a>
+                    <a href="https://amsterdamsbuurtfilmfestival2017.netlify.app/" target="_blank"><img
+                            src="./IMG/vijf.jpg" alt="amsterdams buurtfestival"></a>
 
-                    <h4 class="project-title">Netflix clone</h4>
+                    <h4 class="project-title">Event website</h4>
                     <h5 class="category-title">
-                        Groeps
-                        project</h5>
+                        HTML, CSS, Bootstrap</h5>
                 </div>
-                <div class='portfolio-item overlay'>
-                    <a href="https://catcontrolsystems.nl" target="_blank"><img src="./IMG/parkingsystems_logo.png"
-                            alt="cat control system example"></a>
-                    <h4 class="project-title">Bedrijfs website</h4>
-                    <h5 class="category-title">Elementor &
-                        Wordpress</h5>
+                <div class="portfolio-item overlay">
+                    <div class="background-title">
+                        <h4 class="project-title image-overlay">Bedrijfs Website</h4>
+                        <h5 class="category-title">Wordpress
+                        </h5>
+                    </div>
+                    <a href="https://catcontrolsystems.nl/product-op-maat/" target="_blank"><img src="./IMG/parkingsystems_logo.png"
+                            alt="clock-javacript"></a>
                 </div>
                 <div class="portfolio-item overlay">
                     <div class="background-title">
@@ -126,65 +261,77 @@
                         <h5 class="category-title">Javascript
                         </h5>
                     </div>
-                    <a href="#"><img src="./IMG/clock.jpg" alt="clock-javacript"></a>                   
+                    <a href="https://clock-javascript-janou.netlify.app/" target="_blank"><img src="./IMG/clock.jpg"
+                            alt="clock-javacript"></a>
                 </div>
                 <div class="portfolio-item overlay">
-                    <a href="https://stichtingsask.org/nl/home-2/" target="_blank"><img src="./IMG/bosaaso_opening_4.jpg" alt=""></a>                 
-                    <h4 class="project-title">Donatie website</h4>
-                    <h5 class="category-title">Elementor &
-                            Wordpress</a>
-                    </h5>
+                    <div class="background-title">
+                        <h4 class="project-title image-overlay">Film Portfolio</h4>
+                        <h5 class="category-title">Wordpress
+                        </h5>
+                    </div>
+                    <a href="https://esthertog.com/" target="_blank"><img
+                            src="./IMG/Photo by_Baz Ratner_Reuters kopie.jpg" alt="Website for Esther Hertog"></a>
                 </div>
             </div>
         </section>
-        <section class="section-contact">
-            <div class="contact-info" id="contact">
-                <h2>Like to know more?</h2>
-                <p>Send me a message</p>
 
-                <form action="">
-                    <label class="name">Name:
-                        <input type="text" id="name">
-                    </label>
-                    <label class="email">E-mail:
-                        <input type="text" id="email">
-                    </label>
-                    <label class="message">Message:
-                        <textarea name="" id="message"></textarea>
-                    </label>
-                    <button type="submit">Send...</button>
+        <section class="section-contact" id="contact">
+            <div class="contact-container">
+                <form class="form-bg target=" _blank" action="https://formsubmit.co/janoutreffers@gmail.com"
+                    method="POST">
+                    <div class="form-group">
+                        <div class="contact-header">
+                            <h2>Like to know more?</h1>
+                                <p>Send Janou a message</p>
+                        </div>
+                        <div class="form-row">
+                            <div class="">
+                                <input type="text" name="name" placeholder="Full Name" required>
+                            </div>
+                            <div class="">
+                                <input type="email" name="email" placeholder="Email Address" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" name="message" rows="10" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-lg btn-dark btn-block">Send...</button>
                 </form>
             </div>
         </section>
     </main>
-    <footer>
+    <!-- <footer>
         <div class="footer-container">
             <div>
-                <H4>Janou Treffers</H4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident minus illo iste velit consequuntur
-                    expedita aspernatur nulla tenetur quaerat, doloremque consectetur odio dolorem eum impedit quas eos
-                    reprehenderit asperiores alias!</p>
-            </div>
-            <div>
-                <H4>Social Links</H4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident minus illo iste velit consequuntur
+                <h4>Janou Treffers</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident minus illo iste velit
+                    consequuntur
                     expedita
                     aspernatur nulla tenetur quaerat, doloremque consectetur odio dolorem eum impedit quas eos
                     reprehenderit
                     asperiores alias!</p>
             </div>
             <div>
-                <H4>What else to know</H4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident minus illo iste velit consequuntur
+                <h4>Social Links</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident minus illo iste velit
+                    consequuntur
                     expedita
                     aspernatur nulla tenetur quaerat, doloremque consectetur odio dolorem eum impedit quas eos
                     reprehenderit
                     asperiores alias!</p>
             </div>
-        </div>
-    </footer>
-
-    <script src="/JS/main.js"></script>
+            <div>
+                <h4>What else to know</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident minus illo iste velit
+                    consequuntur
+                    expedita
+                    aspernatur nulla tenetur quaerat, doloremque consectetur odio dolorem eum impedit quas eos
+                    reprehenderit
+                    asperiores alias!</p>
+            </div>
+    </footer> -->
 </body>
 
 </html>

@@ -1,26 +1,22 @@
 @import './colors';
 @import './variables';
+@import './typography';
 
 footer {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: auto;
-    margin:0;
-	padding: 2rem 1rem;
-	background: palegoldenrod;
-}
-.footer-container {
-	display: flex;
-	justify-content: flex-start;
-	width:100%;
-	max-width: 95rem;
-	padding: 5px;
 	div {
-		display: flex;
-		flex-direction: column;
-		gap: 10px;
-		padding-top: 15px;
+		display: grid;
+		height: auto;
+		width: 100%;
+		margin: 0 auto;
+		gap: 5%;
+		width: 100%;
+		max-width: 95rem;
+		padding: 1.5rem 1rem 0;
+		font-size: $font-size;
+		p {
+			font-size: 14px;
+			color: $font-color;
+			padding-bottom: 1em;
+		}
 	}
 }

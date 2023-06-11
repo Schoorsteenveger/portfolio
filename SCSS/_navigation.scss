@@ -1,126 +1,40 @@
 @import './colors';
 @import './variables';
 
-/* Mobile first*/
 /* navigation */
 
-.navbar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	margin: 0 auto;
-	height: 100%;
-	padding: 0 15px;
-}
-
-.toggle-btn {
+nav {
 	position: relative;
-	color: $button-color;
-	font-size: 1.5rem;
-	cursor: pointer;
-	display: none;
-}
-
-.nav-menu {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-	width: 100%;
-	z-index: 1;
-	transition: 0.2s;
-	cursor: pointer;
-	li {
-		list-style-type: none;
-		background-color: transparent;
-		&:hover {
-			color: $primary-color;
-		}
-	}
-	a {
-		color: $color-heading;
-		text-decoration: none;
-		transition: 0.3s ease;
-		font-size: 1.4rem;
-		&:hover {
-			color: $button-hover-color;
-		}
-		&:active {
-			color: deeppink;
-			background-color: transparent;
-			transition: 0.3s;
-		}
+	.download-container {
+		display: none;
 	}
 }
-
-.action-btn-1 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.toggleBtn {
+	display: none;
+}
+.action-btn {
 	background-color: $secondary-color;
 	color: $button-color;
-	width: 100%;
-	max-width: 200px;
-	height: 3em;
-	padding: 0;
+	min-width: 6rem;
+	height: 2rem;
+	padding: 0.5em 1.5em;
 	border: none;
 	outline: none;
 	border-radius: 20px;
-	font-weight: bold;
-	font-size: 0.8rem;
+	font-weight: 400;
+	font-size: $font-size;
 	transition: scale ease 0.2s;
 	cursor: pointer;
 	&:hover {
 		scale: 1.05;
+		transition: 0.2s ease;
+		background-color: $button-hover-color;
+		color: $button-text-hover-color;
 	}
 	&:active {
 		scale: 0.95;
 	}
-}
-
-.dropdown-menu {
-	display: none;
-	flex-direction: column;
-	align-items: center;
-	position: absolute;
-	padding: 0;
-	top: 80%;
-	right: 1rem;
-	width: 80%;
-	height: 0;
-	background-color: rgba(99, 120, 134, 0.856);
-	backdrop-filter: blur(15px);
-	border-radius: 10px;
-	overflow: hidden;
-	transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	cursor: pointer;
-	li {
-		padding: 0.5rem 0.8rem;
-		margin: 0.5em 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-}
-.action-btn-dropdown {
-	display: block;
-	margin: 0 auto;
-	margin-top: 5px;
-	width: 100%;
-	background-color: $button-menu-color;
-	width: 100%;
-	max-width: 200px;
-	height: 3em;
-	padding: 0;
-	border: none;
-	outline: none;
-	border-radius: 20px;
-	font-weight: bold;
-	font-size: 0.8rem;
-	transition: scale ease 0.2s;
-	cursor: pointer;
-}
-
-.dropdown-menu.open {
-	height: auto;
 }
