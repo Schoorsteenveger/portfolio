@@ -42,7 +42,6 @@
 		color: $font-color;
 		list-style: none;
 		padding: 2rem 0;
-		transition: 0.5s ease-in-out;
 		.download-container {
 			display: block;
 			padding-top: 1.2rem;
@@ -83,9 +82,6 @@
 		.card {
 			word-wrap: break-word;
 		}
-		// p {
-		// 	font-size: $font-size;
-		// }
 	}
 	.wrapper-card {
 		flex-direction: column;
