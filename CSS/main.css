@@ -1090,6 +1090,9 @@ footer div p {
   .toggleBtn .closeIcon {
     display: none;
   }
+  .action-btn {
+    height: auto;
+  }
   .container-card {
     width: 100%;
     max-width: 600px;
