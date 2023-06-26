@@ -4,37 +4,37 @@
 /* navigation */
 
 nav {
-	position: relative;
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	.download-container {
-		display: none;
-	}
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  .download-container {
+    display: none;
+  }
 }
 .toggleBtn {
-	display: none;
+  display: none;
 }
 .action-btn {
-	background-color: $secondary-color;
-	color: $button-color;
-	min-width: 6rem;
-	height: 2rem;
-	padding: 0.5em 1.5em;
-	border: none;
-	outline: none;
-	border-radius: 20px;
-	font-weight: 400;
-	font-size: $font-size;
-	transition: scale ease 0.2s;
-	cursor: pointer;
-	&:hover {
-		scale: 1.05;
-		transition: 0.2s ease;
-		background-color: $button-hover-color;
-		color: $button-text-hover-color;
-	}
-	&:active {
-		scale: 0.95;
-	}
+  background-color: $secondary-color;
+  color: $button-color;
+  min-width: 6rem;
+  height: auto;
+  padding: 0.5em 1.5em;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-weight: 400;
+  font-size: $font-size;
+  transition: scale ease 0.2s;
+  cursor: pointer;
+  &:hover {
+    scale: 1.05;
+    transition: 0.2s ease;
+    background-color: $button-hover-color;
+    color: $button-text-hover-color;
+  }
+  &:active {
+    scale: 0.95;
+  }
 }

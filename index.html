@@ -125,7 +125,7 @@
         <section class="section-intro">
             <div class="container-intro" id="container-intro">
                 <div class="intro-title">
-                    <h2>Color me!</h2>
+                    <h2>Hello</h2>
                 </div>
                 <div class="intro-text">
                     <br>
@@ -163,19 +163,9 @@
 
                     const ctx = canvas.getContext("2d");
 
-                    // canvas.width = window.innerWidth;
-                    // canvas.height = window.innerHeight;
-
                     canvas.width = containerWidth;
                     canvas.height = containerHeight;
-                    // canvas.width = canvas.parentNode.clientWidth;
-                    // canvas.height = canvas.parentNode.clientHeight;
-
-                    // console.log(canvas.width, "cann width")
-                    // console.log(canvas.height, 'height')
-                    console.log(containerWidth, "c width")
-                    // console.log(containerHeight, "c height")
-
+                          
                     ctx.strokeStyle = "#ffffa2";
                     ctx.lineJoin = "round";
                     ctx.lineCap = "round";
@@ -223,28 +213,23 @@
                         clearCanvas()
                     })
 
-                    // touchevents > 1200 and mobile devices
+                    // touchevents > 1200 and mobile devices in progress
 
                     canvas.addEventListener("touchstart", (e) => {
                         isDrawing = true;
                         [lastX, lastY] = [e.offsetX, e.offsetY];
                         let mouseEvent = new MouseEvent("mousedown",{x: e.clientX, y: e.clientY});
                         canvas.dispatchEvent(mouseEvent);
-                        console.log(isDrawing, "touchstart")
-                        console.log(isDrawing, "isdrawing here?");
-                        console.log(mousePos, "mouse poss")
                     },false);
 
                     canvas.addEventListener("touchmove", (e) => {
                         isDrawing = true;
                         [lastX, lastY] = [e.offsetX, e.offsetY];
-                        console.log(containerWidth, "c width here?")
                     });
 
                     canvas.addEventListener("touchend", (e) => {
                         isDrawing = false;
                         clearCanvas();
-                        console.log(isDrawing, "touchend")
                     });
                 </script>
             </div>
