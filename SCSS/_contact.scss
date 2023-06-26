@@ -5,113 +5,113 @@
 /* Contact Mobile version*/
 
 .section-contact {
-	display: flex;
-	justify-items: center;
-	margin: 0 auto;
-	background: $secondary-color;
-	color: $primary-color;
-	width: 100%;
-	font-family: $body-font-family;
-	h2 {
-		font-size: $h2;
-		font-weight: 700;
-		font-family: $body-font-family;
-		line-height: $line-height;
-	}
-	p {
-		font-size: $font-size;
-		color: $primary-color;
-		padding-bottom: 1em;
-	}
+  display: flex;
+  justify-items: center;
+  margin: 0 auto;
+  background: $secondary-color;
+  color: $primary-color;
+  width: 100%;
+  font-family: $body-font-family;
+  h2 {
+    font-size: $h2;
+    font-weight: 700;
+    font-family: $body-font-family;
+    line-height: $line-height;
+  }
+  p {
+    font-size: $font-size;
+    color: $primary-color;
+    padding-bottom: 1em;
+  }
 }
 .contact-bg {
-	align-items: center;
-	width: 100%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	object-fit: contain;
-	height: 50pc;
+  align-items: center;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: contain;
+  height: 50pc;
 }
 .contact-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding: 1rem;
-	width: 500px;
-	height: auto;
-	margin: 0 auto;
-	button {
-		background: $button-background-color;
-		outline: none;
-		width: 100%;
-		height: 2em;
-		border-radius: 15px;
-		border: 1px solid $button-active-color;
-		cursor: pointer;
-		&:hover {
-			background: $button-hover-color;
-			transition: ease 0.2s;
-		}
-		&:active {
-			outline: 1px solid $button-active-color;
-		}
-	}
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  width: 500px;
+  height: auto;
+  margin: 0 auto;
+  button {
+    background: $button-background-color;
+    outline: none;
+    width: 100%;
+    height: 2em;
+    border-radius: 15px;
+    border: 1px solid $button-active-color;
+    cursor: pointer;
+    &:hover {
+      background: $button-hover-color;
+      transition: ease 0.2s;
+    }
+    &:active {
+      outline: 1px solid $button-active-color;
+    }
+  }
 }
 .form-bg {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	flex-wrap: wrap;
-	height: auto;
-	padding: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: auto;
+  padding: 5%;
 }
 .form-group {
-	width: 100%;
-	// flex: 1;
-	padding: 15px 0;
-	border: none;
-	input {
-		font-family: $body-font-family;
-		width: 100%;
-		height: 4em;
-		color: $font-color;
-		background: transparentize($color: #000000, $amount: 0.5);
-		outline: 1px solid rgb(255, 217, 0);
-		margin: 10px 0;
-		border: none;
-		padding-left: 4px;
-		&:hover {
-			outline: 1px solid gold;
-		}
-		&::placeholder {
-			color: $font-color;
-		}
-	}
-	textarea {
-		font-family: $body-font-family;
-		width: 100%;
-		outline: 1px solid rgb(150, 128, 1);
-		background: transparentize($color: #000000, $amount: 0.5);
-		color: $font-color;
-		border: none;
-		padding-left: 4px;
-		&:hover {
-			outline: 1px solid gold;
-		}
-		:active {
-			outline: 1px solid gold;
-		}
-		&::placeholder {
-			color: $font-color;
-		}
-	}
+  width: 100%;
+  // flex: 1;
+  padding: 15px 0;
+  border: none;
+  input {
+    font-family: $body-font-family;
+    width: 100%;
+    height: 4em;
+    color: $font-color;
+    background: transparentize($color: #000000, $amount: 0.5);
+    outline: 1px solid rgb(255, 217, 0);
+    margin: 10px 0;
+    border: none;
+    padding-left: 4px;
+    &:hover {
+      outline: 1px solid gold;
+    }
+    &::placeholder {
+      color: $font-color;
+    }
+  }
+  textarea {
+    font-family: $body-font-family;
+    width: 100%;
+    outline: 1px solid rgb(150, 128, 1);
+    background: transparentize($color: #000000, $amount: 0.5);
+    color: $font-color;
+    border: none;
+    padding-left: 4px;
+    &:hover {
+      outline: 1px solid gold;
+    }
+    &:active {
+      outline: 1px solid gold;
+    }
+    &::placeholder {
+      color: $background-color;
+    }
+  }
 }
 .btn {
-	font-size: $font-size;
-	&:focus {
-		outline: none;
-	}
+  font-size: $font-size;
+  &:focus {
+    outline: none;
+  }
 }

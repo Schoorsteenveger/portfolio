@@ -3,145 +3,150 @@
 @import './typography';
 
 .hero {
-	display: flex;
-	opacity: 0;
-	height: 100%;
-	width: 100%;
-	overflow: hidden;
-	.container {
-		width: 100%;
-		max-width: 100%;
-		margin: 0 auto;
-		background-color: plum;
-		.hero-inner {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			margin: 0;
-			min-height: fit-content;
-			background-color: plum;
-			.hero-content {
-				width: 50%;
-				.hero-content-inner {
-					position: relative;
-					width: 600px;
-					color: $font-color;
-					margin: 0 auto;
-					padding-left: 1.5rem;
-					h1 {
-						font-weight: 500;
-						font-size: $h1;
-						line-height: $line-height;
-						margin-bottom: 24px;
-						.hero-content-line {
-							margin: 0;
-							height: 60px;
-							overflow: hidden;
-							.hero-content-line-inner {
-								height: 60px;
-							}
-						}
-					}
-					p {
-						font-size: 24px;
-						line-height: $line-height;
-						font-weight: $font-weight;
-						padding-right: 48px;
-						margin-bottom: 56px;
-					}
-					.btn-row {
-						position: relative;
-						&:before {
-							content: '';
-							position: absolute;
-							width: 56px;
-							height: 1px;
-							background: $font-color;
-							top: 50%;
-							left: -68px;
-							cursor: pointer;
-						}
-						button {
-							background: none;
-							border: none;
-							font-size: 12px;
-							padding: 0;
-							cursor: pointer;
-							text-transform: uppercase;
-							font-weight: 700;
-							letter-spacing: 0.7px;
-							display: flex;
-							align-items: center;
-							position: relative;
-							&:focus {
-								outline: none;
-							}
-							.arrow-icon {
-								position: absolute;
-								display: flex;
-								align-items: center;
-								justify-content: center;
-								background: $button-background-color;
-								height: 48px;
-								width: 48px;
-								border-radius: 100px;
-								margin-left: 16px;
-								left: 64px;
-								transition: all 0.2s ease;
-								&:hover {
-									background: $button-hover-color;
-									transform: rotateZ(90deg);
-									scale: 1.05;
-								}
-								&:active {
-									scale: 0.95;
-								}
-							}
-						}
-					}
-				}
-			}
-			.hero-images {
-				width: 50%;
-				height: 100vh;
-				position: relative;
-				.div {
-					background: rgb(121, 76, 245);
-					background-color: rgb(245 76 76);
-					height: 80%;
-					width: 80%;
-					margin: 6rem -6rem 1rem 0;
-
-					// border: 2px solid rgb(20, 247, 255);
-					.hero-images-inner {
-						.hero-image {
-							position: absolute;
-							overflow: hidden;
-							&.janou {
-								top: 50px;
-								right: 100px;
-								width: 65%;
-								height: 60%;
-								z-index: 5;
-							}
-							&.hertz {
-								bottom: 100px;
-								left: 50px;
-								width: 35%;
-								height: 45%;
-								z-index: 50;
-							}
-							img {
-								position: absolute;
-								top: 0;
-								left: 0;
-								right: 0;
-								width: 100%;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+  display: flex;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  .container {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    .hero-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0;
+      .hero-content {
+        width: 50%;
+        .hero-content-inner {
+          position: relative;
+          max-width: 35rem;
+          color: $font-color;
+          margin: 0 auto;
+          padding: 1.5rem;
+          h1 {
+            font-weight: 500;
+            font-size: $h1;
+            line-height: $line-height;
+            margin-bottom: 24px;
+            .hero-content-line {
+              margin: 0;
+              height: 60px;
+              overflow: hidden;
+              .hero-content-line-inner {
+                height: 60px;
+              }
+            }
+          }
+          p {
+            font-size: 24px;
+            line-height: $line-height;
+            font-weight: $font-weight;
+            padding-right: 48px;
+            margin-bottom: 56px;
+          }
+          .btn-row {
+            position: relative;
+            &:before {
+              content: '';
+              position: absolute;
+              width: 56px;
+              height: 1px;
+              background: $font-color;
+              top: 50%;
+              left: -68px;
+              cursor: pointer;
+            }
+            button {
+              background: none;
+              border: none;
+              font-size: 12px;
+              padding: 0;
+              cursor: pointer;
+              text-transform: uppercase;
+              font-weight: 700;
+              letter-spacing: 0.7px;
+              display: flex;
+              align-items: center;
+              position: relative;
+              &:focus {
+                outline: none;
+              }
+              .arrow-icon {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $button-background-color;
+                height: 48px;
+                width: 48px;
+                border-radius: 100px;
+                margin-left: 16px;
+                left: 64px;
+                transition: all 0.2s ease;
+                &:hover {
+                  background: $button-hover-color;
+                  transform: rotateZ(90deg);
+                  scale: 1.05;
+                }
+                &:active {
+                  scale: 0.95;
+                }
+              }
+            }
+          }
+        }
+      }
+      .hero-images {
+        width: 50%;
+        height: 100vh;
+        position: relative;
+        margin: 0 auto;
+        .div-yellow {
+          position: absolute;
+          top: 250px;
+          left: 32px;
+          background-color: rgb(242, 245, 76);
+          width: clamp(180px, 50vh, 500px);
+          height: clamp(180px, 50vh, 500px);
+        }
+        // .div-green {
+        //   position: absolute;
+        //   bottom: 150px;
+        //   right: 350px;
+        //   background-color: rgb(87, 245, 76);
+        //   width: clamp(350px, 30vh, 500px);
+        //   height: clamp(350px, 30vh, 500px);
+        // }
+        .hero-images-inner {
+          position: relative;
+          height: 100%;
+          .hero-image {
+            overflow: hidden;
+            width: 100%;
+            &.janou {
+              position: absolute;
+              top: 140px;
+              right: 300px;
+              width: 45%;
+              height: 60%;
+              z-index: 2;
+            }
+            &.hertz {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 25%;
+              height: 60%;
+              z-index: 3;
+            }
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
 }
