@@ -679,6 +679,11 @@ nav .download-container {
   width: 100%;
 }
 
+#canvas1 {
+  border: 1px solid black;
+  background-color: aquamarine;
+}
+
 /* Image size */
 /* portfolio grid */
 .section-portfolio {

@@ -17,7 +17,6 @@
     <title>Portfolio</title>
     <script src="/JS/main.js" defer></script>
     <script src="/JS/cursor.js"></script>
-    <!-- <script src="/JS/draw.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Flip.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
@@ -155,85 +154,111 @@
                 </div>
                 <canvas id="draw"></canvas>
                 <script>
-                    window.onload = function () { }
-                    const canvas = document.querySelector('canvas');
-                    const container = document.getElementById('container-intro');
-                    const containerWidth = container.offsetWidth;
-                    const containerHeight = container.offsetHeight;
+                    window.addEventListener ('load',() => {
+                        console.log ('Loading')
 
-                    const ctx = canvas.getContext("2d");
+                        const canvas = document.querySelector('canvas');
+                        const container = document.getElementById('container-intro');
 
-                    canvas.width = containerWidth;
-                    canvas.height = containerHeight;
-                          
-                    ctx.strokeStyle = "#ffffa2";
-                    ctx.lineJoin = "round";
-                    ctx.lineCap = "round";
-                    ctx.lineWidth = 100;
+                        const ctx = canvas.getContext("2d");
 
-                    let isDrawing;
-                    let lastX = 0;
-                    let lastY = 0;
-                    let hue = 0;
-                    let direction = true;
+                        function resizeCanvas() {
+                            const containerWidth = container.offsetWidth;
+                            const containerHeight = container.offsetHeight;
 
-                    function draw(e) {
-                        if (!isDrawing) return;
-                        console.log(isDrawing, "isdrawing");
-                        ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
-                        ctx.beginPath();
-                        ctx.moveTo(lastX, lastY);
-                        ctx.lineTo(e.offsetX, e.offsetY);
-                        ctx.stroke();
-                        [lastX, lastY] = [e.offsetX, e.offsetY];
-
-                        hue++;
-                        if (hue >= 360) {
-                            hue = 0;
+                            canvas.width = containerWidth;
+                            canvas.height = containerHeight;
                         }
-                    }
 
-                    function clearCanvas() {
-                        ctx.clearRect(0, 0, canvas.width, canvas.height);
-                    }
+                        resizeCanvas();
 
-                    canvas.addEventListener("mousedown", (e) => {
-                        isDrawing = true;
-                        [lastX, lastY] = [e.offsetX, e.offsetY];
-                    });
+                        ctx.strokeStyle = "#ffffa2";
+                        ctx.lineJoin = "round";
+                        ctx.lineCap = "round";
+                        ctx.lineWidth = 100;
 
-                    canvas.addEventListener("mousemove", draw);
-                    canvas.addEventListener("mouseup", () => {
-                        isDrawing = false;
-                        clearCanvas();
-                    });
+                        console.log(ctx);
 
-                    canvas.addEventListener("mouseout", () => {
-                        isDrawing = false;
-                        clearCanvas()
-                    })
+                        let isDrawing;
+                        let lastX = 0;
+                        let lastY = 0;
+                        let hue = 0;
+                        let direction = true;
 
-                    // touchevents > 1200 and mobile devices in progress
+                        function draw(e) {
+                            if (!isDrawing) return;
+                            console.log(isDrawing, "isdrawing");
+                            ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+                            ctx.beginPath();
+                            ctx.moveTo(lastX, lastY);
+                            ctx.lineTo(e.offsetX, e.offsetY);
+                            ctx.stroke();
+                            [lastX, lastY] = [e.offsetX, e.offsetY];
 
-                    canvas.addEventListener("touchstart", (e) => {
-                        isDrawing = true;
-                        [lastX, lastY] = [e.offsetX, e.offsetY];
-                        let mouseEvent = new MouseEvent("mousedown",{x: e.clientX, y: e.clientY});
-                        canvas.dispatchEvent(mouseEvent);
-                    },false);
+                            hue++;
+                            if (hue >= 360) {
+                                hue = 0;
+                            }
+                        }
 
-                    canvas.addEventListener("touchmove", (e) => {
-                        isDrawing = true;
-                        [lastX, lastY] = [e.offsetX, e.offsetY];
-                    });
+                        function clearCanvas() {
+                            ctx.clearRect(0, 0, canvas.width, canvas.height);
+                        }
 
-                    canvas.addEventListener("touchend", (e) => {
-                        isDrawing = false;
-                        clearCanvas();
+                        canvas.addEventListener("mousedown", (e) => {
+                            isDrawing = true;
+                            [lastX, lastY] = [e.offsetX, e.offsetY];
+                        });
+
+                        canvas.addEventListener("mousemove", draw);
+                        canvas.addEventListener("mouseup", () => {
+                            isDrawing = false;
+                            clearCanvas();
+                        });
+
+                        canvas.addEventListener("mouseout", () => {
+                            isDrawing = false;
+                            clearCanvas();
+                        });
+
+                        // Prevent touch events from scrolling on devices with innerWidth smaller than 768px
+                        canvas.addEventListener("touchstart", (e) => {
+                            if (window.innerWidth < 768) {
+                                e.preventDefault();
+                            }
+                            isDrawing = true;
+                            [lastX, lastY] = [e.touches[0].clientX, e.touches[0].clientY];
+                            let mouseEvent = new MouseEvent("mousedown", {
+                                x: e.touches[0].clientX,
+                                y: e.touches[0].clientY
+                            });
+                            canvas.dispatchEvent(mouseEvent);
+                        }, false);
+
+                        canvas.addEventListener("touchmove", (e) => {
+                            if (window.innerWidth < 768) {
+                                e.preventDefault();
+                            }
+                            isDrawing = true;
+                            [lastX, lastY] = [e.touches[0].clientX, e.touches[0].clientY];
+                        });
+
+                        canvas.addEventListener("touchend", (e) => {
+                            if (window.innerWidth < 768) {
+                                e.preventDefault();
+                            }
+                            isDrawing = false;
+                            clearCanvas();
+                        });
+
+                        // Resize canvas when the window size changes
+                        window.addEventListener("resize", resizeCanvas);
                     });
                 </script>
             </div>
         </section>
+        <!-- <canvas id="canvas1"></canvas> -->
+        <script src="/JS/draw.js"></script>
         <!-- Card section-->
         <!-- <section class="section-card">
             <div class="wrapper-card">
