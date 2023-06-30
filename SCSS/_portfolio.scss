@@ -5,74 +5,74 @@
 /* portfolio grid */
 
 .section-portfolio {
-	width: 100%;
-	background-color: $secondary-color;
-	background-repeat: no-repeat;
-	background-size: cover;
+  width: 100%;
+  background-color: $secondary-color;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container-portfolio {
-	display: grid;
-	height: auto;
-	padding: 1rem;
-	gap: $gap;
-	width: 100%;
-	height: max-content;
-	max-width: 1920px;
-	margin: 5rem auto;
-	font-family: 'Shippori Antique', sans;
+  display: grid;
+  height: auto;
+  padding: 1rem;
+  gap: $gap;
+  width: 100%;
+  height: max-content;
+  max-width: 1920px;
+  margin: 5rem auto;
+  font-family: 'Shippori Antique', sans;
 }
 
 .portfolio-item {
-	display: inline-block;
-	position: relative;
-	overflow: hidden;
-	cursor: pointer;
-	text-align: center;
-	font-family: $body-font-family;
-	color: $color-heading;
-	& a:hover {
-		color: $button-hover-color;
-		transition: 0.2s ease-in;
-	}
-	h4,
-	h5 {
-		position: absolute;
-		height: 100%;
-		bottom: 0;
-		left: 15px;
-		z-index: 20;
-		text-align: center;
-		line-height: $line-height;
-	}
-	h4 {
-		font-size: $h4;
-		text-transform: uppercase;
-		top: 35px;
-		padding: 5px 15px;
-		&:hover {
-			color: $button-hover-color;
-		}
-	}
-	h5 {
-		font-size: $h5;
-		top: 65%;
-		padding: 5px 15px;
-	}
-	img {
-		filter: grayscale(100%);
-		-webkit-filter: grayscale(100%);
-		width: $image-size;
-		height: 100%;
-		object-fit: cover;
-		transition: transform 0.4s ease-in-out;
-		&:hover {
-			filter: none;
-			-webkit-filter: grayscale(0%);
-			transform: scale(1.2);
-		}
-	}
-	.background-title h4 {
-		padding: 0 3em 0 0,5em;
-	}
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  font-family: $body-font-family;
+  color: $color-heading;
+  & a:hover {
+    color: $button-hover-color;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+  }
+  h4,
+  h5 {
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    left: 15px;
+    z-index: 20;
+    text-align: center;
+    line-height: $line-height;
+  }
+  h4 {
+    font-size: $h4;
+    text-transform: uppercase;
+    top: 35px;
+    padding: 5px 15px;
+    &:hover {
+      color: $button-hover-color;
+    }
+  }
+  h5 {
+    font-size: $h5;
+    top: 65%;
+    padding: 5px 15px;
+  }
+  img {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    width: $image-size;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+    &:hover {
+      filter: none;
+      -webkit-filter: grayscale(0%);
+      transform: scale(1.2);
+    }
+  }
+  .background-title h4 {
+    padding: 0 3em 0 0, 5em;
+  }
 }

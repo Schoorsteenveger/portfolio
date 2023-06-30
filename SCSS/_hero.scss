@@ -105,20 +105,13 @@
         margin: 0 auto;
         .div-yellow {
           position: absolute;
-          top: 250px;
-          left: 32px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
           background-color: rgb(242, 245, 76);
-          width: clamp(180px, 50vh, 500px);
-          height: clamp(180px, 50vh, 500px);
+          width: clamp(200px, 40vh, 500px);
+          height: clamp(200px, 40vh, 500px);
         }
-        // .div-green {
-        //   position: absolute;
-        //   bottom: 150px;
-        //   right: 350px;
-        //   background-color: rgb(87, 245, 76);
-        //   width: clamp(350px, 30vh, 500px);
-        //   height: clamp(350px, 30vh, 500px);
-        // }
         .hero-images-inner {
           position: relative;
           height: 100%;
@@ -127,16 +120,16 @@
             width: 100%;
             &.janou {
               position: absolute;
-              top: 140px;
-              right: 300px;
+              top: 186px;
+              right: 179px;
               width: 45%;
               height: 60%;
               z-index: 2;
             }
             &.hertz {
               position: absolute;
-              bottom: 0;
-              left: 0;
+              bottom: -93px;
+              left: 150px;
               width: 25%;
               height: 60%;
               z-index: 3;

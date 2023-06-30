@@ -9,7 +9,7 @@
   place-items: center;
   z-index: 0;
   color: white;
-  padding: 0;
+  padding: 1.5rem 0;
   max-width: 100vw;
   height: auto;
   min-height: 100vh;
@@ -19,14 +19,15 @@
     position: relative;
     background-color: transparent;
     z-index: 50;
-    padding: 1rem 2rem;
+    padding: 0 1.5rem;
     font-weight: 300;
     p {
       font-size: clamp(1rem, 1.4vw, 1.25rem);
     }
     h2 {
-      font-size: $h2;
+      // font-size: $h2;
       margin-bottom: 0.3rem;
+      font-size: clamp($h2, 2vw, 1rem);
     }
     h3 {
       font-size: $h3;
@@ -41,11 +42,4 @@
     width: 100vw;
     height: max-content;
   }
-  // .intro-title {
-  //   justify-self: left;
-  //   clip-path: fill-box;
-  // }
-  // .intro-text {
-  //   justify-self: left;
-  // }
 }

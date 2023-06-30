@@ -105,7 +105,6 @@
 
                         <div class="hero-images">
                             <div class="div-yellow"></div>
-                            <div class="div-green"></div>
                             <div class="hero-images-inner images">
                                 <div class="hero-image janou">
                                     <img src="./IMG/janou-t-1.png" alt="janou treffers">
@@ -155,8 +154,7 @@
                 <canvas id="draw"></canvas>
                 <script>
                     window.addEventListener ('load',() => {
-                        console.log ('Loading')
-
+                   
                         const canvas = document.querySelector('canvas');
                         const container = document.getElementById('container-intro');
 
@@ -168,6 +166,7 @@
 
                             canvas.width = containerWidth;
                             canvas.height = containerHeight;
+                            
                         }
 
                         resizeCanvas();
@@ -177,8 +176,6 @@
                         ctx.lineCap = "round";
                         ctx.lineWidth = 100;
 
-                        console.log(ctx);
-
                         let isDrawing;
                         let lastX = 0;
                         let lastY = 0;
@@ -187,7 +184,6 @@
 
                         function draw(e) {
                             if (!isDrawing) return;
-                            console.log(isDrawing, "isdrawing");
                             ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
                             ctx.beginPath();
                             ctx.moveTo(lastX, lastY);
@@ -200,9 +196,10 @@
                                 hue = 0;
                             }
                         }
-
+                      
                         function clearCanvas() {
                             ctx.clearRect(0, 0, canvas.width, canvas.height);
+                           
                         }
 
                         canvas.addEventListener("mousedown", (e) => {
@@ -233,19 +230,22 @@
                                 y: e.touches[0].clientY
                             });
                             canvas.dispatchEvent(mouseEvent);
+                           
                         }, false);
 
                         canvas.addEventListener("touchmove", (e) => {
-                            if (window.innerWidth < 768) {
-                                e.preventDefault();
+                            console.log("mouse event: " + e.touches[0].clientX)
+                            if (window.innerWidth <= 768) {
+                               
                             }
                             isDrawing = true;
                             [lastX, lastY] = [e.touches[0].clientX, e.touches[0].clientY];
+                            draw(e.touches[0]); // Pass the touch object to the draw function
                         });
 
                         canvas.addEventListener("touchend", (e) => {
-                            if (window.innerWidth < 768) {
-                                e.preventDefault();
+                            if (window.innerWidth <= 768) {
+                               
                             }
                             isDrawing = false;
                             clearCanvas();
@@ -257,8 +257,9 @@
                 </script>
             </div>
         </section>
+        
         <!-- <canvas id="canvas1"></canvas> -->
-        <script src="/JS/draw.js"></script>
+        <!-- <script src="/JS/draw.js"></script> -->
         <!-- Card section-->
         <!-- <section class="section-card">
             <div class="wrapper-card">
@@ -401,7 +402,7 @@
         <!-- Contact -->
         <section class="section-contact" id="contact">
             <div class="contact-container">
-                <form class="form-bg target=" _blank" action="https://formsubmit.co/janoutreffers@gmail.com"
+                <form class="form-bg target=" _blank" action="6ff1a0a4c2b8aed62081993a627ae2d2"
                     method="POST">
                     <div class="form-group">
                         <div class="contact-header">

@@ -32,11 +32,11 @@ html,
 body {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -45,6 +45,7 @@ body {
   font-weight: 400;
   line-height: 1.3;
   background-color: transparent;
+  position: relative;
 }
 
 main {
@@ -107,7 +108,7 @@ section {
   place-items: center;
   z-index: 0;
   color: white;
-  padding: 0;
+  padding: 1.5rem 0;
   max-width: 100vw;
   height: auto;
   min-height: 100vh;
@@ -118,15 +119,15 @@ section {
   position: relative;
   background-color: transparent;
   z-index: 50;
-  padding: 1rem 2rem;
+  padding: 0 1.5rem;
   font-weight: 300;
 }
 .container-intro div p {
   font-size: clamp(1rem, 1.4vw, 1.25rem);
 }
 .container-intro div h2 {
-  font-size: 2.6rem;
   margin-bottom: 0.3rem;
+  font-size: clamp(2.6rem, 2vw, 1rem);
 }
 .container-intro div h3 {
   font-size: 2.2rem;
@@ -645,11 +646,13 @@ nav .download-container {
 }
 .hero .container .hero-inner .hero-images .div-yellow {
   position: absolute;
-  top: 250px;
-  left: 32px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   background-color: rgb(242, 245, 76);
-  width: clamp(180px, 50vh, 500px);
-  height: clamp(180px, 50vh, 500px);
+  width: clamp(200px, 40vh, 500px);
+  height: clamp(200px, 40vh, 500px);
 }
 .hero .container .hero-inner .hero-images .hero-images-inner {
   position: relative;
@@ -661,16 +664,16 @@ nav .download-container {
 }
 .hero .container .hero-inner .hero-images .hero-images-inner .hero-image.janou {
   position: absolute;
-  top: 140px;
-  right: 300px;
+  top: 186px;
+  right: 179px;
   width: 45%;
   height: 60%;
   z-index: 2;
 }
 .hero .container .hero-inner .hero-images .hero-images-inner .hero-image.hertz {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: -93px;
+  left: 150px;
   width: 25%;
   height: 60%;
   z-index: 3;
@@ -711,7 +714,6 @@ nav .download-container {
   display: inline-block;
   position: relative;
   overflow: hidden;
-  cursor: pointer;
   text-align: center;
   font-family: "Pathway", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #c1f2b4;
@@ -720,6 +722,7 @@ nav .download-container {
   color: #ffffa2;
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
+  cursor: pointer;
 }
 .portfolio-item h4,
 .portfolio-item h5 {
@@ -951,7 +954,6 @@ footer div p {
 }
 
 .cursor {
-  pointer-events: none;
   position: fixed;
   display: block;
   border-radius: 0;
@@ -1152,24 +1154,23 @@ footer div p {
     min-width: 100%;
   }
   .hero-inner .hero-images {
-    max-height: 100svh;
-    max-width: 100%;
+    height: 100%;
+    width: 100%;
   }
   .hero-inner .hero-images .hero-images-inner {
     width: 30rem;
   }
   .hero-inner .hero-images .hero-images-inner .hero-image.janou {
     width: 100%;
-    left: 20px;
+    left: -65px;
     max-height: -webkit-max-content;
     max-height: -moz-max-content;
     max-height: max-content;
   }
   .hero-inner .hero-images .hero-images-inner .hero-image.hertz {
-    width: 100%;
     min-height: 100vh;
-    z-index: 4;
-    top: 320px;
+    top: 368px;
+    left: 86px !important;
   }
   .btn-row:before {
     display: none;
