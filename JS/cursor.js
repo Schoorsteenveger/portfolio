@@ -20,7 +20,7 @@ let drawing;
 window.addEventListener('mousemove', function () {
   if (!drawing) {
     drawing = setInterval(function () {
-      if (mousePos.x > 0 && mousePos.y > 0 && window.innerWidth > 768) {
+      if (mousePos.x > 0 && mousePos.y > 0) {
         let range = 5;
         let color =
           'background: rgb(' +

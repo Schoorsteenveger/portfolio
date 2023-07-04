@@ -151,6 +151,9 @@
     grid-template-columns: repeat(auto-fit, minmax(500px, 2fr));
     height: auto;
   }
+  .portfolio-item {
+    cursor: pointer;
+  }
   footer {
     div {
       grid-template-columns: repeat(auto-fit, minmax(400px, 3fr));

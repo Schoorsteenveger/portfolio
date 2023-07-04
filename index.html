@@ -17,6 +17,7 @@
     <title>Portfolio</title>
     <script src="/JS/main.js" defer></script>
     <script src="/JS/cursor.js"></script>
+    <script src="/JS/draw.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Flip.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
@@ -152,112 +153,10 @@
                         journey of collaboration.</p>
                 </div>
                 <canvas id="draw"></canvas>
-                <script>
-                    window.addEventListener ('load',() => {
-                   
-                        const canvas = document.querySelector('canvas');
-                        const container = document.getElementById('container-intro');
-
-                        const ctx = canvas.getContext("2d");
-
-                        function resizeCanvas() {
-                            const containerWidth = container.offsetWidth;
-                            const containerHeight = container.offsetHeight;
-
-                            canvas.width = containerWidth;
-                            canvas.height = containerHeight;
-                            
-                        }
-
-                        resizeCanvas();
-
-                        ctx.strokeStyle = "#ffffa2";
-                        ctx.lineJoin = "round";
-                        ctx.lineCap = "round";
-                        ctx.lineWidth = 100;
-
-                        let isDrawing;
-                        let lastX = 0;
-                        let lastY = 0;
-                        let hue = 0;
-                        let direction = true;
-
-                        function draw(e) {
-                            if (!isDrawing) return;
-                            ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
-                            ctx.beginPath();
-                            ctx.moveTo(lastX, lastY);
-                            ctx.lineTo(e.offsetX, e.offsetY);
-                            ctx.stroke();
-                            [lastX, lastY] = [e.offsetX, e.offsetY];
-
-                            hue++;
-                            if (hue >= 360) {
-                                hue = 0;
-                            }
-                        }
-                      
-                        function clearCanvas() {
-                            ctx.clearRect(0, 0, canvas.width, canvas.height);
-                           
-                        }
-
-                        canvas.addEventListener("mousedown", (e) => {
-                            isDrawing = true;
-                            [lastX, lastY] = [e.offsetX, e.offsetY];
-                        });
-
-                        canvas.addEventListener("mousemove", draw);
-                        canvas.addEventListener("mouseup", () => {
-                            isDrawing = false;
-                            clearCanvas();
-                        });
-
-                        canvas.addEventListener("mouseout", () => {
-                            isDrawing = false;
-                            clearCanvas();
-                        });
-
-                        // Prevent touch events from scrolling on devices with innerWidth smaller than 768px
-                        canvas.addEventListener("touchstart", (e) => {
-                            if (window.innerWidth < 768) {
-                                e.preventDefault();
-                            }
-                            isDrawing = true;
-                            [lastX, lastY] = [e.touches[0].clientX, e.touches[0].clientY];
-                            let mouseEvent = new MouseEvent("mousedown", {
-                                x: e.touches[0].clientX,
-                                y: e.touches[0].clientY
-                            });
-                            canvas.dispatchEvent(mouseEvent);
-                           
-                        }, false);
-
-                        canvas.addEventListener("touchmove", (e) => {
-                            console.log("mouse event: " + e.touches[0].clientX)
-                            if (window.innerWidth <= 768) {
-                               
-                            }
-                            isDrawing = true;
-                            [lastX, lastY] = [e.touches[0].clientX, e.touches[0].clientY];
-                            draw(e.touches[0]); // Pass the touch object to the draw function
-                        });
-
-                        canvas.addEventListener("touchend", (e) => {
-                            if (window.innerWidth <= 768) {
-                               
-                            }
-                            isDrawing = false;
-                            clearCanvas();
-                        });
-
-                        // Resize canvas when the window size changes
-                        window.addEventListener("resize", resizeCanvas);
-                    });
-                </script>
+                
             </div>
         </section>
-        
+
         <!-- <canvas id="canvas1"></canvas> -->
         <!-- <script src="/JS/draw.js"></script> -->
         <!-- Card section-->
@@ -402,8 +301,7 @@
         <!-- Contact -->
         <section class="section-contact" id="contact">
             <div class="contact-container">
-                <form class="form-bg target=" _blank" action="6ff1a0a4c2b8aed62081993a627ae2d2"
-                    method="POST">
+                <form class="form-bg target=" _blank" action="6ff1a0a4c2b8aed62081993a627ae2d2" method="POST">
                     <div class="form-group">
                         <div class="contact-header">
                             <h2>Like to know more?</h1>
