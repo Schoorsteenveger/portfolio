@@ -73,7 +73,6 @@ window.addEventListener('load', () => {
     (e) => {
       if (container.offsetWidth < 768) {
         e.preventDefault();
-        e.stopPropagation();
       }
       isDrawing = true;
       [lastX, lastY] = [e.touches[0].clientX, e.touches[0].clientY];
@@ -84,7 +83,7 @@ window.addEventListener('load', () => {
 
   canvas.addEventListener('touchmove', (e) => {
     if (container.offsetWidth <= 768) {
-      e.preventDefault();
+      // e.preventDefault();
     }
     [lastX, lastY] = [e.touches[0].clientX, e.touches[0].clientY];
     draw(lastX, lastY);
@@ -92,7 +91,7 @@ window.addEventListener('load', () => {
 
   canvas.addEventListener('touchend', (e) => {
     if (container.offsetWidth <= 768) {
-      e.preventDefault();
+      // e.preventDefault();
     }
     isDrawing = false;
     clearCanvas();
