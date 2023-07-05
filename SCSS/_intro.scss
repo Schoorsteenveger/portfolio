@@ -41,5 +41,7 @@
     z-index: 200;
     width: 100vw;
     height: max-content;
+    touch-action: none;
+    -ms-touch-action: none;
   }
 }

@@ -53,7 +53,7 @@ window.addEventListener('mousemove', function () {
           },
           false
         );
-        document.getElementById('wrap').appendChild(div);
+        document.getElementById('cursorFollower').appendChild(div);
       }
     }, 1);
   }

@@ -8,6 +8,11 @@ window.addEventListener('load', () => {
   canvas.width = containerWidth;
   canvas.height = containerHeight;
 
+  // Calculate canvas position
+  const canvasRect = canvas.getBoundingClientRect();
+  const offsetX = canvasRect.left;
+  const offsetY = canvasRect.top;
+
   ctx.strokeStyle = '#ffffa2';
   ctx.lineJoin = 'round';
   ctx.lineCap = 'round';
@@ -21,10 +26,10 @@ window.addEventListener('load', () => {
   function draw(x, y) {
     ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
     ctx.beginPath();
-    ctx.closePath();
     ctx.moveTo(lastX, lastY);
     ctx.lineTo(x, y);
     ctx.stroke();
+    ctx.closePath();
     lastX = x;
     lastY = y;
 
@@ -42,18 +47,18 @@ window.addEventListener('load', () => {
 
   window.addEventListener('resize', () => {
     setTimeout(() => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      clearCanvas();
     }, 100); // Delay clearing the canvas for 100 milliseconds
   });
 
   canvas.addEventListener('mousedown', (e) => {
     isDrawing = true;
-    [lastX, lastY] = [e.offsetX, e.offsetY];
+    [lastX, lastY] = [e.pageX - offsetX, e.clientY - offsetY];
   });
 
   canvas.addEventListener('mousemove', (e) => {
     if (isDrawing) {
-      draw(e.offsetX, e.offsetY);
+      draw(e.pageX - offsetX, e.clientY - offsetY);
     }
   });
 
@@ -71,27 +76,34 @@ window.addEventListener('load', () => {
   canvas.addEventListener(
     'touchstart',
     (e) => {
-      if (container.offsetWidth < 768) {
+      if (e.target == canvas) {
         e.preventDefault();
       }
       isDrawing = true;
-      [lastX, lastY] = [e.touches[0].clientX, e.touches[0].clientY];
+      isDrawing = true;
+      [lastX, lastY] = [
+        e.touches[0].clientX - offsetX,
+        e.touches[0].clientY - offsetY,
+      ];
       draw(lastX, lastY); // Call draw initially when touch starts
     },
     false
   );
 
   canvas.addEventListener('touchmove', (e) => {
-    if (container.offsetWidth <= 768) {
-      // e.preventDefault();
+    if (e.target == canvas) {
+      e.preventDefault();
     }
-    [lastX, lastY] = [e.touches[0].clientX, e.touches[0].clientY];
+    [lastX, lastY] = [
+      e.touches[0].clientX - offsetX,
+      e.touches[0].clientY - offsetY,
+    ];
     draw(lastX, lastY);
   });
 
   canvas.addEventListener('touchend', (e) => {
-    if (container.offsetWidth <= 768) {
-      // e.preventDefault();
+    if (e.target == canvas) {
+      e.preventDefault();
     }
     isDrawing = false;
     clearCanvas();

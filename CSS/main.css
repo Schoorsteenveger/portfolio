@@ -142,6 +142,8 @@ section {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  touch-action: none;
+  -ms-touch-action: none;
 }
 
 /* Image size */
@@ -682,11 +684,6 @@ nav .download-container {
   width: 100%;
 }
 
-#canvas1 {
-  border: 1px solid black;
-  background-color: aquamarine;
-}
-
 /* Image size */
 /* portfolio grid */
 .section-portfolio {
@@ -975,7 +972,7 @@ footer div p {
   background-image: linear-gradient(319deg, #bbff99 0%, #ffec99 37%, #ff9999 100%);
 }
 
-#wrap {
+#cursorFollower {
   width: 100%;
   height: auto;
   position: absolute;
@@ -1187,7 +1184,7 @@ footer div p {
     grid-template-columns: repeat(auto-fit, minmax(500px, 2fr));
     height: auto;
   }
-  .portfolio-item {
+  .portfolio-item a {
     cursor: pointer;
   }
   footer div {
