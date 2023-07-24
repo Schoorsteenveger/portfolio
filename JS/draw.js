@@ -1,17 +1,23 @@
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
   const canvas = document.querySelector('canvas');
   const container = document.getElementById('container-intro');
   const ctx = canvas.getContext('2d');
   let containerWidth = container.offsetWidth;
   let containerHeight = container.offsetHeight;
-
-  canvas.width = containerWidth;
-  canvas.height = containerHeight;
+  let offsetX = 0;
+  let offsetY = 0;
 
   // Calculate canvas position
-  const canvasRect = canvas.getBoundingClientRect();
-  const offsetX = canvasRect.left;
-  const offsetY = canvasRect.top;
+  function updateCanvasRect() {
+    const canvasRect = canvas.getBoundingClientRect();
+    offsetX = canvasRect.left;
+    offsetY = canvasRect.top;
+  }
+
+  // Initial canvas size update
+  updateCanvasRect();
+  canvas.width = containerWidth;
+  canvas.height = containerHeight;
 
   ctx.strokeStyle = '#ffffa2';
   ctx.lineJoin = 'round';
@@ -40,18 +46,23 @@ window.addEventListener('load', () => {
   }
 
   function clearCanvas() {
-    setTimeout(function () {
-      ctx.clearRect(0, 0, containerWidth, containerHeight);
-    }, 100);
+    ctx.clearRect(0, 0, containerWidth, containerHeight);
   }
 
   window.addEventListener('resize', () => {
+    containerWidth = container.offsetWidth;
+    containerHeight = container.offsetHeight;
+    canvas.width = containerWidth;
+    canvas.height = containerHeight;
     clearCanvas();
+    updateCanvasRect();
   });
 
   canvas.addEventListener('mousedown', (e) => {
     isDrawing = true;
+    updateCanvasRect();
     [lastX, lastY] = [e.pageX - offsetX, e.clientY - offsetY];
+    draw(e.pageX - offsetX, e.clientY - offsetY);
   });
 
   canvas.addEventListener('mousemove', (e) => {
@@ -62,7 +73,6 @@ window.addEventListener('load', () => {
 
   canvas.addEventListener('mouseup', () => {
     isDrawing = false;
-    // clearCanvas();
   });
 
   canvas.addEventListener('mouseout', () => {
@@ -71,10 +81,9 @@ window.addEventListener('load', () => {
   });
 
   // Prevent touch events from scrolling on devices with innerWidth smaller than 768px
-
   canvas.addEventListener('touchstart', function (e) {
-    console.log('touchstart');
     isDrawing = true;
+    updateCanvasRect();
     const touchX = e.touches[0].pageX - offsetX;
     const touchY = e.touches[0].pageY - offsetY;
     draw(touchX, touchY);
@@ -83,16 +92,14 @@ window.addEventListener('load', () => {
   canvas.addEventListener('touchmove', function (e) {
     e.preventDefault();
     if (isDrawing) {
+      updateCanvasRect();
       const touchX = e.touches[0].pageX - offsetX;
       const touchY = e.touches[0].pageY - offsetY;
       draw(touchX, touchY);
-      console.log(touchX, touchY, 'touchmove, touchX, touchY');
-      console.log(isDrawing, 'isDrawing');
     }
   });
 
   canvas.addEventListener('touchend', function (e) {
     isDrawing = false;
-    clearCanvas();
   });
 });
