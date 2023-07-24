@@ -42,13 +42,11 @@ window.addEventListener('load', () => {
   function clearCanvas() {
     setTimeout(function () {
       ctx.clearRect(0, 0, containerWidth, containerHeight);
-    }, 2000);
+    }, 100);
   }
 
   window.addEventListener('resize', () => {
-    setTimeout(() => {
-      clearCanvas();
-    }, 100); // Delay clearing the canvas for 100 milliseconds
+    clearCanvas();
   });
 
   canvas.addEventListener('mousedown', (e) => {
@@ -64,7 +62,7 @@ window.addEventListener('load', () => {
 
   canvas.addEventListener('mouseup', () => {
     isDrawing = false;
-    clearCanvas();
+    // clearCanvas();
   });
 
   canvas.addEventListener('mouseout', () => {
@@ -77,16 +75,16 @@ window.addEventListener('load', () => {
   canvas.addEventListener('touchstart', function (e) {
     console.log('touchstart');
     isDrawing = true;
-    const touchX = e.changedTouches[0].pageX - offsetX;
-    const touchY = e.changedTouches[0].pageY - offsetY;
+    const touchX = e.touches[0].pageX - offsetX;
+    const touchY = e.touches[0].pageY - offsetY;
     draw(touchX, touchY);
   });
 
   canvas.addEventListener('touchmove', function (e) {
     e.preventDefault();
     if (isDrawing) {
-      const touchX = e.changedTouches[0].pageX - offsetX;
-      const touchY = e.changedTouches[0].pageY - offsetY;
+      const touchX = e.touches[0].pageX - offsetX;
+      const touchY = e.touches[0].pageY - offsetY;
       draw(touchX, touchY);
       console.log(touchX, touchY, 'touchmove, touchX, touchY');
       console.log(isDrawing, 'isDrawing');
