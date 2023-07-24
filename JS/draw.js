@@ -73,38 +73,27 @@ window.addEventListener('load', () => {
   });
 
   // Prevent touch events from scrolling on devices with innerWidth smaller than 768px
-  canvas.addEventListener(
-    'touchstart',
-    (e) => {
-      if (e.target == canvas) {
-        e.preventDefault();
-      }
-      isDrawing = true;
-      isDrawing = true;
-      [lastX, lastY] = [
-        e.touches[0].clientX - offsetX,
-        e.touches[0].clientY - offsetY,
-      ];
-      draw(lastX, lastY); // Call draw initially when touch starts
-    },
-    false
-  );
 
-  canvas.addEventListener('touchmove', (e) => {
-    if (e.target == canvas) {
-      e.preventDefault();
-    }
-    [lastX, lastY] = [
-      e.touches[0].clientX - offsetX,
-      e.touches[0].clientY - offsetY,
-    ];
-    draw(lastX, lastY);
+  canvas.addEventListener('touchstart', function (e) {
+    console.log('touchstart');
+    isDrawing = true;
+    const touchX = e.changedTouches[0].pageX - offsetX;
+    const touchY = e.changedTouches[0].pageY - offsetY;
+    draw(touchX, touchY);
   });
 
-  canvas.addEventListener('touchend', (e) => {
-    if (e.target == canvas) {
-      e.preventDefault();
+  canvas.addEventListener('touchmove', function (e) {
+    e.preventDefault();
+    if (isDrawing) {
+      const touchX = e.changedTouches[0].pageX - offsetX;
+      const touchY = e.changedTouches[0].pageY - offsetY;
+      draw(touchX, touchY);
+      console.log(touchX, touchY, 'touchmove, touchX, touchY');
+      console.log(isDrawing, 'isDrawing');
     }
+  });
+
+  canvas.addEventListener('touchend', function (e) {
     isDrawing = false;
     clearCanvas();
   });
