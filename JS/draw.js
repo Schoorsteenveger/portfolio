@@ -8,6 +8,7 @@ window.addEventListener('DOMContentLoaded', () => {
   let offsetY = 0;
 
   // Calculate canvas position
+
   function updateCanvasRect() {
     const canvasRect = canvas.getBoundingClientRect();
     offsetX = canvasRect.left;
@@ -15,7 +16,9 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   // Initial canvas size update
+
   updateCanvasRect();
+
   canvas.width = containerWidth;
   canvas.height = containerHeight;
 
@@ -46,14 +49,10 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   function clearCanvas() {
-    ctx.clearRect(0, 0, containerWidth, containerHeight);
+    ctx.clearRect(0, 0, container.offsetWidth, container.offsetHeight);
   }
 
   window.addEventListener('resize', () => {
-    containerWidth = container.offsetWidth;
-    containerHeight = container.offsetHeight;
-    canvas.width = containerWidth;
-    canvas.height = containerHeight;
     clearCanvas();
     updateCanvasRect();
   });
@@ -82,10 +81,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Prevent touch events from scrolling on devices with innerWidth smaller than 768px
   canvas.addEventListener('touchstart', function (e) {
+    e.preventDefault();
     isDrawing = true;
     updateCanvasRect();
-    const touchX = e.touches[0].pageX - offsetX;
-    const touchY = e.touches[0].pageY - offsetY;
+    const touchX = e.touches[0].clientX - offsetX;
+    const touchY = e.touches[0].clientY - offsetY;
     draw(touchX, touchY);
   });
 
@@ -93,8 +93,8 @@ window.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     if (isDrawing) {
       updateCanvasRect();
-      const touchX = e.touches[0].pageX - offsetX;
-      const touchY = e.touches[0].pageY - offsetY;
+      const touchX = e.touches[0].clientX - offsetX;
+      const touchY = e.touches[0].clientY - offsetY;
       draw(touchX, touchY);
     }
   });
