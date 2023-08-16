@@ -49,7 +49,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   function clearCanvas() {
-    ctx.clearRect(0, 0, container.offsetWidth, container.offsetHeight);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
   }
 
   window.addEventListener('resize', () => {
@@ -101,5 +101,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   canvas.addEventListener('touchend', function (e) {
     isDrawing = false;
+    clearCanvas();
   });
 });
