@@ -4,36 +4,18 @@
 
 .container-intro {
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 3fr));
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 0;
-  color: white;
+  color: $button-background-color;
   padding: 1.5rem 0;
   max-width: 100vw;
+  width: 100%;
   height: 100%;
   min-height: 100vh;
   overflow: hidden;
-  background-color: rgb(0, 127, 120);
-  div {
-    position: relative;
-    background-color: transparent;
-    z-index: 50;
-    padding: 0 1.5rem;
-    font-weight: 300;
-    p {
-      font-size: clamp(1rem, 1.4vw, 1.25rem);
-    }
-    h2 {
-      // font-size: $h2;
-      margin-bottom: 0.3rem;
-      font-size: clamp($h2, 2vw, 1rem);
-    }
-    h3 {
-      font-size: $h3;
-      margin-bottom: 0.3rem;
-    }
-  }
+  background-color: $secondary-color;
   canvas {
     position: absolute;
     top: 0;
@@ -44,4 +26,67 @@
     touch-action: none;
     -ms-touch-action: none;
   }
+  .circle-container {
+    width: 50vw;
+    height: auto;
+    justify-self: start;
+    align-items: center;
+    flex-basis: 33.33%;
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+    }
+    .circle-inner {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $primary-color;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .intro-title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    h2 {
+      font-size: $h2 * 2.2;
+      color: $secondary-color;
+    }
+  }
+}
+
+.section-intro {
+  position: relative;
+  overflow: hidden;
+}
+
+#intro-text {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 1s ease, transform 1s ease, color 1s ease; /* Add color transition */
+  text-align: left;
+  max-width: 40vw;
+  flex-basis: 40%;
+  padding: 0 2rem;
+  h3 {
+    font-size: $h3;
+    padding-bottom: 1.125rem;
+    color: white;
+  }
+  p {
+    font-size: clamp(1rem, 1.4vw, 1.25rem);
+    color: white;
+  }
+}
+
+#intro-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+  color: white; /* Desired text color */
+  transition-delay: 0.8s;
 }

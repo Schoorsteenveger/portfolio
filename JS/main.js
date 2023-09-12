@@ -24,6 +24,7 @@ const closeMenu = () => {
 navLink.forEach((navLink) => navLink.addEventListener('click', closeMenu));
 
 // GSAP Hero animation
+
 let images = document.querySelector('.images');
 const janouImage = images.firstElementChild;
 const hertzImage = images.lastElementChild;
@@ -72,45 +73,36 @@ tl.staggerFrom(
 tl.from(contentP, 1, { y: 20, opacity: 0, ease: 'Power3.easeOut' }, 1.4);
 tl.from(btnRow, 1, { y: 20, opacity: 0, ease: 'Power3.easeOut' }, 1.6);
 
-// // Cursor animation
-// const coords = { x: 0, y: 0 };
-// const circles = document.querySelectorAll(".circle");
+// Text animation on scroll
 
-// const cursor = document.querySelector(".cursor");
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
 
-// circles.forEach(function (circle, index) {
-//     circle.x = 0;
-//     circle.y = 0;
-//     circle.style.backgroundColor = "white";
-// });
+function showIntroTextOnScroll() {
+  const introText = document.getElementById('intro-text');
 
-// window.addEventListener("mousemove", function (e) {
-//     coords.x = e.clientX;
-//     coords.y = e.clientY;
-// });
+  window.addEventListener('scroll', function () {
+    if (isElementInViewport(introText)) {
+      introText.classList.add('visible');
 
-// function animateCircles() {
-//     let x = coords.x;
-//     let y = coords.y;
+      window.removeEventListener('scroll', showIntroTextOnScroll);
+    }
+  });
+}
 
-//     cursor.style.top = x;
-//     cursor.style.left = y;
+showIntroTextOnScroll();
 
-//     circles.forEach(function (circle, index) {
-//         circle.style.left = x - 12 + "px";
-//         circle.style.top = y - 12 + "px";
+// Text animation on page refresh
 
-//         circle.style.scale = (circles.length - index) / circles.length;
-
-//         circle.x = x;
-//         circle.y = y;
-
-//         const nextCircle = circles[index + 1] || circles[0];
-//         x += (nextCircle.x - x) * 0.6;
-//         y += (nextCircle.y - y) * 0.6;
-//     });
-
-//     requestAnimationFrame(animateCircles);
-// }
-
-// animateCircles();
+document.addEventListener('DOMContentLoaded', function () {
+  const introText = document.getElementById('intro-text');
+  introText.classList.add('visible');
+});

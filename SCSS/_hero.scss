@@ -29,7 +29,7 @@
             font-weight: 500;
             font-size: $h1;
             line-height: $line-height;
-            margin-bottom: 24px;
+            margin-bottom: 1.5rem;
             .hero-content-line {
               margin: 0;
               height: 60px;
@@ -40,7 +40,7 @@
             }
           }
           p {
-            font-size: 24px;
+            font-size: 1.5rem;
             line-height: $line-height;
             font-weight: $font-weight;
             padding-right: 48px;
@@ -61,7 +61,7 @@
             button {
               background: none;
               border: none;
-              font-size: 12px;
+              font-size: 0.75rem;
               padding: 0;
               cursor: pointer;
               text-transform: uppercase;
@@ -108,7 +108,7 @@
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          background-color: rgb(242, 245, 76);
+          background-color: #ffffa2;
           width: clamp(200px, 40vh, 500px);
           height: clamp(200px, 40vh, 500px);
         }
