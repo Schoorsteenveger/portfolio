@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/CSS/main.css" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,300&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,100&display=swap"
-        rel="stylesheet">
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,300&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,100&display=swap"
+      rel="stylesheet"
+    />
     <title>Portfolio</title>
     <script src="/JS/main.js" defer></script>
     <script src="/JS/cursor.js"></script>
@@ -29,263 +33,301 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/MotionPathPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/PixiPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js"></script>
-</head>
+  </head>
 
-<body id="cursorFollower">
+  <body id="cursorFollower">
     <main class="main-homepage">
-        <header class="header">
-            <div class="header-left">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="/IMG/logo-hertz-hr.png" alt="logo-hertz">
-                    </a>
+      <header class="header">
+        <div class="header-left">
+          <div class="logo">
+            <a href="index.html">
+              <img src="/IMG/logo-hertz-hr.png" alt="logo-hertz" />
+            </a>
+          </div>
+          <nav class="navbar">
+            <ul class="nav-menu">
+              <li class="menuItem hide-logo">
+                <a class="nav-link hover-underline-animation" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="menuItem">
+                <a class="nav-link hover-underline-animation" href="#about"
+                  >About</a
+                >
+              </li>
+              <li class="menuItem hover-underline-animation">
+                <a class="nav-link" href="#work">Work</a>
+              </li>
+              <li class="menuItem hover-underline-animation">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+              <div class="download-container">
+                <a
+                  href="./PDF/Janou-treffers-resume.pdf"
+                  download="Janou-treffers-resume"
+                  ><button class="action-btn">
+                    <i class="fa fa-download"></i> Download
+                  </button></a
+                >
+              </div>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-right">
+          <div class="download-container">
+            <a
+              href="./PDF/Janou-treffers-resume.pdf"
+              download="Janou-treffers-resume"
+              ><button class="action-btn">
+                <i class="fa fa-download"></i> Download
+              </button></a
+            >
+          </div>
+          <button class="toggleBtn">
+            <i class="menuIcon fa-solid fa-bars"></i>
+            <i class="closeIcon fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- hero animation -->
+      <section id="about">
+        <div class="hero">
+          <div class="container">
+            <div class="hero-inner">
+              <div class="hero-content">
+                <div class="hero-content-inner content">
+                  <h1>
+                    <div class="hero-content-line">
+                      <div class="hero-content-line-inner">
+                        Creative Frontend
+                      </div>
+                    </div>
+                    <div class="hero-content-line">
+                      <div class="hero-content-line-inner">
+                        Painting the Digital Canvas
+                      </div>
+                    </div>
+                    <div class="hero-content-line">
+                      <div class="hero-content-line-inner">
+                        With Brushstrokes
+                      </div>
+                    </div>
+                  </h1>
+                  <p>
+                    Mastering the Art of Web Experiences: Unleashing Creativity
+                    with a Colorful Coding Palette.
+                  </p>
+                  <div class="btn-row">
+                    <button class="explore-btn">
+                      Explore
+                      <div class="arrow-icon">
+                        <i class="fa-solid fa-arrow-right" alt="arrow"></i>
+                      </div>
+                    </button>
+                  </div>
                 </div>
-                <nav class="navbar">
-                    <ul class="nav-menu">
-                        <li class="menuItem hide-logo">
-                            <a class="nav-link hover-underline-animation" href="index.html">Home</a>
-                        </li>
-                        <li class="menuItem">
-                            <a class="nav-link hover-underline-animation" href="#about">About</a>
-                        </li>
-                        <li class="menuItem hover-underline-animation">
-                            <a class="nav-link" href="#work">Work</a>
-                        </li>
-                        <li class="menuItem hover-underline-animation">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                        <div class="download-container">
-                            <a href="./PDF/Janou-treffers-resume.pdf" download="Janou-treffers-resume"><button
-                                    class="action-btn"><i class="fa fa-download"></i> Download</button></a>
-                        </div>
-                    </ul>
-                </nav>
+              </div>
+
+              <div class="hero-images">
+                <div class="div-yellow"></div>
+                <div class="hero-images-inner images">
+                  <div class="hero-image janou">
+                    <img src="./IMG/janou-t-1.png" alt="janou treffers" />
+                  </div>
+                  <div class="hero-image hertz">
+                    <img src="./IMG/terese_bertha.jpg" alt="something" />
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="header-right">
-                <div class="download-container">
-                    <a href="./PDF/Janou-treffers-resume.pdf" download="Janou-treffers-resume"><button
-                            class="action-btn"><i class="fa fa-download"></i> Download</button></a>
-                </div>
-                <button class="toggleBtn">
-                    <i class="menuIcon fa-solid fa-bars"></i>
-                    <i class="closeIcon fa-solid fa-xmark"></i>
-                </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Drawing canvas-->
+      <section class="section-intro">
+        <div class="container-intro" id="container-intro">
+          <div class="circle-container">
+            <div class="circle-inner">
+              <div class="intro-title">
+                <h2>Paint</h2>
+                <span>
+                  <h2>Me!</h2>
+                </span>
+              </div>
             </div>
-        </header>
+          </div>
+          <div class="intro-text" id="intro-text">
+            <br />
+            <h3><u>Front-end developer</u></h3>
+            <p>
+              I'm flexible by design, collaborative by nature & passionate about
+              helping purpose-driven brands & companies showing up in the world
+              with an intentional and authentic presence. I love to help them
+              thrive and establish long-term connections with their audience.
+            </p>
+            <br />
+            <p>
+              Before I grew to love webdevelopment I broadend my creative
+              horizons by delving into the world of moving images, aiming to
+              capture the essence of people and their surroundings through short
+              documentaries. Visualizing my observations is my strength. With
+              interviews and storytelling, I have helped businesses convey their
+              stories and offerings. With experience in camerajournalism,
+              utilizing Adobe Creative Suite, and now front-end web development,
+              I am capable of translating a wide range of ideas and desires into
+              functional websites and software.
+            </p>
+            <br />
+            <p>
+              Let's combine our powers and embark on an unforgettable journey of
+              collaboration.
+            </p>
+          </div>
+          <canvas></canvas>
+        </div>
+      </section>
 
-        <!-- hero animation -->
-        <section id="about">
-            <div class="hero">
-                <div class="container">
-                    <div class="hero-inner">
-                        <div class="hero-content">
-                            <div class="hero-content-inner content">
-                                <h1>
-                                    <div class="hero-content-line">
-                                        <div class="hero-content-line-inner">Creative Frontend</div>
-                                    </div>
-                                    <div class="hero-content-line">
-                                        <div class="hero-content-line-inner">Painting the Digital Canvas</div>
-                                    </div>
-                                    <div class="hero-content-line">
-                                        <div class="hero-content-line-inner">With Brushstrokes</div>
-                                    </div>
-                                </h1>
-                                <p>Mastering the Art of Web Experiences: Unleashing Creativity with a Colorful Coding
-                                    Palette.
-                                </p>
-                                <div class="btn-row">
-                                    <button class="explore-btn">
-                                        Explore
-                                        <div class="arrow-icon">
-                                            <i class="fa-solid fa-arrow-right" alt="arrow"></i>
-                                        </div>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="hero-images">
-                            <div class="div-yellow"></div>
-                            <div class="hero-images-inner images">
-                                <div class="hero-image janou">
-                                    <img src="./IMG/janou-t-1.png" alt="janou treffers">
-                                </div>
-                                <div class="hero-image hertz">
-                                    <img src="./IMG/terese_bertha.jpg" alt="something">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <!-- Portfolio -->
+      <section class="section-portfolio" id="work">
+        <div class="container-portfolio">
+          <div class="portfolio-item">
+            <div class="background-title">
+              <h4 class="project-title">Real Estate website</h4>
+              <h5 class="category-title">Custom made</h5>
             </div>
-        </section>
+            <a
+              href="https://tg-web-dev-4.github.io/webshop-web-Schoorsteenveger/#/"
+              target="_blank"
+            >
+              <img src="./IMG/mansion.jpg" alt="Real Estate website" />
+            </a>
+          </div>
 
-        <!-- Drawing canvas-->
-        <section class="section-intro">
-            <div class="container-intro" id="container-intro">
-                <div class="circle-container">
-                    <div class="circle-inner">
-                        <div class="intro-title">
-                            <h2>Paint</h2>
-                            <span>
-                                <h2>Me!</h2>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="intro-text" id="intro-text">
-                    <br>
-                    <h3><u>Front-end developer</u></h3>
-                    <p>
-                        I'm flexible by design, collaborative by nature & passionate about helping purpose-driven brands
-                        & companies showing up in the world with an intentional and authentic presence. I love to help
-                        them thrive and establish long-term
-                        connections with their audience.
-                    </p>
-                    <br>
-                    <p>Before I grew to love webdevelopment I broadend my creative horizons by delving into the world of
-                        moving images, aiming to capture the
-                        essence of people and their surroundings through short documentaries. Visualizing my
-                        observations is my strength. With interviews and storytelling, I have helped businesses
-                        convey their stories and offerings. With experience in camerajournalism, utilizing Adobe
-                        Creative Suite, and now front-end web development, I am capable of translating a wide range of
-                        ideas and desires into functional websites and software.</p>
-                    <br>
-                    <p> Let's combine our powers and embark on an unforgettable
-                        journey of collaboration.</p>
-                </div>
-                <canvas></canvas>
+          <div class="portfolio-item">
+            <div class="background-title">
+              <h4 class="project-title">Weather App</h4>
+              <h5 class="category-title">Api</h5>
             </div>
-        </section>
+            <a
+              href="https://weather-app-react-by-janou.netlify.app/"
+              target="_blank"
+            >
+              <img src="./IMG/clouds.png" alt="weather app" />
+            </a>
+          </div>
 
-        <!-- Portfolio -->
-        <section class="section-portfolio" id="work">
-            <div class='container-portfolio'>
-                <div class="portfolio-item">
-                    <div class="background-title">
-                        <h4 class="project-title">Real Estate website</h4>
-                        <h5 class="category-title">Custom
-                            made</h5>
-                    </div>
-                    <a href="https://tg-web-dev-4.github.io/webshop-web-Schoorsteenveger/#/" target="_blank">
-                        <img src="./IMG/mansion.jpg" alt="Real Estate website">
-                    </a>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="background-title">
-                        <h4 class="project-title">Weather App</h4>
-                        <h5 class="category-title">Api</h5>
-                    </div>
-                    <a href="https://weather-app-react-by-janou.netlify.app/" target="_blank">
-                        <img src="./IMG/clouds.png" alt="weather app">
-                    </a>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="background-title">
-                        <h4 class="project-title">Event website</h4>
-                        <h5 class="category-title">HTML, CSS, Bootstrap</h5>
-                    </div>
-                    <a href="https://amsterdamsbuurtfilmfestival2017.netlify.app/" target="_blank">
-                        <img src="./IMG/vijf.jpg" alt="amsterdams buurtfestival">
-                    </a>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="background-title">
-                        <h4 class="project-title">Bedrijfs Website</h4>
-                        <h5 class="category-title">Wordpress</h5>
-                    </div>
-                    <a href="https://catcontrolsystems.nl/product-op-maat/" target="_blank">
-                        <img src="./IMG/parkingsystems_logo.png" alt="clock-javacript">
-                    </a>
-                </div>
-                <div class="portfolio-item">
-                    <div class="background-title">
-                        <h4 class="project-title">Clock</h4>
-                        <h5 class="category-title">Javascript</h5>
-                    </div>
-                    <a href="https://clock-javascript-janou.netlify.app/" target="_blank">
-                        <img src="./IMG/clock.jpg" alt="clock-javacript">
-                    </a>
-                </div>
-                <div class="portfolio-item overlay">
-                    <div class="background-title">
-                        <h4 class="project-title image-overlay">Film Portfolio</h4>
-                        <h5 class="category-title">Wordpress</h5>
-                    </div>
-                    <a href="https://esthertog.com/" target="_blank">
-                        <img src="./IMG/Photo by_Baz Ratner_Reuters kopie.jpg" alt="Website for Esther Hertog">
-                    </a>
-                </div>
+          <div class="portfolio-item">
+            <div class="background-title">
+              <h4 class="project-title">Event website</h4>
+              <h5 class="category-title">HTML, CSS, Bootstrap</h5>
             </div>
-        </section>
+            <a
+              href="https://amsterdamsbuurtfilmfestival2017.netlify.app/"
+              target="_blank"
+            >
+              <img src="./IMG/vijf.jpg" alt="amsterdams buurtfestival" />
+            </a>
+          </div>
 
-        <!-- Contact -->
-        <section class="section-contact" id="contact">
-            <div class="contact-container">
-                <form class="form-bg target=" _blank" action="6ff1a0a4c2b8aed62081993a627ae2d2" method="POST">
-                    <div class="form-group">
-                        <div class="contact-header">
-                            <h2>Like to know more?</h1>
-                                <p>Send Janou a message</p>
-                        </div>
-                        <div class="form-row">
-                            <div class="">
-                                <input type="text" name="name" placeholder="Full Name" required>
-                            </div>
-                            <div class="">
-                                <input type="email" name="email" placeholder="Email Address" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Your Message" name="message" rows="10" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-lg btn-dark btn-block">Send...</button>
-                </form>
+          <div class="portfolio-item">
+            <div class="background-title">
+              <h4 class="project-title">Bedrijfs Website</h4>
+              <h5 class="category-title">Wordpress</h5>
             </div>
-        </section>
+            <a
+              href="https://catcontrolsystems.nl/product-op-maat/"
+              target="_blank"
+            >
+              <img src="./IMG/parkingsystems_logo.png" alt="clock-javacript" />
+            </a>
+          </div>
+          <div class="portfolio-item">
+            <div class="background-title">
+              <h4 class="project-title">Clock</h4>
+              <h5 class="category-title">Javascript</h5>
+            </div>
+            <a
+              href="https://clock-javascript-janou.netlify.app/"
+              target="_blank"
+            >
+              <img src="./IMG/clock.jpg" alt="clock-javacript" />
+            </a>
+          </div>
+          <div class="portfolio-item overlay">
+            <div class="background-title">
+              <h4 class="project-title image-overlay">Film Portfolio</h4>
+              <h5 class="category-title">Wordpress</h5>
+            </div>
+            <a href="https://esthertog.com/" target="_blank">
+              <img
+                src="./IMG/Photo by_Baz Ratner_Reuters kopie.jpg"
+                alt="Website for Esther Hertog"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+
+      <section class="section-contact">
+        <div class="contact-wrapper">
+          <div class="contact-container">
+            <h2>Send a message</h2>
+            <form
+              target="_blank"
+              action="https://formsubmit.co/6ff1a0a4c2b8aed62081993a627ae2d2"
+              method="POST"
+            >
+              <div class="form-group">
+                <div class="form-row">
+                  <div class="column">
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control"
+                      placeholder="Full Name"
+                      required
+                    />
+                  </div>
+                  <div class="column">
+                    <input
+                      type="email"
+                      name="email"
+                      class="form-control"
+                      placeholder="Email Address"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <textarea
+                  placeholder="Your Message"
+                  class="form-control"
+                  name="message"
+                  rows="10"
+                  required
+                >
+                </textarea>
+              </div>
+              <button type="submit" class="btn btn-lg btn-dark btn-block">
+                Submit Form
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer>
-        <!-- <div class="footer-container">
-            <div>
-                <h4>Janou Treffers</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident minus illo iste velit
-                    consequuntur
-                    expedita
-                    aspernatur nulla tenetur quaerat, doloremque consectetur odio dolorem eum impedit quas eos
-                    reprehenderit
-                    asperiores alias!</p>
-            </div>
-            <div>
-                <h4>Social Links</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident minus illo iste velit
-                    consequuntur
-                    expedita
-                    aspernatur nulla tenetur quaerat, doloremque consectetur odio dolorem eum impedit quas eos
-                    reprehenderit
-                    asperiores alias!</p>
-            </div>
-            <div>
-                <h4>What else to know</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident minus illo iste velit
-                    consequuntur
-                    expedita
-                    aspernatur nulla tenetur quaerat, doloremque consectetur odio dolorem eum impedit quas eos
-                    reprehenderit
-                    asperiores alias!</p>
-            </div>
-    </footer> -->
-        <!-- <script>document.addEventListener('DOMContentLoaded', function () {
+    <footer class="footer">&copy; All rights reserved</footer>
+    <!-- <script>document.addEventListener('DOMContentLoaded', function () {
   const introText = document.getElementById('intro-text');
   introText.style.opacity = '1';
   introText.style.transform = 'translateY(0)';
   introText.classList.add('active');
 });</script> -->
-
-</body>
-
+  </body>
 </html>

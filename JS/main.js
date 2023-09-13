@@ -102,7 +102,7 @@ showIntroTextOnScroll();
 
 // Text animation on page refresh
 
-document.addEventListener('DOMContentLoaded', function () {
-  const introText = document.getElementById('intro-text');
-  introText.classList.add('visible');
-});
+// document.addEventListener('DOMContentLoaded', function () {
+//   const introText = document.getElementById('intro-text');
+//   introText.classList.add('visible');
+// });

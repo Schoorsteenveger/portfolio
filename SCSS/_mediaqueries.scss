@@ -3,6 +3,7 @@
 @import './typography';
 
 // //Mobile
+
 /* On screens that are 992px or less */
 @media (max-width: 992px) {
   .header-right {
@@ -85,12 +86,23 @@
   .circle-container {
     min-width: 90vmin;
   }
-
-  .contact-container {
+  .contact-wrapper {
     max-width: 100vw;
+  }
+  .contact-container {
+    width: auto;
     h2 {
       font-size: $h2;
       padding-bottom: 1rem;
+    }
+    .form {
+      width: 100%;
+    }
+    .form-row {
+      flex-direction: column;
+    }
+    .column {
+      flex: 1;
     }
   }
   .footer-container {

@@ -6,44 +6,31 @@
 
 .section-contact {
   display: flex;
-  justify-items: center;
-  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
   background-color: #ffae5294;
   color: $primary-color;
+}
+.contact-wrapper {
+  width: 600px;
+  padding: 0 15px;
+}
+.contact-container {
+  flex-direction: column;
+  text-align: center;
+  border-radius: 5%;
+  padding: 1rem;
   width: 100%;
-  font-family: $body-font-family;
+  height: auto;
+  margin: 5rem auto;
+  // background-color: $section-contact;
+  background-color: $background-color-mid;
   h2 {
     font-size: $h2;
     font-weight: 700;
     font-family: $body-font-family;
     line-height: $line-height;
   }
-  p {
-    font-size: $font-size;
-    color: $primary-color;
-    padding-bottom: 1em;
-  }
-}
-.contact-bg {
-  align-items: center;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  object-fit: contain;
-  height: 50pc;
-}
-.contact-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 18px;
-  padding: 1rem;
-  width: 500px;
-  height: auto;
-  margin: 50px auto;
-  background-color: #ffe8a2;
   button {
     background: $button-background-color;
     outline: none;
@@ -61,20 +48,22 @@
     }
   }
 }
-.form-bg {
-  width: 100%;
+.form-row {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: auto;
-  padding: 5%;
+  margin-right: -5px;
+  margin-left: -5px;
+  padding-bottom: 1rem;
+}
+.column {
+  flex: 50%;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 .form-group {
   width: 100%;
-  // flex: 1;
-  padding: 15px 0;
+  flex: 1;
   border: none;
+  padding-bottom: 1rem;
   input {
     font-family: $body-font-family;
     width: 100%;
@@ -86,7 +75,7 @@
     border: none;
     padding-left: 4px;
     &:hover {
-      outline: 1px solid gold;
+      outline: 1px solid rgb(59, 53, 22);
     }
     &::placeholder {
       color: $font-color;
@@ -95,11 +84,11 @@
   textarea {
     font-family: $body-font-family;
     width: 100%;
-    outline: 1px solid rgb(150, 128, 1);
+    outline: 1px solid rgb(255, 217, 0);
     background: transparentize($color: #000000, $amount: 0.5);
     color: $font-color;
     border: none;
-    padding-left: 4px;
+    margin: 0;
     &:hover {
       outline: 1px solid gold;
     }
