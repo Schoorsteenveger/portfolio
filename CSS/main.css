@@ -524,6 +524,7 @@ nav .download-container {
 .hero .container .hero-inner .hero-images .hero-images-inner .hero-image {
   overflow: hidden;
   width: 100%;
+  position: relative;
 }
 .hero .container .hero-inner .hero-images .hero-images-inner .hero-image.janou {
   position: absolute;
@@ -540,9 +541,38 @@ nav .download-container {
   width: 25%;
   height: 60%;
   z-index: 3;
+  cursor: pointer;
 }
 .hero .container .hero-inner .hero-images .hero-images-inner .hero-image img {
   width: 100%;
+}
+.hero .wrapper-tooltip {
+  position: absolute;
+  top: 50vh;
+  left: 10px;
+  z-index: 400;
+}
+.hero .tooltip {
+  position: relative;
+  z-index: 500;
+}
+.hero .tooltip:hover::after {
+  content: attr(data-tooltip);
+  background-color: deeppink;
+  min-width: 200px;
+  max-width: 400px;
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 1em;
+  line-height: 1.7em;
+  position: absolute;
+  z-index: 1000;
+  right: 100%;
+  top: 0;
+  opacity: 1;
+}
+.hero .tooltip:hover::after i {
+  margin-left: 30px;
 }
 
 .container-test-portfolio {

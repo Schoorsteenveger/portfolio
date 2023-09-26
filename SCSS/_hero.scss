@@ -118,6 +118,7 @@
           .hero-image {
             overflow: hidden;
             width: 100%;
+            position: relative;
             &.janou {
               position: absolute;
               top: 186px;
@@ -133,12 +134,96 @@
               width: 25%;
               height: 60%;
               z-index: 3;
+              cursor: pointer;
             }
             img {
               width: 100%;
             }
           }
         }
+      }
+    }
+  }
+  // .tooltip {
+  //   // display: inline-block;
+  //   // position: relative;
+  //   // border-bottom: 1px dotted #666;
+  //   // text-align: left;
+  //   display: block;
+  //   position: absolute;
+  //   // border-bottom: 1px dotted #666;
+  //   text-align: left;
+  //   color: transparent;
+  //   font-size: xx-large;
+  //   left: 20%;
+  //   bottom: 40%;
+  //   z-index: 100;
+  // }
+
+  // .tooltip .left {
+  //   min-width: 200px;
+  //   max-width: 400px;
+  //   top: 50%;
+  //   right: 100%;
+  //   margin-right: 20px;
+  //   transform: translate(0, -50%);
+  //   padding: 10px 20px;
+  //   color: #000000;
+  //   background-color: #dddddd;
+  //   font-weight: normal;
+  //   font-size: 13px;
+  //   border-radius: 8px;
+  //   position: absolute;
+  //   z-index: 99999999;
+  //   box-sizing: border-box;
+  //   border: 1px solid transparent;
+  //   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+  //   visibility: hidden;
+  //   opacity: 0;
+  //   transition: opacity 0.8s;
+  // }
+
+  // .tooltip:hover .left {
+  //   visibility: visible;
+  //   opacity: 1;
+  // }
+
+  // .tooltip .left i {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 100%;
+  //   margin-top: -25px;
+  //   width: 25px;
+  //   height: 50px;
+  //   overflow: hidden;
+  // }
+
+  .wrapper-tooltip {
+    position: absolute;
+    top: 50vh;
+    left: 10px;
+    z-index: 400;
+  }
+
+  .tooltip {
+    position: relative;
+    z-index: 500;
+    &:hover::after {
+      content: attr(data-tooltip);
+      background-color: deeppink;
+      min-width: 200px;
+      max-width: 400px;
+      padding: 15px;
+      border-radius: 15px;
+      font-size: 1em;
+      line-height: 1.7em;
+      position: absolute;
+      z-index: 1000;
+      right: 100%;
+      top: 0;
+      opacity: 1;
+      i {
+        margin-left: 30px;
       }
     }
   }
