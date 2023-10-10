@@ -90,7 +90,7 @@ section {
   width: 200px;
   height: 70px;
   font-size: 16px;
-  border: solid 2px black;
+  border: solid 2px rgb(215, 27, 175);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -522,7 +522,6 @@ nav .download-container {
   height: 100%;
 }
 .hero .container .hero-inner .hero-images .hero-images-inner .hero-image {
-  overflow: hidden;
   width: 100%;
   position: relative;
 }
@@ -535,44 +534,34 @@ nav .download-container {
   z-index: 2;
 }
 .hero .container .hero-inner .hero-images .hero-images-inner .hero-image.hertz {
-  position: absolute;
-  bottom: -93px;
-  left: 150px;
+  position: relative;
+  top: 90px;
+  left: 10%;
   width: 25%;
-  height: 60%;
+  height: 100%;
   z-index: 3;
   cursor: pointer;
+  background-image: url("../IMG/terese_bertha.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero .container .hero-inner .hero-images .hero-images-inner .hero-image.hertz:hover::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 70%;
+  left: 4rem;
+  padding: 1rem;
+  min-width: 8rem;
+  min-height: 10%;
+  border-radius: 0.3rem;
+  color: #ffffff;
+  background-color: #42f5b9;
+  -webkit-transform: translateX(-150%) translateY(-200%);
+          transform: translateX(-150%) translateY(-200%);
 }
 .hero .container .hero-inner .hero-images .hero-images-inner .hero-image img {
   width: 100%;
-}
-.hero .wrapper-tooltip {
-  position: absolute;
-  top: 50vh;
-  left: 10px;
-  z-index: 400;
-}
-.hero .tooltip {
-  position: relative;
-  z-index: 500;
-}
-.hero .tooltip:hover::after {
-  content: attr(data-tooltip);
-  background-color: deeppink;
-  min-width: 200px;
-  max-width: 400px;
-  padding: 15px;
-  border-radius: 15px;
-  font-size: 1em;
-  line-height: 1.7em;
-  position: absolute;
-  z-index: 1000;
-  right: 100%;
-  top: 0;
-  opacity: 1;
-}
-.hero .tooltip:hover::after i {
-  margin-left: 30px;
 }
 
 .container-test-portfolio {
@@ -1054,6 +1043,19 @@ footer {
     min-height: 100vh;
     top: 368px;
     left: 86px !important;
+  }
+  .hero-inner .hero-images .hero-images-inner .hero-image.hertz:hover::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 70%;
+    left: 6rem;
+    padding: 1rem;
+    min-width: 8rem;
+    min-height: 10%;
+    border-radius: 0.3rem;
+    color: #d3c9c9;
+    -webkit-transform: translateX(-150%) translateY(-200%);
+    transform: translateX(-150%) translateY(-200%);
   }
   .btn-row:before {
     display: none;

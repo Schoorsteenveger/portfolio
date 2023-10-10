@@ -132,6 +132,19 @@
             min-height: 100vh;
             top: 368px;
             left: 86px !important;
+            &:hover::before {
+              content: attr(data-tooltip);
+              position: absolute;
+              top: 70%;
+              left: 6rem;
+              padding: 1rem;
+              min-width: 8rem;
+              min-height: 10%;
+              border-radius: 0.3rem;
+              color: #d3c9c9;
+              -webkit-transform: translateX(-150%) translateY(-200%);
+              transform: translateX(-150%) translateY(-200%);
+            }
           }
         }
       }
