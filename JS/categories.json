@@ -1,0 +1,79 @@
+{
+  "categories": [
+    {
+      "name": "React",
+      "items": [
+        {
+          "title": "React Project 1",
+          "subtitle": "A cool React application",
+          "image": "react_project1.jpg"
+        },
+        {
+          "title": "React Project 2",
+          "subtitle": "Another awesome React project",
+          "image": "react_project2.jpg"
+        }
+      ]
+    },
+    {
+      "name": "JavaScript",
+      "items": [
+        {
+          "title": "JavaScript Project 1",
+          "subtitle": "A creative JavaScript project",
+          "image": "javascript_project1.jpg"
+        },
+        {
+          "title": "JavaScript Project 2",
+          "subtitle": "A functional JavaScript application",
+          "image": "javascript_project2.jpg"
+        }
+      ]
+    },
+    {
+      "name": "TypeScript",
+      "items": [
+        {
+          "title": "TypeScript Project 1",
+          "subtitle": "A TypeScript project with types",
+          "image": "typescript_project1.jpg"
+        },
+        {
+          "title": "TypeScript Project 2",
+          "subtitle": "A TypeScript application",
+          "image": "typescript_project2.jpg"
+        }
+      ]
+    },
+    {
+      "name": "SCSS",
+      "items": [
+        {
+          "title": "SCSS Project 1",
+          "subtitle": "A stylish SCSS project",
+          "image": "scss_project1.jpg"
+        },
+        {
+          "title": "SCSS Project 2",
+          "subtitle": "An elegant SCSS application",
+          "image": "scss_project2.jpg"
+        }
+      ]
+    },
+    {
+      "name": "MongoDB",
+      "items": [
+        {
+          "title": "MongoDB Project 1",
+          "subtitle": "A MongoDB project with databases",
+          "image": "mongodb_project1.jpg"
+        },
+        {
+          "title": "MongoDB Project 2",
+          "subtitle": "A MongoDB application",
+          "image": "mongodb_project2.jpg"
+        }
+      ]
+    }
+  ]
+}
