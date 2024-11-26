@@ -79,6 +79,7 @@
   }
   .container-intro {
     flex-direction: column;
+    justify-content: space-between;
     #intro-text {
       max-width: 100%;
     }

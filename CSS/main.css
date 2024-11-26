@@ -28,11 +28,11 @@
   padding: 0;
 }
 
-html,
 body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  margin: 0;
   font-family: "Pathway", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -102,7 +102,7 @@ section {
   height: 100%;
   min-height: 100vh;
   overflow: hidden;
-  background-color: #f67a58;
+  background-color: #4287f5;
 }
 .container-intro canvas {
   position: absolute;
@@ -136,7 +136,7 @@ section {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #4287f5;
+  background-color: #ddd;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -155,12 +155,7 @@ section {
 }
 .container-intro .intro-title h2 {
   font-size: 5.72rem;
-  color: #f67a58;
-}
-
-.section-intro {
-  position: relative;
-  overflow: hidden;
+  color: #4287f5;
 }
 
 #intro-text {
@@ -170,7 +165,7 @@ section {
   -webkit-transition: opacity 1s ease, color 1s ease, -webkit-transform 1s ease;
   transition: opacity 1s ease, color 1s ease, -webkit-transform 1s ease;
   transition: opacity 1s ease, transform 1s ease, color 1s ease;
-  transition: opacity 1s ease, transform 1s ease, color 1s ease, -webkit-transform 1s ease; /* Add color transition */
+  transition: opacity 1s ease, transform 1s ease, color 1s ease, -webkit-transform 1s ease;
   text-align: left;
   max-width: 40vw;
   -ms-flex-preferred-size: 40%;
@@ -191,7 +186,7 @@ section {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  color: white; /* Desired text color */
+  color: white;
   -webkit-transition-delay: 0.8s;
           transition-delay: 0.8s;
 }
@@ -286,7 +281,7 @@ section {
 .hover-underline-animation {
   display: inline-block;
   position: relative;
-  color: #f67a58;
+  color: #4287f5;
 }
 
 .hover-underline-animation::after {
@@ -297,7 +292,7 @@ section {
   top: 80%;
   bottom: 0;
   left: 0;
-  background-color: #f67a58;
+  background-color: #4287f5;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transition: bottom right;
@@ -338,7 +333,7 @@ nav .download-container {
 }
 
 .action-btn {
-  background-color: #f67a58;
+  background-color: #4287f5;
   color: #333333;
   min-width: 6rem;
   height: auto;
@@ -527,6 +522,8 @@ nav .download-container {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 .hero .container .hero-inner .hero-images .hero-images-inner .hero-image.hertz:hover::before {
   content: attr(data-tooltip);
@@ -658,6 +655,155 @@ nav .download-container {
   padding: 0 3em 0 0, 5em;
 }
 
+.new-gallery {
+  background: #eef4ff;
+  font-family: sans-serif;
+  color: #333;
+}
+
+.spacer {
+  width: 100%;
+  height: 50vh;
+  background: #ddd;
+  display: none;
+}
+
+.gallery h1 {
+  font-size: clamp(2em, 4vw, 6em);
+}
+
+.gallery p {
+  font-size: clamp(1.4em, 2.5vw, 3.5em);
+  line-height: 1.4;
+}
+
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* outline:1px solid red; */
+}
+
+.left {
+  width: 50%;
+}
+
+.right {
+  height: 100vh;
+  /* outline:1px solid purple; */
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.desktopContent {
+  margin: auto;
+  width: 80%;
+}
+
+.desktopContentSection {
+  min-height: 100vh;
+  /* outline:1px solid green; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.desktopPhotos {
+  width: 40vw;
+  height: 40vw;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.desktopPhoto {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.red {
+  background: crimson;
+  background-image: url("../IMG/gradient-geometric-shapes-dark-background_23-2148437204.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.green {
+  background: MediumSeaGreen;
+  background-image: url("../IMG/clock.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.blue {
+  background: dodgerblue;
+  background-image: url("../IMG/bosaaso_opening_4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.pink {
+  background: deepPink;
+  background-image: url("../IMG/boothuisanzee.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* small screen / mobile layout */
+.mobileContent {
+  display: none;
+  width: 80vw;
+}
+
+.mobilePhoto {
+  width: 80vw;
+  height: 80vw;
+  margin-top: 5em;
+  border-radius: 6vw;
+}
+
+/* defines styles for screens up to 599px wide */
+@media screen and (max-width: 599px) {
+  .left {
+    display: none;
+  }
+  .right {
+    height: auto;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .desktopPhotos {
+    display: none;
+  }
+  .mobileContent {
+    display: block;
+  }
+}
 /* Image size */
 /* Contact Mobile version*/
 .section-contact {
@@ -671,7 +817,7 @@ nav .download-container {
       -ms-flex-align: center;
           align-items: center;
   background-color: rgba(255, 174, 82, 0.5803921569);
-  color: #4287f5;
+  color: #ddd;
 }
 
 .contact-wrapper {
@@ -1096,6 +1242,9 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .container-intro #intro-text {
     max-width: 100%;

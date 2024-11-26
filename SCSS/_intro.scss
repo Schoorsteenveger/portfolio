@@ -60,15 +60,15 @@
   }
 }
 
-.section-intro {
-  position: relative;
-  overflow: hidden;
-}
+// .section-intro {
+//   position: relative;
+//   overflow: hidden;
+// }
 
 #intro-text {
   opacity: 0;
   transform: translateY(-50px);
-  transition: opacity 1s ease, transform 1s ease, color 1s ease; /* Add color transition */
+  transition: opacity 1s ease, transform 1s ease, color 1s ease;
   text-align: left;
   max-width: 40vw;
   flex-basis: 40%;
@@ -87,6 +87,6 @@
 #intro-text.visible {
   opacity: 1;
   transform: translateY(0);
-  color: white; /* Desired text color */
+  color: white;
   transition-delay: 0.8s;
 }
