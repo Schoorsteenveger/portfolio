@@ -1,186 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/CSS/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,300&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,100&display=swap"
-      rel="stylesheet"
-    />
-    <title>Portfolio</title>
-    <script src="/JS/main.js" defer></script>
-    <script src="/JS/cursor.js"></script>
-    <script src="/JS/draw.js"></script>
-    <script src="/JS/stickyGallery.js"></script>
-    <script src="/JS/slider.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  </head>
 
-  <body id="cursorFollower">
-    <main class="main-homepage">
-      <header class="header">
-        <div class="header-left">
-          <div class="logo">
-            <a href="index.html">
-              <img src="/IMG/logo-hertz-hr.png" alt="logo-hertz" />
-            </a>
-          </div>
-          <nav class="navbar">
-            <ul class="nav-menu">
-              <li class="menuItem hide-logo">
-                <a class="nav-link hover-underline-animation" href="index.html"
-                  >Home</a
-                >
-              </li>
-              <li class="menuItem">
-                <a class="nav-link hover-underline-animation" href="#about"
-                  >About</a
-                >
-              </li>
-              <li class="menuItem hover-underline-animation">
-                <a class="nav-link" href="#work">Work</a>
-              </li>
-              <li class="menuItem hover-underline-animation">
-                <a class="nav-link" href="#contact">Contact</a>
-              </li>
-              <div class="download-container">
-                <a href="./cv-janou-treffers.pdf" download="cv-janou-treffers"
-                  ><button class="action-btn">
-                    <i class="fa fa-download"></i> Download
-                  </button></a
-                >
-              </div>
-            </ul>
-          </nav>
-        </div>
-        <div class="header-right">
-          <div class="download-container">
-            <a href="./cv-janou-treffers.pdf" download="cv-janou-treffers"
-              ><button class="action-btn">
-                <i class="fa fa-download"></i> Download CV
-              </button></a
-            >
-          </div>
-          <button class="toggleBtn">
-            <i class="menuIcon fa-solid fa-bars"></i>
-            <i class="closeIcon fa-solid fa-xmark"></i>
-          </button>
-        </div>
-      </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/CSS/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,300&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,100&display=swap"
+    rel="stylesheet" />
+  <title>Portfolio</title>
+  <script src="/JS/main.js" defer></script>
+  <script src="/JS/cursor.js"></script>
+  <script src="/JS/draw.js"></script>
+  <script src="/JS/stickyGallery.js"></script>
+  <script src="/JS/slider.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
 
-      <!-- hero animation -->
-      <section id="about">
-        <div class="hero">
-          <div class="container">
-            <div class="hero-inner">
-              <div class="hero-content">
-                <div class="hero-content-inner content">
-                  <h1>
-                    <div class="hero-content-line">
-                      <div class="hero-content-line-inner">
-                        Creative Frontend
-                      </div>
+<body id="cursorFollower">
+  <main class="main-homepage">
+    <header class="header">
+      <div class="header-left">
+        <div class="logo">
+          <a href="index.html">
+            <img src="/IMG/logo-hertz-hr.png" alt="logo-hertz" />
+          </a>
+        </div>
+        <nav class="navbar">
+          <ul class="nav-menu">
+            <li class="menuItem hide-logo">
+              <a class="nav-link hover-underline-animation" href="index.html">Home</a>
+            </li>
+            <li class="menuItem">
+              <a class="nav-link hover-underline-animation" href="#about">About</a>
+            </li>
+            <li class="menuItem hover-underline-animation">
+              <a class="nav-link" href="#work">Work</a>
+            </li>
+            <li class="menuItem hover-underline-animation">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <div class="download-container">
+              <a href="./cv-janou-treffers.pdf" download="cv-janou-treffers"><button class="action-btn">
+                  <i class="fa fa-download"></i> Download
+                </button></a>
+            </div>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-right">
+        <div class="download-container">
+          <a href="./cv-janou-treffers.pdf" download="cv-janou-treffers"><button class="action-btn">
+              <i class="fa fa-download"></i> Download CV
+            </button></a>
+        </div>
+        <button class="toggleBtn">
+          <i class="menuIcon fa-solid fa-bars"></i>
+          <i class="closeIcon fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- hero animation -->
+    <section id="about">
+      <div class="hero">
+        <div class="container">
+          <div class="hero-inner">
+            <div class="hero-content">
+              <div class="hero-content-inner content">
+                <h1>
+                  <div class="hero-content-line">
+                    <div class="hero-content-line-inner">
+                      Creative Frontend
                     </div>
-                    <div class="hero-content-line">
-                      <div class="hero-content-line-inner">
-                        Painting the Digital Canvas
-                      </div>
-                    </div>
-                    <div class="hero-content-line">
-                      <div class="hero-content-line-inner">
-                        With Brushstrokes
-                      </div>
-                    </div>
-                  </h1>
-                  <p>
-                    Mastering the Art of Web Experiences: Unleashing Creativity
-                    with a Colorful Coding Palette.
-                  </p>
-                  <div class="btn-row">
-                    <button class="explore-btn">
-                      Explore
-                      <div class="arrow-icon">
-                        <i class="fa-solid fa-arrow-right" alt="arrow"></i>
-                      </div>
-                    </button>
                   </div>
+                  <div class="hero-content-line">
+                    <div class="hero-content-line-inner">
+                      Painting the Digital Canvas
+                    </div>
+                  </div>
+                  <div class="hero-content-line">
+                    <div class="hero-content-line-inner">
+                      With Brushstrokes
+                    </div>
+                  </div>
+                </h1>
+                <p>
+                  Mastering the Art of Web Experiences: Unleashing Creativity
+                  with a Colorful Coding Palette.
+                </p>
+                <div class="btn-row">
+                  <button class="explore-btn">
+                    Explore
+                    <div class="arrow-icon">
+                      <i class="fa-solid fa-arrow-right" alt="arrow"></i>
+                    </div>
+                  </button>
                 </div>
               </div>
+            </div>
 
-              <div class="hero-images">
-                <div class="div-yellow"></div>
-                <div class="hero-images-inner images">
-                  <div class="hero-image janou">
-                    <img src="./IMG/janou-t-1.png" alt="janou treffers" />
-                  </div>
-
-                  <div
-                    class="hero-image hertz"
-                    data-tooltip="Dit zijn mijn oma en haar zus, Bertha & Frieda Hertz, ergens rond 1938."
-                  ></div>
+            <div class="hero-images">
+              <div class="div-yellow"></div>
+              <div class="hero-images-inner images">
+                <div class="hero-image janou">
+                  <img src="./IMG/janou-t-1.png" alt="janou treffers" />
                 </div>
+
+                <div class="hero-image hertz"
+                  data-tooltip="Dit zijn mijn oma en haar zus, Bertha & Frieda Hertz, ergens rond 1938."></div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Drawing canvas-->
-      <section class="section-intro">
-        <div class="container-intro" id="container-intro">
-          <div class="circle-container">
-            <div class="circle-inner">
-              <div class="intro-title">
-                <h2>Paint</h2>
-                <span>
-                  <h2>Me!</h2>
-                </span>
-              </div>
+    <!-- Drawing canvas-->
+    <section class="section-intro">
+      <div class="container-intro" id="container-intro">
+
+        <div class="circle-container">
+          <div class="circle-inner">
+            <div class="intro-title">
+              <h2>Paint</h2>
+              <span>
+                <h2>Me!</h2>
+              </span>
             </div>
           </div>
-          <div class="intro-text" id="intro-text">
-            <br />
-            <h3>Front-end developer</h3>
-            <p>
-              I thrive on flexibility, collaboration, and a passion for helping
-              purpose-driven brands and companies make a meaningful impact. By
-              fostering an intentional and authentic presence, I empower them to
-              connect deeply with their audience, build trust, and grow lasting
-              relationships." Let me know if you’d like further adjustments!
-            </p>
-            <br />
-            <p>
-              Before I grew to love webdevelopment I broadend my creative
-              horizons by delving into the world of moving images, aiming to
-              capture the essence of people and their surroundings through short
-              documentaries. Visualizing my observations is my strength. With
-              interviews and storytelling, I have helped businesses convey their
-              stories and offerings. With experience in camerajournalism,
-              utilizing Adobe Creative Suite, and now front-end web development,
-              I am capable of translating a wide range of ideas and desires into
-              functional websites and software.
-            </p>
-            <br />
-            <p>
-              Let's combine our powers and embark on an unforgettable journey of
-              collaboration.
-            </p>
-          </div>
-          <canvas></canvas>
         </div>
-      </section>
+
+
+        <div class="intro-text" id="intro-text">
+          <br />
+          <h3>
+            If you want to know how its like to work from chaos, start working with me.
+          </h3>
+          <p>
+            As a front-end developer with full-stack experience, I focus on delivering an inspirational and engaging
+            experience for end users.
+          </p>
+          <br>
+          <p>I’m eager to contribute to a team where creativity, fun and a passion for interactive storytelling come
+            together.</p>
+          <br>
+          <p>
+            I specialize in translating diverse ideas into engaging websites, platforms or interfaces. I built websites
+            in a team or alone for a variety of companies dedicated to health, sustainability and helping those in need. I love to create
+            playful, energetic and inspiring user experiences that strengthen brands. First I did this with SEO friendly
+            websites, video and photography. Now by building custom code fronts or fullstack applications.
+          </p>
+          <br />
+          <p>
+            Before I grew to love front-end development I broadend my creative
+            horizons by delving into the world of moving images, aiming to
+            capture the essence of people and their surroundings through short
+            documentaries.
+          </p>
+          <br>
+          <p>My dream is to grow as a creative developer, mastering web animation techniques while keeping web
+            performance at the forefront.</p>
+        </div>
+        <canvas></canvas>
+      </div>
+    </section>
 
       <section>
       <div class="wrapper">
@@ -310,181 +301,116 @@
       </div>
     </section>
 
-      <section class="new-gallery">
-        <div class="spacer"></div>
+    <section class="new-gallery">
+      <div class="spacer"></div>
 
-        <div class="gallery">
-          <div class="left">
-            <div class="desktopContent">
-              <div class="desktopContentSection">
-                <h1>Red</h1>
-                <p>
-                  Red is a color often associated with strong emotions such as
-                  passion, love, and anger. It's a bold and attention-grabbing
-                  color that can evoke feelings of excitement, warmth, and
-                  energy.
-                </p>
-              </div>
-              <div class="desktopContentSection">
-                <h1>Green</h1>
-                <p>
-                  Green is a color that is often associated with nature, growth,
-                  and harmony. It is a calming and relaxing color that can evoke
-                  feelings of balance, stability, and freshness. In color
-                  psychology, green is said to represent balance and stability,
-                  making it a popular choice for branding and marketing in the
-                  health and wellness industry.
-                </p>
-              </div>
-              <div class="desktopContentSection">
-                <h1>Pink</h1>
-                <p>
-                  Pink is a color that is often associated with femininity,
-                  romance, and sweetness. It is a softer and more delicate shade
-                  of red that can evoke feelings of warmth, love, and nurturing.
-                </p>
-                <p>
-                  In the world of branding and marketing, pink is often used to
-                  target a female audience or to promote products that are
-                  associated with beauty, love, or romance.
-                </p>
-                <p>
-                  Pink is also used in the food industry, as it is associated
-                  with sweetness and desserts. Pink is often used in breast
-                  cancer awareness campaigns, as it has become the signature
-                  color of the movement.
-                </p>
-                <p>
-                  Pink is also commonly used in baby showers and weddings, as it
-                  symbolizes love, innocence, and new beginnings.
-                </p>
-              </div>
-              <div class="desktopContentSection">
-                <h1>Blue</h1>
-                <p>
-                  Blue is a color that is often associated with calmness, trust,
-                  and reliability. It is a peaceful and serene color that can
-                  evoke feelings of stability, security, and professionalism. In
-                  color psychology, blue is said to represent loyalty and trust,
-                  making it a popular choice for branding and marketing in the
-                  finance and technology industries.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="right">
-            <!-- mobile content -->
-            <div class="mobileContent">
-              <div class="mobilePhoto red"></div>
-              <h1>Red</h1>
+      <div class="gallery">
+        <div class="left">
+          <div class="desktopContent">
+            <div class="desktopContentSection">
+              <h1>Front-end & backend</h1>
               <p>
-                Red is a color often associated with strong emotions such as
-                passion, love, and anger. It's a bold and attention-grabbing
-                color that can evoke feelings of excitement, warmth, and energy.
-              </p>
-
-              <div class="mobilePhoto green"></div>
-              <h1>Green</h1>
-              <p>
-                Green is a color that is often associated with nature, growth,
-                and harmony. It is a calming and relaxing color that can evoke
-                feelings of balance, stability, and freshness. In color
-                psychology, green is said to represent balance and stability,
-                making it a popular choice for branding and marketing in the
-                health and wellness industry.
-              </p>
-
-              <div class="mobilePhoto pink"></div>
-              <h1>Pink</h1>
-              <p>
-                Pink is a color that is often associated with femininity,
-                romance, and sweetness. It is a softer and more delicate shade
-                of red that can evoke feelings of warmth, love, and nurturing.
-                In the world of branding and marketing, pink is often used to
-                target a female audience or to promote products that are
-                associated with beauty, love, or romance.
-              </p>
-
-              <div class="mobilePhoto blue"></div>
-              <h1>Blue</h1>
-              <p>
-                Blue is a color that is often associated with calmness, trust,
-                and reliability. It is a peaceful and serene color that can
-                evoke feelings of stability, security, and professionalism. In
-                color psychology, blue is said to represent loyalty and trust,
-                making it a popular choice for branding and marketing in the
-                finance and technology industries.
+                React, Vue, Typescript, Remix, Next, Ruby on Rails, touched Angular.
               </p>
             </div>
+            <div class="desktopContentSection">
+              <h1>Team work & time management</h1>
+              <p>
+                Agile scrum techniques, Jira
+              </p>
+            </div>
+            <div class="desktopContentSection">
+              <h1>Styling</h1>
+              <p>
+                Tailwind, SCSS, styled components, Material Ui, Chakra Ui
+              </p>
 
-            <!-- desktop content -->
-
-            <div class="desktopPhotos">
-              <div class="desktopPhoto red"></div>
-              <div class="desktopPhoto green"></div>
-              <div class="desktopPhoto pink"></div>
-              <div class="desktopPhoto blue"></div>
+              </p>
+            </div>
+            <div class="desktopContentSection">
+              <h1>Pixel perfect</h1>
+              <p>
+                Coding from Figma designs delivered bu UX designer
+              </p>
             </div>
           </div>
         </div>
 
-        <div class="spacer"></div>
-        <div class="spacer"></div>
-        <div class="spacer"></div>
-      </section>
+        <div class="right">
+          <!-- mobile content -->
+          <div class="mobileContent">
+            <div class="mobilePhoto red"></div>
+            <h1>Front-end & backend</h1>
+            <p>
+              React, Vue, Typescript, Remix, Next, Ruby on Rails, touched Angular.
+            </p>
 
-      <!-- Contact -->
+            <div class="mobilePhoto green"></div>
+            <h1>Team work & time management</h1>
+            <p>
+              Agile scrum techniques, Jira
+            </p>
 
-      <section class="section-contact">
-        <div class="contact-wrapper">
-          <div class="contact-container">
-            <h2>Send a message</h2>
-            <form
-              target="_blank"
-              action="https://formsubmit.co/6ff1a0a4c2b8aed62081993a627ae2d2"
-              method="POST"
-            >
-              <div class="form-group">
-                <div class="form-row">
-                  <div class="column">
-                    <input
-                      type="text"
-                      name="name"
-                      class="form-control"
-                      placeholder="Full Name"
-                      required
-                    />
-                  </div>
-                  <div class="column">
-                    <input
-                      type="email"
-                      name="email"
-                      class="form-control"
-                      placeholder="Email Address"
-                      required
-                    />
-                  </div>
+            <div class="mobilePhoto pink"></div>
+            <h1>Styling</h1>
+            <p>
+              Tailwind, SCSS, styled components, Material Ui, Chakra Ui
+            </p>
+
+
+            <div class="mobilePhoto blue"></div>
+            <h1>Pixel perfect</h1>
+            <p>
+              Coding from Figma designs delivered bu UX designer
+            </p>
+          </div>
+
+          <!-- desktop content -->
+
+          <div class="desktopPhotos">
+            <div class="desktopPhoto red"></div>
+            <div class="desktopPhoto green"></div>
+            <div class="desktopPhoto pink"></div>
+            <div class="desktopPhoto blue"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="spacer"></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
+    </section>
+
+    <!-- Contact -->
+
+    <section class="section-contact">
+      <div class="contact-wrapper">
+        <div class="contact-container">
+          <h1>Send a message</h1>
+          <form target="_blank" action="https://formsubmit.co/6ff1a0a4c2b8aed62081993a627ae2d2" method="POST">
+            <div class="form-group">
+              <div class="form-row">
+                <div class="column">
+                  <input type="text" name="name" class="form-control" placeholder="Full Name" required />
+                </div>
+                <div class="column">
+                  <input type="email" name="email" class="form-control" placeholder="Email Address" required />
                 </div>
               </div>
-              <div class="form-group">
-                <textarea
-                  placeholder="Your Message"
-                  class="form-control"
-                  name="message"
-                  rows="10"
-                  required
-                >
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required>
                 </textarea>
-              </div>
-              <button type="submit" class="btn btn-lg btn-dark btn-block">
-                Submit Form
-              </button>
-            </form>
-          </div>
+            </div>
+            <button type="submit" class="btn btn-lg btn-dark btn-block">
+              Submit Form
+            </button>
+          </form>
         </div>
-      </section>
-    </main>
-    <footer class="footer">&copy; All rights reserved</footer>
-  </body>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">&copy; All rights reserved</footer>
+</body>
+
 </html>

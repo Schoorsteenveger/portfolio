@@ -18,13 +18,15 @@ body {
   font-weight: $font-weight-400;
   line-height: $line-height;
   background-color: transparent;
+  line-height: 1.4;
+  word-break: break-word;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-main {
+.main-homepage {
   display: flex;
   flex-direction: column;
   justify-content: center;

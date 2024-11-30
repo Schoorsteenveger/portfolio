@@ -12,6 +12,8 @@
     width: 100%;
     height: auto;
     margin: 0 auto;
+    z-index: 800;
+    position: relative;
     .hero-inner {
       display: flex;
       align-items: center;
@@ -40,7 +42,7 @@
             }
           }
           p {
-            font-size: 1.5rem;
+            font-size: $font-size * 1.5;
             line-height: $line-height;
             font-weight: $font-weight-400;
             padding-right: 48px;
