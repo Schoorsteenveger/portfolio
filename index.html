@@ -18,10 +18,12 @@
   <script src="/JS/main.js" defer></script>
   <script src="/JS/cursor.js"></script>
   <script src="/JS/draw.js"></script>
+  <script>"/JS/intro.js"</script>
   <script src="/JS/stickyGallery.js"></script>
   <script src="/JS/slider.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
 </head>
 
 <body id="cursorFollower">
@@ -68,58 +70,32 @@
       </div>
     </header>
 
-    <!-- hero animation -->
-    <section id="about">
-      <div class="hero">
-        <div class="container">
-          <div class="hero-inner">
-            <div class="hero-content">
-              <div class="hero-content-inner content">
-                <h1>
-                  <div class="hero-content-line">
-                    <div class="hero-content-line-inner">
-                      Creative Frontend
-                    </div>
-                  </div>
-                  <div class="hero-content-line">
-                    <div class="hero-content-line-inner">
-                      Painting the Digital Canvas
-                    </div>
-                  </div>
-                  <div class="hero-content-line">
-                    <div class="hero-content-line-inner">
-                      With Brushstrokes
-                    </div>
-                  </div>
-                </h1>
-                <p>
-                  Mastering the Art of Web Experiences: Unleashing Creativity
-                  with a Colorful Coding Palette.
-                </p>
-                <div class="btn-row">
-                  <button class="explore-btn">
-                    Explore
-                    <div class="arrow-icon">
-                      <i class="fa-solid fa-arrow-right" alt="arrow"></i>
-                    </div>
-                  </button>
-                </div>
-              </div>
+    <section class="hero">
+      <div class="hero__content">
+        <h1>
+          <span>Creative Frontend</span>
+          <span>Painting the Digital Canvas</span>
+          <span>With Brushstrokes</span>
+        </h1>
+        <p>
+          Mastering the Art of Web Experiences:<br />
+          Unleashing Creativity with a Colorful Coding Palette.
+        </p>
+        <div class="btn-container">
+          <button class="hero__explore-btn">
+            Explore
+            <div class="arrow-icon">
+              <i class="fa-solid fa-arrow-right" alt="arrow"></i>
             </div>
-
-            <div class="hero-images">
-              <div class="div-yellow"></div>
-              <div class="hero-images-inner images">
-                <div class="hero-image janou">
-                  <img src="./IMG/janou-t-1.png" alt="janou treffers" />
-                </div>
-
-                <div class="hero-image hertz"
-                  data-tooltip="Dit zijn mijn oma en haar zus, Bertha & Frieda Hertz, ergens rond 1938."></div>
-              </div>
-            </div>
-          </div>
+          </button>
         </div>
+      </div>
+
+      <div class="hero__images">
+
+        <div class="background-square"></div>
+        <img src="./IMG/janou-t-1.png" alt=" Portrait" class="hero__image--1" />
+        <img src="./IMG/terese_bertha.jpg" alt=" Bertha & Frieda" class="hero__image--2" />
       </div>
     </section>
 
@@ -138,7 +114,6 @@
           </div>
         </div>
 
-
         <div class="intro-text" id="intro-text">
           <br />
           <h3>
@@ -154,7 +129,8 @@
           <br>
           <p>
             I specialize in translating diverse ideas into engaging websites, platforms or interfaces. I built websites
-            in a team or alone for a variety of companies dedicated to health, sustainability and helping those in need. I love to create
+            in a team or alone for a variety of companies dedicated to health, sustainability and helping those in need.
+            I love to create
             playful, energetic and inspiring user experiences that strengthen brands. First I did this with SEO friendly
             websites, video and photography. Now by building custom code fronts or fullstack applications.
           </p>
@@ -173,7 +149,7 @@
       </div>
     </section>
 
-      <section>
+    <section>
       <div class="wrapper">
         <button class="arrow prev">
           <i class="fa-solid fa-arrow-left" alt="arrow"></i>

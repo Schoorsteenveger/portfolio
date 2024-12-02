@@ -5,7 +5,7 @@
 // //Mobile
 
 /* On screens that are 992px or less */
-@media (max-width: 992px) {
+@media (max-width: 1100px) {
   .header-right {
     .download-container {
       display: none;
@@ -76,6 +76,7 @@
   }
   .action-btn {
     height: auto;
+    background-color: $button-background-color;
   }
   .container-intro {
     flex-direction: column;
@@ -83,6 +84,7 @@
 
     #intro-text {
       max-width: 100%;
+      padding-top: 100px;
     }
   }
   .circle-container {
@@ -111,47 +113,7 @@
     flex-direction: column;
     padding: 5px;
   }
-  .hero-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    .hero-content {
-      display: flex;
-      min-width: 100%;
-    }
-    .hero-images {
-      height: 100%;
-      width: 100%;
-      .hero-images-inner {
-        width: 30rem;
-        .hero-image {
-          &.janou {
-            width: 100%;
-            left: -65px;
-            max-height: max-content;
-          }
-          &.hertz {
-            min-height: 100vh;
-            top: 368px;
-            left: 86px !important;
-            &:hover::before {
-              content: attr(data-tooltip);
-              position: absolute;
-              top: 70%;
-              left: 6rem;
-              padding: 1rem;
-              min-width: 8rem;
-              min-height: 10%;
-              border-radius: 0.3rem;
-              color: #d3c9c9;
-              -webkit-transform: translateX(-150%) translateY(-200%);
-              transform: translateX(-150%) translateY(-200%);
-            }
-          }
-        }
-      }
-    }
-  }
+
   .btn-row:before {
     display: none;
   }
@@ -162,7 +124,13 @@
 
 /* Adjustments that are 768px or less */
 
-@media (min-width: 786px) {
+@media (min-width: 1272px) {
+  .header {
+    min-width: 1158px;
+    a {
+      font-size: 1.3rem;
+    }
+  }
   .intro-text {
     padding-bottom: 3em;
   }

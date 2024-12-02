@@ -25,53 +25,29 @@ navLink.forEach((navLink) => navLink.addEventListener('click', closeMenu));
 
 // GSAP Hero animation
 
-let images = document.querySelector('.images');
-const janouImage = images.firstElementChild;
-const hertzImage = images.lastElementChild;
+// Animate lines in h1
+gsap.from('.hero__content h1 span', {
+  y: 60,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.4, // Delay between lines
+  ease: 'power3.out',
+});
 
-let tl = gsap.timeline();
-
-gsap.to('.hero', { opacity: 1 });
-gsap.set('.janou', { opacity: 1 });
+// Animate images stacking and scaling
 gsap
   .timeline()
-  .from(janouImage, 1.2, { y: '80vh', opacity: 1, ease: 'power3.out' }, 'Start')
+  .from('.background-square', { scale: 0, duration: 1, ease: 'back.out(1.7)' })
   .from(
-    janouImage.firstElementChild,
-    2,
-    { scale: 1.6, ease: 'power3.easeOut' },
+    '.hero__image--1',
+    { scale: 0, duration: 1, ease: 'back.out(1.7)' },
     0.2
   )
-  .from(hertzImage, 1.4, { x: '80vh', opacity: 1, ease: 'power3.easeOut' }, 0.2)
   .from(
-    hertzImage.lastElementChild,
-    2,
-    { scale: 1.8, ease: 'power3.out' },
-    0.2
+    '.hero__image--2',
+    { scale: 0, duration: 1, ease: 'back.out(1.7)' },
+    0.1
   );
-
-let content = document.querySelector('.hero-content-inner');
-
-const headlineFirst = content.children[0].children[0];
-const headlineSecond = content.children[0].children[1];
-const headlineThird = content.children[0].children[2];
-const contentP = content.children[1];
-const btnRow = content.children[2];
-
-tl.staggerFrom(
-  [headlineFirst.children, headlineSecond.children, headlineThird.children],
-  1,
-  {
-    y: 60,
-    opacity: 0,
-    stagger: 0.3,
-    delay: 0.8,
-  },
-  0.15,
-  'Start'
-);
-tl.from(contentP, 1, { y: 20, opacity: 0, ease: 'Power3.easeOut' }, 1.4);
-tl.from(btnRow, 1, { y: 20, opacity: 0, ease: 'Power3.easeOut' }, 1.6);
 
 // Text animation on scroll
 
