@@ -38,6 +38,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  gsap.to('.circle-container', {
+    scrollTrigger: {
+      trigger: '.section-intro',
+      start: 'top center',
+      end: 'bottom center',
+      scrub: true,
+    },
+    rotate: 360,
+    scale: 1.2,
+    duration: 3,
+    ease: 'none',
+  });
+
   scrollBtn.addEventListener('click', (event) => {
     console.log('clicked', event.target);
     event.stopPropagation();

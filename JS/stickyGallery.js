@@ -1,23 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
+  gsap.registerPlugin(ScrollTrigger);
+
   if (!window.gsap) {
     console.error('GSAP is not defined. Check your script imports.');
     return;
   } else {
     console.log('youre a genius');
   }
-
-  gsap.to('.circle-container', {
-    scrollTrigger: {
-      trigger: '.section-intro',
-      start: 'top center',
-      end: 'bottom center',
-      scrub: true,
-    },
-    rotate: 360,
-    scale: 1.2,
-    duration: 3,
-    ease: 'none',
-  });
 
   const details = gsap.utils.toArray(
     '.desktopContentSection:not(:first-child)'

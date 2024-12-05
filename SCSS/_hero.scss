@@ -9,7 +9,6 @@
   min-height: 100vh;
   align-items: center;
   position: relative;
-  padding-bottom: 100px;
 
   @media (max-width: 1024px) {
     grid-template-columns: 1fr;
@@ -24,21 +23,23 @@
   @media (max-width: 480px) {
     padding: 1rem;
     gap: 0.5rem;
-    padding-bottom: 100px;
   }
 
   &__content {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    padding-left: 20%;
+    min-width: 50vw;
+    align-items: flex-start;
+    align-content: space-around;
+    flex-wrap: wrap;
 
     @media (max-width: 1024px) {
       padding-left: 5%;
     }
 
-    @media (max-width: 768px) {
-      padding-left: 2%;
+    @media (max-width: 768px) and (min-width: 480px) {
+      padding: 100px 150px 0;
     }
 
     @media (max-width: 480px) {
@@ -151,13 +152,13 @@
     }
   }
 
+  // fix height
+
   &__images {
     position: relative;
     display: flex;
     justify-content: center;
-    @media (max-width: 480px) and (min-width: 1100px) {
-      padding-bottom: 300px;
-    }
+    height: 100vh;
 
     .background-square {
       position: absolute;
@@ -170,8 +171,8 @@
       z-index: 1;
 
       @media (max-width: 768px) {
-        width: 300px;
-        height: 300px;
+        width: 400px;
+        height: 400px;
       }
 
       @media (max-width: 480px) {
@@ -194,7 +195,7 @@
 
       @media (max-width: 1024px) {
         width: 60%;
-        bottom: 40%;
+        bottom: 70%;
         right: 10%;
       }
 
@@ -205,14 +206,14 @@
       }
 
       @media (max-width: 480px) {
-        max-width: 70%;
-        bottom: 35%;
+        width: 70%;
+        bottom: 75%;
         right: 15%;
       }
     }
 
     .hero__image--2 {
-      top: 70%;
+      top: 40%;
       left: 16.6rem;
       width: 50%;
       max-width: 270px;
@@ -225,12 +226,12 @@
 
       @media (max-width: 768px) {
         width: 35%;
-        top: 55%;
-        left: 5%;
+        top: 35%;
+        left: 15%;
       }
 
       @media (max-width: 480px) {
-        max-width: 50%;
+        width: 50%;
         top: 50%;
         left: 0;
       }
