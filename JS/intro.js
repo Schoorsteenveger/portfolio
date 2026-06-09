@@ -1,16 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
+  if (typeof gsap === 'undefined' || typeof SplitText === 'undefined') {
+    console.error('GSAP or SplitText is not loaded.');
+    return;
+  }
+
+  const introText = document.querySelector('.intro-text');
+  if (!introText) return;
+
   gsap.registerPlugin(SplitText);
 
-  const introText = document.getElementById('intro-text');
+  const splitText = new SplitText(introText, { type: 'words' });
+  const words = splitText.words || [];
 
-  let split = new SplitText('.intro-text', { type: 'words' });
-  let words = mySplitText.words;
+  if (words.length) {
+    gsap.from(words, {
+      yPercent: 130,
+      duration: 1,
+      ease: 'power3.out',
+      stagger: 0.05,
+    });
+  }
 
-  gsap.from(words, {
-    yPercent: 130,
-  });
-
-  gsap.to('.introtext', {
+  gsap.to(introText, {
     y: 100,
     stagger: {
       each: 0.1,
@@ -21,29 +32,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const observer = new IntersectionObserver(
-    (entries, observer) => {
+    (entries, observerInstance) => {
       entries.forEach((entry) => {
-        // Log when the observer is triggered
-        console.log('Observer triggered:', entry.target);
-
         if (entry.isIntersecting) {
-          // Log when the 'visible' class is added
-          console.log("Element is visible. Adding 'visible' class.");
           entry.target.classList.add('visible');
-          // Optionally, unobserve the element after adding the class
-          observer.unobserve(entry.target);
-        } else {
-          // Log if the element is not in the viewport
-          console.log('Element is not in the viewport.');
+          observerInstance.unobserve(entry.target);
         }
       });
     },
     {
-      root: null, // Use the viewport as the root
-      threshold: 0.1, // Trigger when at least 10% of the element is visible
-    }
+      root: null,
+      threshold: 0.1,
+    },
   );
 
-  // Start observing the intro text element
   observer.observe(introText);
 });

@@ -1,60 +1,78 @@
-let mousePos = {};
+document.addEventListener('DOMContentLoaded', () => {
+  const cursorContainer = document.getElementById('cursorFollower');
+  if (!cursorContainer) return;
 
-function getRandomInt(min, max) {
-  return Math.round(Math.random() * (max - min + 1)) + min;
-}
+  const isTouchDevice =
+    'ontouchstart' in window ||
+    navigator.maxTouchPoints > 0 ||
+    window.matchMedia('(pointer: coarse)').matches;
+  if (isTouchDevice) return;
 
-window.addEventListener('mousemove', function (e) {
-  mousePos.x = e.pageX;
-  mousePos.y = e.pageY;
-});
+  let mousePos = { x: -1, y: -1 };
+  let rafId = null;
+  let lastTimestamp = 0;
+  const frameThrottle = 33; // ~30 FPS
 
-// eslint-disable-next-line no-unused-vars
-window.addEventListener('mouseleave', function (e) {
-  mousePos.x = -1;
-  mousePos.y = -1;
-});
+  const getRandomInt = (min, max) =>
+    Math.floor(Math.random() * (max - min + 1)) + min;
 
-let drawing;
+  const createBall = (x, y) => {
+    const sizeInt = getRandomInt(5, 15);
+    const ball = document.createElement('div');
 
-window.addEventListener('mousemove', function () {
-  if (!drawing) {
-    drawing = setInterval(function () {
-      if (mousePos.x > 0 && mousePos.y > 0 && window.innerWidth > 768) {
-        let range = 5;
-        let color =
-          'background: rgb(' +
-          getRandomInt(0, 255) +
-          ',' +
-          getRandomInt(0, 255) +
-          ',' +
-          getRandomInt(0, 255) +
-          ');';
-        let sizeInt = getRandomInt(5, 15);
-        let size = 'height: ' + sizeInt + 'px; width: ' + sizeInt + 'px;';
-        let left =
-          'left: ' +
-          getRandomInt(mousePos.x - range - sizeInt, mousePos.x + range) +
-          'px;';
-        let top =
-          'top: ' +
-          getRandomInt(mousePos.y - range - sizeInt, mousePos.y + range) +
-          'px;';
-        let style = left + top + color;
+    ball.className = 'ball';
+    ball.style.cssText = `
+      left: ${x - sizeInt / 2}px;
+      top: ${y - sizeInt / 2}px;
+      width: ${sizeInt}px;
+      height: ${sizeInt}px;
+      background: rgb(${getRandomInt(0, 255)}, ${getRandomInt(0, 255)}, ${getRandomInt(0, 255)});
+      pointer-events: none;
+    `;
 
-        let div = document.createElement('div');
-        div.className = 'ball';
-        div.style.cssText = style + size;
+    ball.addEventListener(
+      'animationend',
+      function () {
+        this.remove();
+      },
+      { once: true },
+    );
 
-        div.addEventListener(
-          'animationend',
-          function () {
-            this.parentNode.removeChild(this);
-          },
-          false
-        );
-        document.getElementById('cursorFollower').appendChild(div);
-      }
-    }, 1);
-  }
+    cursorContainer.appendChild(ball);
+  };
+
+  const animate = (timestamp) => {
+    if (
+      timestamp - lastTimestamp >= frameThrottle &&
+      mousePos.x >= 0 &&
+      mousePos.y >= 0
+    ) {
+      createBall(mousePos.x, mousePos.y);
+      lastTimestamp = timestamp;
+    }
+    rafId = requestAnimationFrame(animate);
+  };
+
+  const stopAnimation = () => {
+    mousePos.x = -1;
+    mousePos.y = -1;
+    if (rafId) {
+      cancelAnimationFrame(rafId);
+      rafId = null;
+    }
+  };
+
+  window.addEventListener('mousemove', (event) => {
+    if (event.target.closest('canvas')) return;
+
+    mousePos.x = event.pageX;
+    mousePos.y = event.pageY;
+
+    if (!rafId) {
+      rafId = requestAnimationFrame(animate);
+    }
+  });
+
+  window.addEventListener('mouseleave', stopAnimation);
+  window.addEventListener('blur', stopAnimation);
 });

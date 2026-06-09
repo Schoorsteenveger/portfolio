@@ -1,21 +1,34 @@
-$primary-color: #7fe986;
-$secondary-color: #4287f5;
-$background-color-mid: plum;
-$background-color: #c7b4be;
-$font-color: #ffffff;
-$button-color: #333333;
-$button-background-color: #42f5b9;
-$button-menu-color: #4287f5;
-$button-hover-color: #7fe986;
-$button-text-hover-color: #737373;
-$button-active-color: #ffffa2;
-$menu-link-color: white;
-$menu-link-hover: #9ff4d8;
-$menu-link-active: #8af6d2;
-$background-img: #0c1711;
-$section-intro: #ffffa2;
-$section-contact: #ffffa2;
-$overlay-img: #1f694f66;
-$color-heading: #c1f2b4;
-$background-menu: #4287f5;
-$tile-text-color: #ffffff;
+// _colors.scss
+
+:root {
+  // Basic Colors
+  --color-green-light: #7fe986;
+  --color-blue: #4287f5;
+  --color-plum: plum;
+  --color-mauve: #c7b4be;
+  --color-white: #ffffff;
+  --color-dark: #333333;
+  --color-mint: #42f5b9;
+  --color-yellow: #ffffa2;
+
+  // Theme Colors
+  --primary-color: var(--color-green-light);
+  --secondary-color: var(--color-blue);
+  --background-color: var(--color-mauve);
+  --font-color: var(--color-white);
+
+  // Button Colors
+  --button-color: var(--color-dark);
+  --button-background-color: var(--color-mint);
+  --button-hover-color: var(--color-green-light);
+  --button-text-hover-color: #737373;
+  --button-active-color: var(--color-yellow);
+
+  // Menu & Section Colors
+  --background-menu: var(--color-blue);
+  --menu-link-color: var(--color-white);
+  --section-intro: var(--color-yellow);
+  --section-contact: var(--color-yellow);
+  --color-heading: #c1f2b4;
+  --tile-text-color: var(--color-white);
+}
