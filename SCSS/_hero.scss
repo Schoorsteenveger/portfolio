@@ -1,6 +1,6 @@
-@import './colors';
-@import './variables';
-@import './typography';
+@use 'colors';
+@use 'variables';
+@use 'typography';
 
 .hero {
   display: grid;
@@ -48,7 +48,7 @@
 
     h1 {
       margin-bottom: 1rem;
-      font-size: $h1;
+      font-size: typography.$h1;
 
       span {
         display: block;
@@ -69,7 +69,7 @@
 
     p {
       margin-bottom: 1.5rem;
-      font-size: $font-size;
+      font-size: typography.$font-size;
 
       @media (max-width: 1024px) {
         font-size: 1rem;
@@ -94,7 +94,7 @@
         position: absolute;
         width: 56px;
         height: 1px;
-        background: $font-color;
+        background: colors.$font-color;
         top: 50%;
         left: -68px;
       }
@@ -128,7 +128,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: $button-background-color;
+        background: colors.$button-background-color;
         height: 48px;
         width: 48px;
         border-radius: 100px;
@@ -136,7 +136,7 @@
         transition: all 0.2s ease;
 
         &:hover {
-          background: $button-hover-color;
+          background: colors.$button-hover-color;
           transform: rotateZ(90deg) scale(1.05);
         }
 
@@ -207,7 +207,7 @@
 
       @media (max-width: 480px) {
         width: 70%;
-        bottom: 75%;
+        bottom: 60%;
         right: 15%;
       }
     }

@@ -1,12 +1,12 @@
-@import './colors';
-@import './variables';
-@import './typography';
+@use 'colors';
+@use 'variables';
+@use 'typography';
 
 footer {
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: $background-color-mid;
-  font-size: $font-size;
+  background-color: colors.$background-color-mid;
+  font-size: typography.$font-size;
   padding: 0.5em 0;
 }

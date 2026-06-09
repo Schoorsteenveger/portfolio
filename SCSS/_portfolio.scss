@@ -1,12 +1,12 @@
-@import './colors';
-@import './variables';
-@import './typography';
+@use 'colors';
+@use 'variables';
+@use 'typography';
 
 /* portfolio grid */
 
 .section-portfolio {
   width: 100%;
-  background-color: $section-contact;
+  background-color: colors.$section-contact;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -15,7 +15,7 @@
   display: grid;
   height: auto;
   padding: 1rem;
-  gap: $gap;
+  gap: variables.$gap;
   width: 100%;
   height: max-content;
   max-width: 1920px;
@@ -28,12 +28,12 @@
   position: relative;
   overflow: hidden;
   text-align: center;
-  font-family: $body-font-family;
-  color: $color-heading;
+  font-family: typography.$body-font-family;
+  color: colors.$color-heading;
   border-radius: 20px;
   cursor: pointer;
   & a:hover {
-    color: $button-hover-color;
+    color: colors.$button-hover-color;
     transition: 0.2s ease-in;
   }
   h4,
@@ -44,26 +44,26 @@
     left: 15px;
     z-index: 20;
     text-align: center;
-    line-height: $line-height;
+    line-height: typography.$line-height;
   }
   h4 {
-    font-size: $h4;
+    font-size: typography.$h4;
     text-transform: uppercase;
     top: 35px;
     padding: 5px 15px;
     &:hover {
-      color: $button-hover-color;
+      color: colors.$button-hover-color;
     }
   }
   h5 {
-    font-size: $h5;
+    font-size: typography.$h5;
     top: 65%;
     padding: 5px 15px;
   }
   img {
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
-    width: $image-size;
+    width: variables.$image-size;
     height: 100%;
     object-fit: cover;
     transition: transform 0.4s ease-in-out;

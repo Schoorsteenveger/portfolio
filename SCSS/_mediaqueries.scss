@@ -1,6 +1,6 @@
-@import './colors';
-@import './variables';
-@import './typography';
+@use 'colors';
+@use 'variables';
+@use 'typography';
 
 // //Mobile
 
@@ -39,8 +39,8 @@
     width: 100%;
     align-items: center;
     z-index: 80;
-    background-color: $background-menu;
-    color: $font-color;
+    background-color: colors.$background-menu;
+    color: colors.$font-color;
     list-style: none;
     padding: 2rem 0;
     .download-container {
@@ -51,7 +51,7 @@
       bottom: 0;
       transform: translateY(0);
       transition: transform 0.5s ease-in-out;
-      background-color: $background-menu;
+      background-color: colors.$background-menu;
     }
   }
   .toggleBtn {
@@ -63,7 +63,7 @@
     color: rgb(255, 255, 255);
     background: transparent;
     border: none;
-    font-size: $font-size * 1.5;
+    font-size: typography.$font-size * 1.5;
     cursor: pointer;
     transition: scale ease 0.2s;
     &:hover {
@@ -76,7 +76,7 @@
   }
   .action-btn {
     height: auto;
-    background-color: $button-background-color;
+    background-color: colors.$button-background-color;
   }
   .container-intro {
     flex-direction: column;
@@ -96,7 +96,7 @@
   .contact-container {
     width: auto;
     h2 {
-      font-size: $h2;
+      font-size: typography.$h2;
       padding-bottom: 1rem;
     }
     .form {

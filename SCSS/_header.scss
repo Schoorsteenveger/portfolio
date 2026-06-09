@@ -1,6 +1,6 @@
-@import './colors';
-@import './variables';
-@import './typography';
+@use 'colors';
+@use 'variables';
+@use 'typography';
 
 .header {
   display: flex;
@@ -13,7 +13,7 @@
   min-height: 70px;
   padding: 15px 0;
   margin: 0 auto;
-  background: $background-color-mid;
+  background: colors.$background-color-mid;
   .header-left {
     display: flex;
     justify-content: flex-start;
@@ -36,15 +36,15 @@
     }
     a {
       display: inline-block;
-      color: $menu-link-color;
-      font-size: $font-size * 1.8;
+      color: colors.$menu-link-color;
+      font-size: typography.$font-size * 1.8;
       transition: 0.2s;
       cursor: pointer;
       &:hover {
-        color: $menu-link-hover;
+        color: colors.$menu-link-hover;
       }
       &:active {
-        color: $button-active-color;
+        color: colors.$button-active-color;
       }
     }
     .logo {
@@ -77,7 +77,7 @@
 .hover-underline-animation {
   display: inline-block;
   position: relative;
-  color: $secondary-color;
+  color: colors.$secondary-color;
 }
 .hover-underline-animation::after {
   content: '';
@@ -87,7 +87,7 @@
   top: 80%;
   bottom: 0;
   left: 0;
-  background-color: $secondary-color;
+  background-color: colors.$secondary-color;
   transform: scaleX(0);
   transition: bottom right;
   transition: transform 0.25s ease-out;
