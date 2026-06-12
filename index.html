@@ -41,6 +41,7 @@
     <script src="/JS/intro.js" defer></script>
     <script src="/JS/stickyGallery.js" defer></script>
     <script src="/JS/slider.js" defer></script>
+    <script src="/JS/contactForm.js" defer></script>
   </head>
 
   <body id="cursorFollower">
@@ -133,9 +134,47 @@
         </div>
       </section>
 
-      <!-- Drawing canvas -->
       <section class="section-intro" id="section-intro">
         <div class="container-intro" id="container-intro">
+          <div class="intro-text" id="intro-animated-text">
+            <h3>
+              If you want to know how its like to work from chaos start working
+              with me.
+            </h3>
+            <p>
+              As a front-end developer with full-stack experience I focus on
+              delivering an inspirational and engaging experience for end users.
+            </p>
+            <p>
+              I’m eager to contribute to a team where creativity fun and a
+              passion for interactive storytelling come together.
+            </p>
+            <p>
+              I specialize in translating diverse ideas into engaging websites,
+              platforms or interfaces. I built websites in a team or alone for a
+              variety of companies dedicated to health sustainability and
+              helping those in need. I love to create playful energetic and
+              inspiring user experiences that strengthen brands. First I did
+              this with SEO friendly websites, video and photography. Now by
+              building custom code fronts or fullstack applications.
+            </p>
+            <p>
+              Before I grew to love front-end development I broadend my creative
+              horizons by delving into the world of moving images aiming to
+              capture the essence of people and their surroundings through short
+              documentaries.
+            </p>
+            <p>
+              My dream is to grow as a creative developer mastering web
+              animation techniques while keeping web performance at the
+              forefront.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-paintme" id="section-paintme">
+        <div class="container-paintme" id="container-paintme">
           <div class="circle-container">
             <div class="circle-inner">
               <div class="intro-title">
@@ -146,47 +185,7 @@
               </div>
             </div>
           </div>
-
-          <div class="intro-text" id="intro-text">
-            <br />
-            <h3>
-              If you want to know how its like to work from chaos, start working
-              with me.
-            </h3>
-            <p>
-              As a front-end developer with full-stack experience, I focus on
-              delivering an inspirational and engaging experience for end users.
-            </p>
-            <br />
-            <p>
-              I’m eager to contribute to a team where creativity, fun and a
-              passion for interactive storytelling come together.
-            </p>
-            <br />
-            <p>
-              I specialize in translating diverse ideas into engaging websites,
-              platforms or interfaces. I built websites in a team or alone for a
-              variety of companies dedicated to health, sustainability and
-              helping those in need. I love to create playful, energetic and
-              inspiring user experiences that strengthen brands. First I did
-              this with SEO friendly websites, video and photography. Now by
-              building custom code fronts or fullstack applications.
-            </p>
-            <br />
-            <p>
-              Before I grew to love front-end development I broadend my creative
-              horizons by delving into the world of moving images, aiming to
-              capture the essence of people and their surroundings through short
-              documentaries.
-            </p>
-            <br />
-            <p>
-              My dream is to grow as a creative developer, mastering web
-              animation techniques while keeping web performance at the
-              forefront.
-            </p>
-          </div>
-          <canvas></canvas>
+          <canvas id="paint-canvas"></canvas>
         </div>
       </section>
 
@@ -489,11 +488,7 @@
         <div class="contact-wrapper">
           <div class="contact-container">
             <h1>Send a message</h1>
-            <form
-              target="_blank"
-              action="https://formsubmit.co/6ff1a0a4c2b8aed62081993a627ae2d2"
-              method="POST"
-            >
+            <form id="form">
               <div class="form-group">
                 <div class="form-row">
                   <div class="column">

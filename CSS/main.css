@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,wght@0,400;0,500;0,700;1,100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,700;1,500;1,600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,wght@0,400;0,500;0,700;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,700;1,500;1,600&display=swap');
 /* Image size */
 * {
   box-sizing: border-box;
@@ -12,7 +12,19 @@ body {
   height: 100%;
   overflow-x: hidden;
   margin: 0;
-  font-family: "Pathway", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    'Pathway',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.3;
@@ -28,7 +40,6 @@ body {
   flex-grow: 1;
   margin: 0 auto;
   padding: 0;
-  background-color: plum;
 }
 
 a {
@@ -48,7 +59,7 @@ section {
 .container-intro {
   position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   z-index: 0;
   color: #42f5b9;
@@ -58,9 +69,25 @@ section {
   height: 100%;
   min-height: 100vh;
   overflow: hidden;
-  background-color: #4287f5;
+  background-color: #ffffff;
 }
-.container-intro canvas {
+
+.container-paintme {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  color: #42f5b9;
+  padding: 1.5rem 0;
+  max-width: 100vw;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #333333;
+}
+.container-paintme canvas {
   position: absolute;
   top: 0;
   left: 0;
@@ -70,20 +97,21 @@ section {
   height: max-content;
   touch-action: none;
 }
-.container-intro .circle-container {
-  width: 50vw;
+.container-paintme .circle-container {
+  width: 40vw;
+  max-width: 380px;
+  min-width: 220px;
   height: auto;
-  justify-self: start;
+  margin: 0 auto;
   align-items: center;
-  flex-basis: 33.33%;
   position: relative;
 }
-.container-intro .circle-container::after {
-  content: "";
+.container-paintme .circle-container::after {
+  content: '';
   display: block;
   padding-bottom: 100%;
 }
-.container-intro .circle-container .circle-inner {
+.container-paintme .circle-container .circle-inner {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -92,6 +120,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 .intro-title {
@@ -101,25 +130,33 @@ section {
 }
 .intro-title h2 {
   font-size: 5.72rem;
-  color: #4287f5;
+  color: #333333;
 }
 
-#intro-text {
+.intro-text {
   text-align: left;
   max-width: 40vw;
   flex-basis: 40%;
   padding: 0 2rem;
   line-height: 1.6;
 }
-#intro-text h3 {
+.intro-text h3 {
   font-size: 2.2rem;
   padding-bottom: 1.125rem;
   color: white;
   line-height: 1.2;
 }
-#intro-text p {
-  font-size: clamp(1rem, 1.4vw, 1.25rem);
-  color: white;
+.intro-text p {
+  font-size: clamp(1.15rem, 1.75vw, 1.42rem);
+  font-weight: 600;
+  line-height: 1.8;
+  margin-bottom: 1.8rem;
+  color: transparent;
+  background: linear-gradient(135deg, #4287f5 0%, plum 55%, #111 100%);
+  background-size: 250% 250%;
+  background-position: 0% 0%;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .header {
@@ -158,13 +195,13 @@ section {
 }
 .header .header-left a {
   display: inline-block;
-  color: white;
+  color: #ffffff;
   font-size: 28.8px;
   transition: 0.2s;
   cursor: pointer;
 }
 .header .header-left a:hover {
-  color: #9ff4d8;
+  color: #ffffa2;
 }
 .header .header-left a:active {
   color: #ffffa2;
@@ -192,18 +229,18 @@ section {
 .hover-underline-animation {
   display: inline-block;
   position: relative;
-  color: #4287f5;
+  color: #333333;
 }
 
 .hover-underline-animation::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 2px;
   top: 80%;
   bottom: 0;
   left: 0;
-  background-color: #4287f5;
+  background-color: #333333;
   transform: scaleX(0);
   transition: bottom right;
   transition: transform 0.25s ease-out;
@@ -230,7 +267,7 @@ nav .download-container {
 }
 
 .action-btn {
-  background-color: #4287f5;
+  background-color: #42f5b9;
   color: #333333;
   min-width: 6rem;
   height: auto;
@@ -260,6 +297,7 @@ nav .download-container {
   min-height: 100vh;
   align-items: center;
   position: relative;
+  background-color: plum;
 }
 @media (max-width: 1024px) {
   .hero {
@@ -350,7 +388,7 @@ nav .download-container {
   position: relative;
 }
 .hero__content .btn-container:before {
-  content: "";
+  content: '';
   position: absolute;
   width: 56px;
   height: 1px;
@@ -539,7 +577,7 @@ nav .download-container {
   height: max-content;
   max-width: 1920px;
   margin: 5rem auto;
-  font-family: "Shippori Antique", sans;
+  font-family: 'Shippori Antique', sans;
 }
 
 .portfolio-item {
@@ -547,7 +585,19 @@ nav .download-container {
   position: relative;
   overflow: hidden;
   text-align: center;
-  font-family: "Pathway", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    'Pathway',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
   color: #c1f2b4;
   border-radius: 20px;
   cursor: pointer;
@@ -586,7 +636,7 @@ nav .download-container {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: transform 0.4s ease-in-out;
 }
 .portfolio-item img:hover {
@@ -595,7 +645,9 @@ nav .download-container {
   transform: scale(1.2);
 }
 .portfolio-item .background-title h4 {
-  padding: 0 3em 0 0, 5em;
+  padding:
+    0 3em 0 0,
+    5em;
 }
 
 :root {
@@ -678,7 +730,7 @@ nav .download-container {
 
 .red {
   background: crimson;
-  background-image: url("../IMG/gradient-geometric-shapes-dark-background_23-2148437204.avif");
+  background-image: url('../IMG/gradient-geometric-shapes-dark-background_23-2148437204.avif');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -686,7 +738,7 @@ nav .download-container {
 
 .green {
   background: MediumSeaGreen;
-  background-image: url("../IMG/clock.jpg");
+  background-image: url('../IMG/clock.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -694,7 +746,7 @@ nav .download-container {
 
 .blue {
   background: dodgerblue;
-  background-image: url("../IMG/pixels-blue.webp");
+  background-image: url('../IMG/pixels-blue.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -702,7 +754,7 @@ nav .download-container {
 
 .pink {
   background: deepPink;
-  background-image: url("../IMG/boothuisanzee.jpg");
+  background-image: url('../IMG/boothuisanzee.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -900,8 +952,6 @@ nav .download-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 174, 82, 0.5803921569);
-  color: #7fe986;
 }
 
 .contact-wrapper {
@@ -917,16 +967,28 @@ nav .download-container {
   width: 100%;
   height: auto;
   margin: 5rem auto;
-  background-color: plum;
+  background-color: #ffffa2;
 }
 .contact-container h2 {
   font-size: 2.6rem;
   font-weight: 700;
-  font-family: "Pathway", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    'Pathway',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
   line-height: 1.3;
 }
 .contact-container button {
-  background: #42f5b9;
+  background-color: #42f5b9;
   outline: none;
   width: 100%;
   height: 2em;
@@ -960,9 +1022,22 @@ nav .download-container {
   flex: 1;
   border: none;
   padding-bottom: 1rem;
+  padding-left: 1rem;
 }
 .form-group input {
-  font-family: "Pathway", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    'Pathway',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
   width: 100%;
   height: 4em;
   color: #ffffff;
@@ -982,7 +1057,19 @@ nav .download-container {
   color: #ffffff;
 }
 .form-group textarea {
-  font-family: "Pathway", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    'Pathway',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
   width: 100%;
   outline: 1px solid rgb(255, 217, 0);
   background: rgba(0, 0, 0, 0.5);
@@ -1014,7 +1101,6 @@ footer {
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: plum;
   font-size: 16px;
   padding: 0.5em 0;
 }
@@ -1032,11 +1118,11 @@ footer {
   pointer-events: none;
   position: absolute;
   z-index: 50000;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background: gray;
-  animation: implode 1s ease-in-out;
+  animation: implode 2s ease-in-out;
   animation-fill-mode: both;
   opacity: 0.8;
 }
@@ -1100,8 +1186,8 @@ footer {
 .card-wrapper.grab {
   cursor: grabbing;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   scroll-snap-type: none;
   scroll-behavior: auto;
 }
@@ -1116,7 +1202,7 @@ footer {
   width: 100%;
   height: 200px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .card-item .card-info {
   padding: 16px;
@@ -1245,12 +1331,30 @@ footer {
     flex-direction: column;
     justify-content: space-between;
   }
-  .container-intro #intro-text {
+  .container-intro .intro-text {
     max-width: 100%;
+    width: 100%;
+    flex-basis: auto;
     padding-top: 100px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
-  .circle-container {
-    min-width: 90vmin;
+  .container-paintme {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+  }
+  .container-paintme .circle-container {
+    min-width: auto;
+    width: 70vw;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .intro-text h3 {
+    font-size: clamp(1.9rem, 4vw, 2.3rem);
+  }
+  .intro-text p {
+    font-size: clamp(1.05rem, 2vw, 1.28rem);
   }
   .contact-wrapper {
     max-width: 100vw;
@@ -1282,6 +1386,44 @@ footer {
     display: none;
   }
 }
+
+@media (max-width: 768px) {
+  .intro-text {
+    padding: 1rem 0.9rem;
+  }
+  .intro-text h3 {
+    font-size: clamp(1.7rem, 5vw, 2rem);
+  }
+  .intro-text p {
+    font-size: clamp(1rem, 2.8vw, 1.15rem);
+    margin-bottom: 1.6rem;
+  }
+  .container-paintme {
+    padding: 1.5rem 0.8rem;
+  }
+  .container-paintme .circle-container {
+    width: 80vw;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-text {
+    padding: 0.85rem 0.85rem;
+  }
+  .intro-text h3 {
+    font-size: clamp(1.5rem, 6vw, 1.8rem);
+  }
+  .intro-text p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    margin-bottom: 1.4rem;
+  }
+  .container-paintme .circle-container {
+    width: 88vw;
+    max-width: 280px;
+  }
+}
 /* Adjustments that are 768px or less */
 @media (min-width: 1272px) {
   .header {
@@ -1304,4 +1446,4 @@ footer {
   footer div {
     grid-template-columns: repeat(auto-fit, minmax(400px, 3fr));
   }
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */

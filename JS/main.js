@@ -1,10 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-  if (typeof gsap === 'undefined' || typeof ScrollToPlugin === 'undefined') {
-    console.error('GSAP or ScrollToPlugin is not loaded.');
+  if (
+    typeof gsap === 'undefined' ||
+    typeof ScrollToPlugin === 'undefined' ||
+    typeof ScrollTrigger === 'undefined'
+  ) {
+    console.error('GSAP, ScrollToPlugin, or ScrollTrigger is not loaded.');
     return;
   }
 
-  gsap.registerPlugin(ScrollToPlugin);
+  gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
   const navMenu = document.querySelector('.nav-menu');
   const hamburger = document.querySelector('.toggleBtn');
@@ -53,18 +57,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const circleContainer = document.querySelector('.circle-container');
   if (circleContainer) {
-    gsap.to('.circle-container', {
-      scrollTrigger: {
-        trigger: '.section-intro',
-        start: 'top center',
-        end: 'bottom center',
-        scrub: true,
+    gsap.fromTo(
+      circleContainer,
+      { y: 0, x: 0, rotate: 0, scale: 1 },
+      {
+        y: -120,
+        x: 30,
+        rotate: 360,
+        scale: 1.15,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.section-paintme',
+          start: 'top center',
+          end: 'bottom center',
+          scrub: true,
+        },
       },
-      rotate: 360,
-      scale: 1.2,
-      duration: 3,
-      ease: 'none',
-    });
+    );
   }
 
   scrollBtn?.addEventListener('click', (event) => {

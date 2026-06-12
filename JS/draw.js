@@ -1,14 +1,20 @@
 window.addEventListener('DOMContentLoaded', () => {
-  const canvas = document.querySelector('canvas');
-  const container = document.getElementById('container-intro');
+  const canvas = document.querySelector('#paint-canvas');
+  const container = document.getElementById('container-paintme');
   const ctx = canvas.getContext('2d');
   let containerWidth = container.offsetWidth;
   let containerHeight = container.offsetHeight;
   let offsetX = 0;
   let offsetY = 0;
 
-  // Calculate canvas position
+  function resizeCanvas() {
+    containerWidth = container.offsetWidth;
+    containerHeight = container.offsetHeight;
+    canvas.width = containerWidth;
+    canvas.height = containerHeight;
+  }
 
+  // Calculate canvas position
   function updateCanvasRect() {
     const canvasRect = canvas.getBoundingClientRect();
     offsetX = canvasRect.left;
@@ -16,11 +22,8 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   // Initial canvas size update
-
+  resizeCanvas();
   updateCanvasRect();
-
-  canvas.width = containerWidth;
-  canvas.height = containerHeight;
 
   ctx.strokeStyle = '#ffffa2';
   ctx.lineJoin = 'round';
@@ -54,6 +57,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('resize', () => {
     clearCanvas();
+    resizeCanvas();
     updateCanvasRect();
   });
 

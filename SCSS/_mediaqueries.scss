@@ -82,13 +82,26 @@
     flex-direction: column;
     justify-content: space-between;
 
-    #intro-text {
+    .intro-text {
       max-width: 100%;
+      width: 100%;
+      flex-basis: auto;
       padding-top: 100px;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
   }
-  .circle-container {
-    min-width: 90vmin;
+  .container-paintme {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+
+    .circle-container {
+      min-width: auto;
+      width: 70vw;
+      max-width: 320px;
+      margin: 0 auto;
+    }
   }
   .contact-wrapper {
     max-width: 100vw;

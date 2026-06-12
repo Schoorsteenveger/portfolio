@@ -1,34 +1,35 @@
-// _colors.scss
+// 1. Basic Colors
+$color-green-light: #7fe986;
+$color-blue: #4287f5;
+$color-plum: plum;
+$color-mauve: #c7b4be;
+$color-white: #ffffff;
+$color-dark: #333333;
+$color-mint: #42f5b9;
+$color-yellow: #ffffa2;
 
-:root {
-  // Basic Colors
-  --color-green-light: #7fe986;
-  --color-blue: #4287f5;
-  --color-plum: plum;
-  --color-mauve: #c7b4be;
-  --color-white: #ffffff;
-  --color-dark: #333333;
-  --color-mint: #42f5b9;
-  --color-yellow: #ffffa2;
+// 2. Theme Colors
+$primary-color: $color-green-light;
+$secondary-color: $color-dark;
+$background-color: $color-mauve;
+$background-color-mid: $color-mauve;
+$font-color: $color-white;
 
-  // Theme Colors
-  --primary-color: var(--color-green-light);
-  --secondary-color: var(--color-blue);
-  --background-color: var(--color-mauve);
-  --font-color: var(--color-white);
+// 3. Button Colors
+$button-color: $color-dark;
+$button-background-color: $color-mint;
+$button-hover-color: $color-green-light;
+$button-text-hover-color: #737373;
+$button-active-color: $color-yellow;
 
-  // Button Colors
-  --button-color: var(--color-dark);
-  --button-background-color: var(--color-mint);
-  --button-hover-color: var(--color-green-light);
-  --button-text-hover-color: #737373;
-  --button-active-color: var(--color-yellow);
-
-  // Menu & Section Colors
-  --background-menu: var(--color-blue);
-  --menu-link-color: var(--color-white);
-  --section-intro: var(--color-yellow);
-  --section-contact: var(--color-yellow);
-  --color-heading: #c1f2b4;
-  --tile-text-color: var(--color-white);
-}
+// 4. Menu & Section Colors
+$background-hero: $color-plum;
+$background-header: $color-plum;
+$background-intro: $color-white;
+$background-menu: $color-blue;
+$menu-link-color: $color-white;
+$section-intro: $color-plum;
+$section-contact: $color-yellow;
+$color-heading: #c1f2b4;
+$tile-text-color: $color-white;
+$menu-link-hover: #ffffa2;

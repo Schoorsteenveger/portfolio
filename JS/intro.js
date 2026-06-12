@@ -1,50 +1,40 @@
-document.addEventListener('DOMContentLoaded', () => {
-  if (typeof gsap === 'undefined' || typeof SplitText === 'undefined') {
-    console.error('GSAP or SplitText is not loaded.');
-    return;
-  }
+// Animate intro text elements on scroll without splitting sentences
+(function () {
+  function initIntroAnimation() {
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+      console.warn('GSAP or ScrollTrigger not loaded');
+      return;
+    }
 
-  const introText = document.querySelector('.intro-text');
-  if (!introText) return;
+    gsap.registerPlugin(ScrollTrigger);
 
-  gsap.registerPlugin(SplitText);
+    const targets = document.querySelectorAll('.intro-text h3, .intro-text p');
 
-  const splitText = new SplitText(introText, { type: 'words' });
-  const words = splitText.words || [];
+    gsap.set(targets, {
+      y: 20,
+      opacity: 0,
+      backgroundPosition: '0% 0%',
+    });
 
-  if (words.length) {
-    gsap.from(words, {
-      yPercent: 130,
-      duration: 1,
-      ease: 'power3.out',
-      stagger: 0.05,
+    targets.forEach((target) => {
+      gsap.fromTo(
+        target,
+        { y: 20, opacity: 0, backgroundPosition: '0% 0%' },
+        {
+          y: 0,
+          opacity: 1,
+          backgroundPosition: '100% 100%',
+          duration: 0.9,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: target,
+            start: 'top 85%',
+            toggleActions: 'play none none none',
+          },
+        },
+      );
     });
   }
 
-  gsap.to(introText, {
-    y: 100,
-    stagger: {
-      each: 0.1,
-      from: 'center',
-      grid: 'auto',
-      ease: 'power2.inOut',
-    },
-  });
-
-  const observer = new IntersectionObserver(
-    (entries, observerInstance) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observerInstance.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      root: null,
-      threshold: 0.1,
-    },
-  );
-
-  observer.observe(introText);
-});
+  document.addEventListener('DOMContentLoaded', initIntroAnimation);
+})();
